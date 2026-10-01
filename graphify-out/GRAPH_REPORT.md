@@ -1,4 +1,4 @@
-# Graph Report - MSplusEverythingIwant  (2026-09-24)
+# Graph Report - MSplusEverythingIwant  (2026-10-01)
 
 ## Corpus Check
 - Corpus is ~1,001 words - fits in a single context window. You may not need a graph.
@@ -6,7 +6,7 @@
 ## Summary
 - 81 nodes · 82 edges · 9 communities (8 shown, 1 thin omitted)
 - Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.84)
-- Token cost: 60,914 input · 0 output
+- Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
 - TypeScript Config
@@ -47,8 +47,8 @@
 - None detected.
 
 ## Hyperedges (group relationships)
-- **Supabase Client Env Configuration** — readme_env_local, readme_next_public_supabase_url, readme_next_public_supabase_anon_key, lib_supabase_client_supabase [INFERRED 0.85]
 - **create-next-app default 16x16 gray UI icons (file, globe, window)** — public_file_file_document_icon, public_globe_globe_icon, public_window_browser_window_icon [INFERRED 0.85]
+- **Supabase Client Env Configuration** — readme_env_local, readme_next_public_supabase_url, readme_next_public_supabase_anon_key, lib_supabase_client_supabase [INFERRED 0.85]
 
 ## Communities (9 total, 1 thin omitted)
 
