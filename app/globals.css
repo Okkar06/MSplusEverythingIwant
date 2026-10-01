@@ -1,26 +1,188 @@
 @import "tailwindcss";
 
+/*
+  Design tokens. Values mirror design/tokens.json — change both together.
+  How to use them is explained in DESIGN.md.
+
+  Components use the semantic names (bg-surface, text-ink, text-mood-calm …),
+  never raw hex values, so light and dark mode come for free.
+*/
+
+/* ─── Colours: light (default) ─────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #f7f2f6;
+  --surface: #ffffff;
+  --sunken: #eee6ee;
+  --line: #e2d7e2;
+  --ink: #2a1d2c;
+  --ink-muted: #6e5f70;
+  --accent: #c2364f;
+  --on-accent: #ffffff;
+  --you: #e14d63;
+  --partner: #b8740f;
+
+  --mood-happy: #b07a0a;
+  --mood-loved: #d9465f;
+  --mood-calm: #3f9483;
+  --mood-excited: #e0632e;
+  --mood-tired: #7f6fb8;
+  --mood-sad: #4a72b0;
+  --mood-stressed: #b8483a;
+  --mood-missing-you: #a1508e;
+
+  /* Motion */
+  --duration-quick: 150ms;
+  --duration-base: 250ms;
+  --duration-settle: 450ms;
+  --duration-count: 900ms;
+  --duration-breathe: 4000ms;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: Arial, Helvetica, sans-serif;
-  --font-mono: "Courier New", Courier, monospace;
-}
-
+/* ─── Colours: dark (follows the phone/computer setting) ───────────────── */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg: #17121c;
+    --surface: #211a27;
+    --sunken: #110d15;
+    --line: #33293a;
+    --ink: #f4ecf3;
+    --ink-muted: #ada0b2;
+    --accent: #ff7c8f;
+    --on-accent: #17121c;
+    --you: #ff7c8f;
+    --partner: #ffbe5c;
+
+    --mood-happy: #ffc94d;
+    --mood-loved: #ff8099;
+    --mood-calm: #7fd1bd;
+    --mood-excited: #ff9a63;
+    --mood-tired: #b3a6e8;
+    --mood-sad: #8db0eb;
+    --mood-stressed: #f08471;
+    --mood-missing-you: #e39ad3;
+
+    color-scheme: dark;
   }
 }
 
+/* ─── Tailwind theme: turns the tokens into utility classes ────────────── */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-sunken: var(--sunken);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-you: var(--you);
+  --color-partner: var(--partner);
+
+  --color-mood-happy: var(--mood-happy);
+  --color-mood-loved: var(--mood-loved);
+  --color-mood-calm: var(--mood-calm);
+  --color-mood-excited: var(--mood-excited);
+  --color-mood-tired: var(--mood-tired);
+  --color-mood-sad: var(--mood-sad);
+  --color-mood-stressed: var(--mood-stressed);
+  --color-mood-missing-you: var(--mood-missing-you);
+
+  /* Fonts are loaded in app/layout.tsx */
+  --font-display: var(--font-fredoka), ui-rounded, "SF Pro Rounded", system-ui, sans-serif;
+  --font-sans: var(--font-figtree), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Type scale (1.25 ratio from 16px, plus two display sizes) */
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1rem;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.25rem;
+  --text-body: 1rem;
+  --text-body--line-height: 1.5rem;
+  --text-lead: 1.25rem;
+  --text-lead--line-height: 1.75rem;
+  --text-title: 1.5625rem;
+  --text-title--line-height: 2rem;
+  --text-heading: 1.9375rem;
+  --text-heading--line-height: 2.25rem;
+  --text-display: 3rem;
+  --text-display--line-height: 1;
+  --text-hero: 5.5rem;
+  --text-hero--line-height: 1;
+
+  /* Corners: soft, never sharp */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+
+  /* Easing curves */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Named animations (keyframes below) */
+  --animate-breathe: breathe var(--duration-breathe) ease-in-out infinite;
+  --animate-pop-in: pop-in var(--duration-settle) var(--ease-pop) both;
+  --animate-fade-up: fade-up var(--duration-settle) var(--ease-out) both;
+}
+
+/* ─── Keyframes ────────────────────────────────────────────────────────── */
+
+/* Slow "someone is here" pulse for live presence. */
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 0.15;
+  }
+}
+
+/* A new mood arriving: grows in with a small overshoot. */
+@keyframes pop-in {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Content settling into place on first load. */
+@keyframes fade-up {
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ─── Base ─────────────────────────────────────────────────────────────── */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Respect "reduce motion": keep the colour changes, drop the movement. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
 }

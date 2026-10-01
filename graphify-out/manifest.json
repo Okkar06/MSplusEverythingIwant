@@ -30,10 +30,10 @@
     "semantic_hash": "9b77af189a21a7a64e4bd7a426f64176"
   },
   "package.json": {
-    "mtime": 1790155502.0923042,
-    "seen": 1790216373.7580156,
-    "ast_hash": "224442cce8e12b138bc5bba6bdf401b9",
-    "semantic_hash": "224442cce8e12b138bc5bba6bdf401b9"
+    "mtime": 1790842947.9319816,
+    "seen": 1790847090.5272925,
+    "ast_hash": "6dec03c241d31cac0deebe946ac131ee",
+    "semantic_hash": "6dec03c241d31cac0deebe946ac131ee"
   },
   "postcss.config.mjs": {
     "mtime": 1790155502.0923042,
@@ -82,5 +82,17 @@
     "seen": 1790216373.7580328,
     "ast_hash": "a2760511c65806022ad20adf74370ff3",
     "semantic_hash": "a2760511c65806022ad20adf74370ff3"
+  },
+  "supabase/migrations/20261001000000_initial_schema.sql": {
+    "mtime": 1790841856.6999662,
+    "seen": 1790847090.5272982,
+    "ast_hash": "3ca67da28fbd4be0dfa869651149c58a",
+    "semantic_hash": "3ca67da28fbd4be0dfa869651149c58a"
+  },
+  "supabase/snippets/pair_partners.sql": {
+    "mtime": 1790841859.9659662,
+    "seen": 1790847090.5273008,
+    "ast_hash": "15f970d9d617d84f82eb59cca349dee7",
+    "semantic_hash": "15f970d9d617d84f82eb59cca349dee7"
   }
 }
