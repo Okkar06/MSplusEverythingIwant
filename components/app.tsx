@@ -71,7 +71,7 @@ function SignedIn({ session }: { session: Session }) {
       <WaitingForPartner
         name={couple.me?.display_name}
         email={session.user.email}
-        onCheckAgain={couple.reload}
+        onPaired={couple.reload}
         onSignOut={signOut}
       />
     );

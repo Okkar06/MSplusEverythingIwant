@@ -74,6 +74,11 @@ export function useCouple(userId: string) {
             : { ...s, moods: { ...s.moods, [(payload.new as MoodRow).user_id]: payload.new as MoodRow } },
         );
       })
+      // A profile change can be a new partner link (which also changes which
+      // moods and locations RLS lets us see), so reload everything.
+      .on("postgres_changes", { event: "*", schema: "public", table: "profiles" }, () => {
+        load();
+      })
       .on("postgres_changes", { event: "*", schema: "public", table: "locations" }, (payload) => {
         setState((s) =>
           payload.eventType === "DELETE"
@@ -115,8 +120,7 @@ export function useCouple(userId: string) {
     [userId],
   );
 
-  // Profiles aren't on Realtime, so a new name updates locally here and your
-  // partner sees it the next time their app loads or reconnects.
+  // Updates locally straight away; your partner gets it over Realtime.
   const setName = useCallback(
     async (displayName: string) => {
       const { error } = await getSupabase()
