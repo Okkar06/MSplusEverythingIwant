@@ -26,7 +26,8 @@ export default defineConfig({
   webServer: {
     command: `npx next build && npx next start -p ${PORT}`,
     url: `http://localhost:${PORT}`,
-    reuseExistingServer: !process.env.CI,
+    // Always build fresh: reusing a leftover server would quietly test an old build.
+    reuseExistingServer: false,
     timeout: 240_000,
     env: {
       NEXT_PUBLIC_SUPABASE_URL: "https://e2e.supabase.co",
