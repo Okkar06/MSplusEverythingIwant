@@ -48,9 +48,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1790931461.8818371,
-    "seen": 1790931488.770192,
-    "ast_hash": "8f60675173c82858632b5d7ad4a4d010",
+    "mtime": 1790934997.9579291,
+    "seen": 1790935008.2517262,
+    "ast_hash": "1c623950c1d01817c1d6496a8558e2fc",
     "semantic_hash": ""
   },
   "supabase/migrations/20261001000000_initial_schema.sql": {
@@ -144,9 +144,9 @@
     "semantic_hash": "4d1fd0800ac97f4f1219249e56084ca5"
   },
   "components/app.tsx": {
-    "mtime": 1790928460.5097592,
-    "seen": 1790928696.8235729,
-    "ast_hash": "5653f741454b473813a169fcad861a2f",
+    "mtime": 1790934777.1459234,
+    "seen": 1790935008.2500563,
+    "ast_hash": "d07373b02e77885edb4a711279546508",
     "semantic_hash": ""
   },
   "components/distance-hero.tsx": {
@@ -192,9 +192,9 @@
     "semantic_hash": ""
   },
   "components/waiting-for-partner.tsx": {
-    "mtime": 1790928460.501759,
-    "seen": 1790928696.824042,
-    "ast_hash": "d82ae5b0dbc8eb3f177691da9219a650",
+    "mtime": 1790934777.1399233,
+    "seen": 1790935008.2503624,
+    "ast_hash": "7e1fdceb93145f12e95f9a592721da16",
     "semantic_hash": ""
   },
   "lib/distance.ts": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "lib/pairing.ts": {
-    "mtime": 1790929184.484778,
-    "seen": 1790930707.7843492,
-    "ast_hash": "44c609b1d5e53d283c3168a6bd93bde8",
+    "mtime": 1790934718.625922,
+    "seen": 1790935008.25045,
+    "ast_hash": "cf3407655f908e8d457347ef4bc1fb86",
     "semantic_hash": ""
   },
   ".claude/skills/feature-commit/SKILL.md": {
@@ -325,14 +325,14 @@
   },
   "supabase/migrations/20261002000000_pair_invites.sql": {
     "mtime": 1790929180.6847777,
-    "seen": 1790930962.7008398,
-    "ast_hash": "",
+    "seen": 1790935008.250813,
+    "ast_hash": "66d7d87821d7a8bea91f15fcd36923a3",
     "semantic_hash": ""
   },
   "tests/fake-supabase.ts": {
-    "mtime": 1790930862.6048217,
-    "seen": 1790930962.7008445,
-    "ast_hash": "69c2786eebb0b35e7ed9b302d6b2f670",
+    "mtime": 1790934815.3149245,
+    "seen": 1790935008.2508514,
+    "ast_hash": "428b577da4ca7bc8f15e163b4dd7ebb0",
     "semantic_hash": ""
   },
   "tests/home.spec.ts": {
@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   "tests/pairing.spec.ts": {
-    "mtime": 1790930843.880821,
-    "seen": 1790930962.7008476,
-    "ast_hash": "b6bb2638fce0c2b2014ca4e71555d8d6",
+    "mtime": 1790934849.8069253,
+    "seen": 1790935008.250883,
+    "ast_hash": "15f95ce0445be5108c25b69eea828fcf",
     "semantic_hash": ""
   },
   "tests/sign-in.spec.ts": {

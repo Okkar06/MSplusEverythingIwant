@@ -1,24 +1,24 @@
 # Graph Report - MSplusEverythingIwant  (2026-10-02)
 
 ## Corpus Check
-- 54 files · ~24,783 words
+- 55 files · ~27,118 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 4, .example 1, .css 1)
 
 ## Summary
-- 305 nodes · 510 edges · 20 communities (17 shown, 3 thin omitted)
+- 319 nodes · 551 edges · 20 communities (17 shown, 3 thin omitted)
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ed99a249`
+- Built from commit: `d7a99e21`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - home-screen.tsx
 - /graphify skill
-- app.tsx
+- getSupabase
 - package.json
 - mood-icons.tsx
 - Design system (two-person distance & mood app)
@@ -37,16 +37,16 @@
 - fake-supabase.ts
 
 ## God Nodes (most connected - your core abstractions)
-1. `/graphify skill` - 18 edges
-2. `getSupabase()` - 16 edges
-3. `compilerOptions` - 16 edges
-4. `Design system (two-person distance & mood app)` - 13 edges
-5. `HomeScreen()` - 11 edges
-6. `WaitingForPartner()` - 11 edges
-7. `react` - 11 edges
-8. `FakeSupabase` - 11 edges
+1. `getSupabase()` - 23 edges
+2. `WaitingForPartner()` - 21 edges
+3. `/graphify skill` - 18 edges
+4. `compilerOptions` - 16 edges
+5. `FakeSupabase` - 13 edges
+6. `Design system (two-person distance & mood app)` - 13 edges
+7. `HomeScreen()` - 11 edges
+8. `react` - 11 edges
 9. `graphify full build pipeline` - 10 edges
-10. `Base()` - 9 edges
+10. `test` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `UI Self-check Before Finishing` --semantically_similar_to--> `Playwright Tests CI Job`  [INFERRED] [semantically similar]
@@ -55,10 +55,10 @@
   app/page.tsx → components/app.tsx
 - `SignedIn()` --calls--> `useCouple()`  [EXTRACTED]
   components/app.tsx → lib/use-couple.ts
-- `sendLink()` --calls--> `getSupabase()`  [EXTRACTED]
-  components/sign-in.tsx → lib/supabase/client.ts
-- `verifyCode()` --calls--> `getSupabase()`  [EXTRACTED]
-  components/sign-in.tsx → lib/supabase/client.ts
+- `sendRequest()` --calls--> `requestPair()`  [EXTRACTED]
+  components/waiting-for-partner.tsx → lib/pairing.ts
+- `withdraw()` --calls--> `cancelRequest()`  [EXTRACTED]
+  components/waiting-for-partner.tsx → lib/pairing.ts
 
 ## Import Cycles
 - None detected.
@@ -72,24 +72,24 @@
 ## Communities (20 total, 3 thin omitted)
 
 ### Community 0 - "home-screen.tsx"
-Cohesion: 0.11
-Nodes (29): DistanceHero(), Presence(), Props, HomeScreen(), Props, LocationCard(), Props, MiniMap() (+21 more)
+Cohesion: 0.09
+Nodes (34): DistanceHero(), Presence(), Props, HomeScreen(), Props, LocationCard(), Props, MiniMap() (+26 more)
 
 ### Community 1 - "/graphify skill"
 Cohesion: 0.08
 Nodes (6): graphify Skill Trigger (/graphify), Community detection and labeling, EXTRACTED / INFERRED / AMBIGUOUS audit trail, graph.json, GRAPH_REPORT.md, /graphify skill
 
-### Community 2 - "app.tsx"
-Cohesion: 0.15
-Nodes (25): Home(), App(), Auth, Loading(), SignedIn(), signOut(), useAuth(), SignIn() (+17 more)
+### Community 2 - "getSupabase"
+Cohesion: 0.12
+Nodes (36): Home(), App(), Auth, Loading(), SignedIn(), signOut(), useAuth(), SignIn() (+28 more)
 
 ### Community 3 - "package.json"
-Cohesion: 0.05
-Nodes (36): eslintConfig, dependencies, next, react, react-dom, @supabase/supabase-js, devDependencies, eslint (+28 more)
+Cohesion: 0.06
+Nodes (35): eslintConfig, dependencies, next, react, react-dom, @supabase/supabase-js, devDependencies, eslint (+27 more)
 
 ### Community 4 - "mood-icons.tsx"
-Cohesion: 0.11
-Nodes (27): Props, Base(), CalmIcon(), ExcitedIcon(), HappyIcon(), IconProps, ICONS, LovedIcon() (+19 more)
+Cohesion: 0.12
+Nodes (22): Base(), CalmIcon(), ExcitedIcon(), HappyIcon(), IconProps, ICONS, LovedIcon(), MissingYouIcon() (+14 more)
 
 ### Community 5 - "Design system (two-person distance & mood app)"
 Cohesion: 0.20
@@ -136,28 +136,28 @@ Cohesion: 0.67
 Nodes (3): PWA App Icon 512px (Overlapping Circles), Dark Background with Pink/Amber Accent Palette, Overlapping Pink and Amber Circles Motif
 
 ### Community 19 - "fake-supabase.ts"
-Cohesion: 0.14
-Nodes (11): b64(), cors, FakeSupabase, Invite, makeSession(), ME, PARTNER, PARTNER_CODE (+3 more)
+Cohesion: 0.11
+Nodes (13): @playwright/test, b64(), cors, FakeSupabase, Invite, makeSession(), ME, NO_ROWS (+5 more)
 
 ## Knowledge Gaps
-- **100 isolated node(s):** `npx`, `@playwright/mcp`, `fredoka`, `figtree`, `metadata` (+95 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 126 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **102 isolated node(s):** `Auth`, `Props`, `Shown`, `NO_ROWS`, `Table` (+97 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 128 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `react` connect `home-screen.tsx` to `app.tsx`, `package.json`, `mood-icons.tsx`?**
-  _High betweenness centrality (0.122) - this node is a cross-community bridge._
+- **Why does `react` connect `home-screen.tsx` to `getSupabase`, `package.json`, `mood-icons.tsx`?**
+  _High betweenness centrality (0.129) - this node is a cross-community bridge._
 - **Why does `next` connect `layout.tsx` to `package.json`?**
   _High betweenness centrality (0.042) - this node is a cross-community bridge._
-- **What connects `npx`, `@playwright/mcp`, `fredoka` to the rest of the system?**
-  _100 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `Auth`, `Props`, `Shown` to the rest of the system?**
+  _102 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `home-screen.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.1106612685560054 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09435707678075855 - nodes in this community are weakly interconnected._
 - **Should `/graphify skill` be split into smaller, more focused modules?**
   _Cohesion score 0.08412698412698413 - nodes in this community are weakly interconnected._
-- **Should `app.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.14838709677419354 - nodes in this community are weakly interconnected._
+- **Should `getSupabase` be split into smaller, more focused modules?**
+  _Cohesion score 0.11962833914053426 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.05263157894736842 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
