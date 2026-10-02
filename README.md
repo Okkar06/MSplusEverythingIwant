@@ -20,6 +20,15 @@ Mood + live-location sharing app for two users, built with Next.js and Supabase.
    npm run dev
    ```
 
+## Using the app
+
+1. Apply the schema: `npx supabase db push` (or run `supabase/migrations/*.sql` in the SQL editor).
+2. Both of you sign in with your email (magic link or the code in the email).
+3. Pair your accounts once by running `supabase/snippets/pair_partners.sql` in the SQL editor,
+   then tap **Check again**.
+4. Pick a mood, and turn on **Share my location** to see the distance between you.
+   Location is only shared while the app is open, and only the latest spot is stored.
+
 ## Notes
 
 - Do not put the Supabase service role/secret key in browser-exposed variables.

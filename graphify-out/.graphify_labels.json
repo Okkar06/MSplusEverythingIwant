@@ -1,1 +1,17 @@
-{"0": "TypeScript Config", "1": "Lint & Package Manifest", "2": "Moods & Locations Schema", "3": "Profiles & Partner Pairing", "4": "Next.js App Shell", "5": "Supabase Client & App Concept", "6": "Dev Dependencies", "7": "Runtime Dependencies", "8": "npm Scripts", "9": "Unused Template Icons", "10": "PostCSS Config"}
+{
+  "0": "/graphify skill",
+  "1": "package.json",
+  "2": "Design system (two-person distance & mood app)",
+  "3": "compilerOptions",
+  "4": "layout.tsx",
+  "5": "20261001000000_initial_schema.sql",
+  "6": "app.tsx",
+  "7": "devDependencies",
+  "8": "Browser Window Icon (window.svg)",
+  "9": "postcss.config.mjs",
+  "10": "pair_partners.sql",
+  "11": "home-screen.tsx",
+  "12": "distance-hero.tsx",
+  "13": "mood-icons.tsx",
+  "14": "MSplusEverythingIwant"
+}
