@@ -1,17 +1,17 @@
 # Graph Report - MSplusEverythingIwant  (2026-10-02)
 
 ## Corpus Check
-- 55 files · ~27,118 words
+- 57 files · ~28,179 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 4, .example 1, .css 1)
 
 ## Summary
-- 319 nodes · 551 edges · 20 communities (17 shown, 3 thin omitted)
+- 325 nodes · 563 edges · 21 communities (18 shown, 3 thin omitted)
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d7a99e21`
+- Built from commit: `7ad33399`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -35,18 +35,19 @@
 - postcss.config.mjs
 - PWA Icon 192px (overlapping pink and amber circles)
 - fake-supabase.ts
+- distance-hero.tsx
 
 ## God Nodes (most connected - your core abstractions)
 1. `getSupabase()` - 23 edges
 2. `WaitingForPartner()` - 21 edges
 3. `/graphify skill` - 18 edges
 4. `compilerOptions` - 16 edges
-5. `FakeSupabase` - 13 edges
+5. `FakeSupabase` - 15 edges
 6. `Design system (two-person distance & mood app)` - 13 edges
-7. `HomeScreen()` - 11 edges
-8. `react` - 11 edges
+7. `HomeScreen()` - 12 edges
+8. `react` - 12 edges
 9. `graphify full build pipeline` - 10 edges
-10. `test` - 9 edges
+10. `Base()` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `UI Self-check Before Finishing` --semantically_similar_to--> `Playwright Tests CI Job`  [INFERRED] [semantically similar]
@@ -55,10 +56,10 @@
   app/page.tsx → components/app.tsx
 - `SignedIn()` --calls--> `useCouple()`  [EXTRACTED]
   components/app.tsx → lib/use-couple.ts
-- `sendRequest()` --calls--> `requestPair()`  [EXTRACTED]
-  components/waiting-for-partner.tsx → lib/pairing.ts
-- `withdraw()` --calls--> `cancelRequest()`  [EXTRACTED]
-  components/waiting-for-partner.tsx → lib/pairing.ts
+- `Presence()` --calls--> `timeAgo()`  [EXTRACTED]
+  components/distance-hero.tsx → lib/time.ts
+- `HomeScreen()` --calls--> `useLocationSharing()`  [EXTRACTED]
+  components/home-screen.tsx → lib/use-location-sharing.ts
 
 ## Import Cycles
 - None detected.
@@ -69,11 +70,11 @@
 - **User Onboarding Flow (sign-in, pair, share location)** — readme_magic_link_auth, readme_partner_pairing, readme_location_sharing, readme_supabase [EXTRACTED 1.00]
 - **graphify graph freshness mechanisms** — _claude_skills_graphify_references_update_incremental_update, _claude_skills_graphify_references_hooks_post_commit_hook, _claude_skills_graphify_references_add_watch_watch_mode, _claude_skills_graphify_references_add_watch_add_url [INFERRED 0.85]
 
-## Communities (20 total, 3 thin omitted)
+## Communities (21 total, 3 thin omitted)
 
 ### Community 0 - "home-screen.tsx"
 Cohesion: 0.09
-Nodes (34): DistanceHero(), Presence(), Props, HomeScreen(), Props, LocationCard(), Props, MiniMap() (+26 more)
+Nodes (29): HomeScreen(), Props, LocationCard(), Props, MoodCard(), Props, MoodIcon(), MoodPicker() (+21 more)
 
 ### Community 1 - "/graphify skill"
 Cohesion: 0.08
@@ -88,8 +89,8 @@ Cohesion: 0.06
 Nodes (35): eslintConfig, dependencies, next, react, react-dom, @supabase/supabase-js, devDependencies, eslint (+27 more)
 
 ### Community 4 - "mood-icons.tsx"
-Cohesion: 0.12
-Nodes (22): Base(), CalmIcon(), ExcitedIcon(), HappyIcon(), IconProps, ICONS, LovedIcon(), MissingYouIcon() (+14 more)
+Cohesion: 0.29
+Nodes (11): Base(), CalmIcon(), ExcitedIcon(), HappyIcon(), IconProps, ICONS, LovedIcon(), MissingYouIcon() (+3 more)
 
 ### Community 5 - "Design system (two-person distance & mood app)"
 Cohesion: 0.20
@@ -139,22 +140,26 @@ Nodes (3): PWA App Icon 512px (Overlapping Circles), Dark Background with Pink/A
 Cohesion: 0.11
 Nodes (13): @playwright/test, b64(), cors, FakeSupabase, Invite, makeSession(), ME, NO_ROWS (+5 more)
 
+### Community 20 - "distance-hero.tsx"
+Cohesion: 0.17
+Nodes (18): DistanceHero(), Presence(), Props, MiniMap(), project(), Props, COMPASS, compassDirection() (+10 more)
+
 ## Knowledge Gaps
-- **102 isolated node(s):** `Auth`, `Props`, `Shown`, `NO_ROWS`, `Table` (+97 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 128 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **103 isolated node(s):** `npx`, `@playwright/mcp`, `fredoka`, `figtree`, `metadata` (+98 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 130 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `react` connect `home-screen.tsx` to `getSupabase`, `package.json`, `mood-icons.tsx`?**
-  _High betweenness centrality (0.129) - this node is a cross-community bridge._
+- **Why does `react` connect `home-screen.tsx` to `getSupabase`, `package.json`, `mood-icons.tsx`, `distance-hero.tsx`?**
+  _High betweenness centrality (0.131) - this node is a cross-community bridge._
 - **Why does `next` connect `layout.tsx` to `package.json`?**
   _High betweenness centrality (0.042) - this node is a cross-community bridge._
-- **What connects `Auth`, `Props`, `Shown` to the rest of the system?**
-  _102 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `npx`, `@playwright/mcp`, `fredoka` to the rest of the system?**
+  _103 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `home-screen.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.09435707678075855 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09302325581395349 - nodes in this community are weakly interconnected._
 - **Should `/graphify skill` be split into smaller, more focused modules?**
   _Cohesion score 0.08412698412698413 - nodes in this community are weakly interconnected._
 - **Should `getSupabase` be split into smaller, more focused modules?**

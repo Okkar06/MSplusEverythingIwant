@@ -119,6 +119,19 @@
       "source_location": "L15"
     },
     {
+      "id": "components_mood_card_props",
+      "label": "Props",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "props",
+      "source_file": "components/mood-card.tsx",
+      "source_location": "L8"
+    },
+    {
       "id": "components_name_card_props",
       "label": "Props",
       "_callable": true,
@@ -145,6 +158,32 @@
       "source_location": "L3"
     },
     {
+      "id": "lib_types_locationrow",
+      "label": "LocationRow",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "locationrow",
+      "source_file": "lib/types.ts",
+      "source_location": "L18"
+    },
+    {
+      "id": "lib_types_profile",
+      "label": "Profile",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "profile",
+      "source_file": "lib/types.ts",
+      "source_location": "L5"
+    },
+    {
       "id": "lib_use_location_sharing_fix",
       "label": "Fix",
       "_callable": true,
@@ -168,7 +207,7 @@
       "file_type": "code",
       "norm_label": "fakesupabase",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L53"
+      "source_location": "L64"
     },
     {
       "id": "tests_fake_supabase_invite",
@@ -181,7 +220,7 @@
       "file_type": "code",
       "norm_label": "invite",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L18"
+      "source_location": "L24"
     },
     {
       "id": "tests_fake_supabase_push",
@@ -194,7 +233,7 @@
       "file_type": "code",
       "norm_label": "push",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L19"
+      "source_location": "L30"
     },
     {
       "id": "tests_fake_supabase_table",
@@ -207,7 +246,7 @@
       "file_type": "code",
       "norm_label": "table",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L17"
+      "source_location": "L23"
     },
     {
       "id": "components_app_auth",
@@ -216,7 +255,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "auth",
       "source_file": "components/app.tsx",
@@ -229,11 +268,24 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "props",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L6"
+      "source_location": "L19"
+    },
+    {
+      "id": "components_waiting_for_partner_shown",
+      "label": "Shown",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "getSupabase",
+      "file_type": "code",
+      "norm_label": "shown",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L33"
     },
     {
       "id": "lib_pairing_invite",
@@ -242,24 +294,24 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "invite",
       "source_file": "lib/pairing.ts",
-      "source_location": "L5"
+      "source_location": "L10"
     },
     {
-      "id": "components_mood_card_props",
-      "label": "Props",
+      "id": "lib_pairing_myrequest",
+      "label": "MyRequest",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "mood-icons.tsx",
+      "community": 2,
+      "community_name": "getSupabase",
       "file_type": "code",
-      "norm_label": "props",
-      "source_file": "components/mood-card.tsx",
-      "source_location": "L8"
+      "norm_label": "myrequest",
+      "source_file": "lib/pairing.ts",
+      "source_location": "L18"
     },
     {
       "id": "components_mood_icons_iconprops",
@@ -314,19 +366,6 @@
       "source_location": "L15"
     },
     {
-      "id": "lib_types_locationrow",
-      "label": "LocationRow",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "mood-icons.tsx",
-      "file_type": "code",
-      "norm_label": "locationrow",
-      "source_file": "lib/types.ts",
-      "source_location": "L18"
-    },
-    {
       "id": "lib_types_moodrow",
       "label": "MoodRow",
       "_callable": true,
@@ -338,19 +377,6 @@
       "norm_label": "moodrow",
       "source_file": "lib/types.ts",
       "source_location": "L11"
-    },
-    {
-      "id": "lib_types_profile",
-      "label": "Profile",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "mood-icons.tsx",
-      "file_type": "code",
-      "norm_label": "profile",
-      "source_file": "lib/types.ts",
-      "source_location": "L5"
     },
     {
       "id": "lib_use_couple_byuser",
@@ -461,6 +487,42 @@
       "norm_label": "moodcard()",
       "source_file": "components/mood-card.tsx",
       "source_location": "L16"
+    },
+    {
+      "id": "components_mood_icons_moodicon",
+      "label": "MoodIcon()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "moodicon()",
+      "source_file": "components/mood-icons.tsx",
+      "source_location": "L113"
+    },
+    {
+      "id": "components_mood_picker_moodpicker",
+      "label": "MoodPicker()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "moodpicker()",
+      "source_file": "components/mood-picker.tsx",
+      "source_location": "L14"
+    },
+    {
+      "id": "components_mood_picker_moodpicker_savenote",
+      "label": "saveNote()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "savenote()",
+      "source_file": "components/mood-picker.tsx",
+      "source_location": "L18"
     },
     {
       "id": "components_name_card_namecard",
@@ -628,7 +690,19 @@
       "file_type": "code",
       "norm_label": "b64()",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L28"
+      "source_location": "L39"
+    },
+    {
+      "id": "tests_fake_supabase_fakesupabase_benapproves",
+      "label": ".benApproves()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "fake-supabase.ts",
+      "file_type": "code",
+      "norm_label": ".benapproves()",
+      "source_file": "tests/fake-supabase.ts",
+      "source_location": "L100"
     },
     {
       "id": "tests_fake_supabase_fakesupabase_install",
@@ -640,7 +714,7 @@
       "file_type": "code",
       "norm_label": ".install()",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L97"
+      "source_location": "L125"
     },
     {
       "id": "tests_fake_supabase_fakesupabase_link",
@@ -652,7 +726,7 @@
       "file_type": "code",
       "norm_label": ".link()",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L73"
+      "source_location": "L87"
     },
     {
       "id": "tests_fake_supabase_fakesupabase_push",
@@ -664,7 +738,19 @@
       "file_type": "code",
       "norm_label": ".push()",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L85"
+      "source_location": "L113"
+    },
+    {
+      "id": "tests_fake_supabase_fakesupabase_requestfromben",
+      "label": ".requestFromBen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "fake-supabase.ts",
+      "file_type": "code",
+      "norm_label": ".requestfromben()",
+      "source_file": "tests/fake-supabase.ts",
+      "source_location": "L93"
     },
     {
       "id": "tests_fake_supabase_fakesupabase_setmood",
@@ -676,7 +762,7 @@
       "file_type": "code",
       "norm_label": ".setmood()",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L78"
+      "source_location": "L106"
     },
     {
       "id": "tests_fake_supabase_fakesupabase_signin",
@@ -688,7 +774,7 @@
       "file_type": "code",
       "norm_label": ".signin()",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L65"
+      "source_location": "L79"
     },
     {
       "id": "tests_fake_supabase_fakesupabase_visible",
@@ -700,7 +786,7 @@
       "file_type": "code",
       "norm_label": ".visible()",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L90"
+      "source_location": "L118"
     },
     {
       "id": "tests_fake_supabase_makesession",
@@ -712,7 +798,19 @@
       "file_type": "code",
       "norm_label": "makesession()",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L32"
+      "source_location": "L43"
+    },
+    {
+      "id": "tests_pairing_spec_askbutton",
+      "label": "askButton()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "fake-supabase.ts",
+      "file_type": "code",
+      "norm_label": "askbutton()",
+      "source_file": "tests/pairing.spec.ts",
+      "source_location": "L9"
     },
     {
       "id": "tests_pairing_spec_codeinput",
@@ -724,7 +822,7 @@
       "file_type": "code",
       "norm_label": "codeinput()",
       "source_file": "tests/pairing.spec.ts",
-      "source_location": "L7"
+      "source_location": "L8"
     },
     {
       "id": "tests_pairing_spec_home",
@@ -736,19 +834,19 @@
       "file_type": "code",
       "norm_label": "home()",
       "source_file": "tests/pairing.spec.ts",
-      "source_location": "L9"
+      "source_location": "L10"
     },
     {
-      "id": "tests_pairing_spec_linkbutton",
-      "label": "linkButton()",
+      "id": "tests_pairing_spec_linkrequest",
+      "label": "linkRequest()",
       "_callable": true,
       "_origin": "ast",
       "community": 19,
       "community_name": "fake-supabase.ts",
       "file_type": "code",
-      "norm_label": "linkbutton()",
+      "norm_label": "linkrequest()",
       "source_file": "tests/pairing.spec.ts",
-      "source_location": "L8"
+      "source_location": "L11"
     },
     {
       "id": "app_page_home",
@@ -756,7 +854,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "home()",
       "source_file": "app/page.tsx",
@@ -768,7 +866,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "app()",
       "source_file": "components/app.tsx",
@@ -780,11 +878,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "loading()",
       "source_file": "components/app.tsx",
-      "source_location": "L83"
+      "source_location": "L84"
     },
     {
       "id": "components_app_signedin",
@@ -792,7 +890,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "signedin()",
       "source_file": "components/app.tsx",
@@ -804,7 +902,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "signout()",
       "source_file": "components/app.tsx",
@@ -816,7 +914,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "useauth()",
       "source_file": "components/app.tsx",
@@ -828,7 +926,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "signin()",
       "source_file": "components/sign-in.tsx",
@@ -840,7 +938,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "sendlink()",
       "source_file": "components/sign-in.tsx",
@@ -852,23 +950,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "verifycode()",
       "source_file": "components/sign-in.tsx",
       "source_location": "L36"
     },
     {
-      "id": "components_waiting_for_partner_hoursleft",
-      "label": "hoursLeft()",
+      "id": "components_waiting_for_partner_incomingrequest",
+      "label": "IncomingRequest()",
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
-      "norm_label": "hoursleft()",
+      "norm_label": "incomingrequest()",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L16"
+      "source_location": "L290"
     },
     {
       "id": "components_waiting_for_partner_waitingforpartner",
@@ -876,23 +974,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "waitingforpartner()",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L23"
+      "source_location": "L44"
     },
     {
-      "id": "components_waiting_for_partner_waitingforpartner_linkup",
-      "label": "linkUp()",
+      "id": "components_waiting_for_partner_waitingforpartner_approve",
+      "label": "approve()",
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
-      "norm_label": "linkup()",
+      "norm_label": "approve()",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L63"
+      "source_location": "L147"
+    },
+    {
+      "id": "components_waiting_for_partner_waitingforpartner_decline",
+      "label": "decline()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "getSupabase",
+      "file_type": "code",
+      "norm_label": "decline()",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L158"
     },
     {
       "id": "components_waiting_for_partner_waitingforpartner_makecode",
@@ -900,11 +1010,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "makecode()",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L39"
+      "source_location": "L102"
+    },
+    {
+      "id": "components_waiting_for_partner_waitingforpartner_sendrequest",
+      "label": "sendRequest()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "getSupabase",
+      "file_type": "code",
+      "norm_label": "sendrequest()",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L126"
     },
     {
       "id": "components_waiting_for_partner_waitingforpartner_sharecode",
@@ -912,23 +1034,59 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "sharecode()",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L48"
+      "source_location": "L111"
     },
     {
-      "id": "lib_pairing_acceptinvite",
-      "label": "acceptInvite()",
+      "id": "components_waiting_for_partner_waitingforpartner_withdraw",
+      "label": "withdraw()",
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
-      "norm_label": "acceptinvite()",
+      "norm_label": "withdraw()",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L139"
+    },
+    {
+      "id": "components_waiting_for_partner_withhours",
+      "label": "withHours()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "getSupabase",
+      "file_type": "code",
+      "norm_label": "withhours()",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L35"
+    },
+    {
+      "id": "lib_pairing_approverequest",
+      "label": "approveRequest()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "getSupabase",
+      "file_type": "code",
+      "norm_label": "approverequest()",
       "source_file": "lib/pairing.ts",
-      "source_location": "L24"
+      "source_location": "L66"
+    },
+    {
+      "id": "lib_pairing_cancelrequest",
+      "label": "cancelRequest()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "getSupabase",
+      "file_type": "code",
+      "norm_label": "cancelrequest()",
+      "source_file": "lib/pairing.ts",
+      "source_location": "L60"
     },
     {
       "id": "lib_pairing_createinvite",
@@ -936,11 +1094,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "createinvite()",
       "source_file": "lib/pairing.ts",
-      "source_location": "L18"
+      "source_location": "L33"
+    },
+    {
+      "id": "lib_pairing_declinerequest",
+      "label": "declineRequest()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "getSupabase",
+      "file_type": "code",
+      "norm_label": "declinerequest()",
+      "source_file": "lib/pairing.ts",
+      "source_location": "L72"
     },
     {
       "id": "lib_pairing_formatcode",
@@ -948,11 +1118,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "formatcode()",
       "source_file": "lib/pairing.ts",
-      "source_location": "L33"
+      "source_location": "L88"
+    },
+    {
+      "id": "lib_pairing_haspartner",
+      "label": "hasPartner()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "getSupabase",
+      "file_type": "code",
+      "norm_label": "haspartner()",
+      "source_file": "lib/pairing.ts",
+      "source_location": "L78"
     },
     {
       "id": "lib_pairing_loadinvite",
@@ -960,11 +1142,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "loadinvite()",
       "source_file": "lib/pairing.ts",
-      "source_location": "L8"
+      "source_location": "L23"
+    },
+    {
+      "id": "lib_pairing_loadmyrequest",
+      "label": "loadMyRequest()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "getSupabase",
+      "file_type": "code",
+      "norm_label": "loadmyrequest()",
+      "source_file": "lib/pairing.ts",
+      "source_location": "L55"
+    },
+    {
+      "id": "lib_pairing_requestpair",
+      "label": "requestPair()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "getSupabase",
+      "file_type": "code",
+      "norm_label": "requestpair()",
+      "source_file": "lib/pairing.ts",
+      "source_location": "L44"
     },
     {
       "id": "lib_supabase_client_getsupabase",
@@ -972,7 +1178,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "getsupabase()",
       "source_file": "lib/supabase/client.ts",
@@ -1051,18 +1257,6 @@
       "source_location": "L93"
     },
     {
-      "id": "components_mood_icons_moodicon",
-      "label": "MoodIcon()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "mood-icons.tsx",
-      "file_type": "code",
-      "norm_label": "moodicon()",
-      "source_file": "components/mood-icons.tsx",
-      "source_location": "L113"
-    },
-    {
       "id": "components_mood_icons_sadicon",
       "label": "SadIcon()",
       "_callable": true,
@@ -1097,30 +1291,6 @@
       "norm_label": "tiredicon()",
       "source_file": "components/mood-icons.tsx",
       "source_location": "L66"
-    },
-    {
-      "id": "components_mood_picker_moodpicker",
-      "label": "MoodPicker()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "mood-icons.tsx",
-      "file_type": "code",
-      "norm_label": "moodpicker()",
-      "source_file": "components/mood-picker.tsx",
-      "source_location": "L14"
-    },
-    {
-      "id": "components_mood_picker_moodpicker_savenote",
-      "label": "saveNote()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "mood-icons.tsx",
-      "file_type": "code",
-      "norm_label": "savenote()",
-      "source_file": "components/mood-picker.tsx",
-      "source_location": "L18"
     },
     {
       "id": "lib_use_couple_usecouple",
@@ -1297,7 +1467,7 @@
       "author": null,
       "captured_at": null,
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "contributor": null,
       "file_type": "concept",
       "norm_label": "next_public_supabase_url / anon_key env vars",
@@ -1348,6 +1518,17 @@
       "file_type": "code",
       "norm_label": "mini-map.tsx",
       "source_file": "components/mini-map.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_mood_card",
+      "label": "mood-card.tsx",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "mood-card.tsx",
+      "source_file": "components/mood-card.tsx",
       "source_location": "L1"
     },
     {
@@ -1404,6 +1585,17 @@
       "norm_label": "live_window_ms",
       "source_file": "lib/time.ts",
       "source_location": "L28"
+    },
+    {
+      "id": "lib_types",
+      "label": "types.ts",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "types.ts",
+      "source_file": "lib/types.ts",
+      "source_location": "L1"
     },
     {
       "id": "lib_use_count_up",
@@ -1528,15 +1720,15 @@
       "source_location": null
     },
     {
-      "id": "test",
-      "label": "@playwright/test",
+      "id": "playwright_config",
+      "label": "playwright.config.ts",
       "_origin": "ast",
       "community": 19,
       "community_name": "fake-supabase.ts",
-      "confidence": "EXTRACTED",
       "file_type": "code",
-      "norm_label": "@playwright/test",
-      "source_file": "@playwright/test"
+      "norm_label": "playwright.config.ts",
+      "source_file": "playwright.config.ts",
+      "source_location": "L1"
     },
     {
       "id": "tests_fake_supabase",
@@ -1558,7 +1750,7 @@
       "file_type": "code",
       "norm_label": "cors",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L21"
+      "source_location": "L32"
     },
     {
       "id": "tests_fake_supabase_me",
@@ -1570,6 +1762,17 @@
       "norm_label": "me",
       "source_file": "tests/fake-supabase.ts",
       "source_location": "L9"
+    },
+    {
+      "id": "tests_fake_supabase_no_rows",
+      "label": "NO_ROWS",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "fake-supabase.ts",
+      "file_type": "code",
+      "norm_label": "no_rows",
+      "source_file": "tests/fake-supabase.ts",
+      "source_location": "L16"
     },
     {
       "id": "tests_fake_supabase_partner",
@@ -1602,7 +1805,7 @@
       "file_type": "code",
       "norm_label": "test",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L222"
+      "source_location": "L274"
     },
     {
       "id": "tests_home_spec",
@@ -1638,11 +1841,22 @@
       "source_location": "L1"
     },
     {
+      "id": "ref_playwright_test",
+      "label": "@playwright/test",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "fake-supabase.ts",
+      "file_type": "concept",
+      "norm_label": "@playwright/test",
+      "source_file": "package.json",
+      "source_location": "L18"
+    },
+    {
       "id": "app_page",
       "label": "page.tsx",
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "page.tsx",
       "source_file": "app/page.tsx",
@@ -1653,7 +1867,7 @@
       "label": "app.tsx",
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "app.tsx",
       "source_file": "components/app.tsx",
@@ -1664,7 +1878,7 @@
       "label": "sign-in.tsx",
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "sign-in.tsx",
       "source_file": "components/sign-in.tsx",
@@ -1675,7 +1889,7 @@
       "label": "waiting-for-partner.tsx",
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "waiting-for-partner.tsx",
       "source_file": "components/waiting-for-partner.tsx",
@@ -1686,7 +1900,7 @@
       "label": "pairing.ts",
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "pairing.ts",
       "source_file": "lib/pairing.ts",
@@ -1697,7 +1911,7 @@
       "label": "client.ts",
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "code",
       "norm_label": "client.ts",
       "source_file": "lib/supabase/client.ts",
@@ -1708,7 +1922,7 @@
       "label": "@supabase/supabase-js",
       "_origin": "ast",
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "file_type": "concept",
       "norm_label": "@supabase/supabase-js",
       "source_file": "package.json",
@@ -2012,17 +2226,6 @@
       "source_location": "L3"
     },
     {
-      "id": "playwright_config",
-      "label": "playwright.config.ts",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "playwright.config.ts",
-      "source_file": "playwright.config.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "ref_eslint",
       "label": "eslint",
       "_origin": "ast",
@@ -2043,17 +2246,6 @@
       "norm_label": "eslint-config-next",
       "source_file": "package.json",
       "source_location": "L24"
-    },
-    {
-      "id": "ref_playwright_test",
-      "label": "@playwright/test",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "@playwright/test",
-      "source_file": "package.json",
-      "source_location": "L18"
     },
     {
       "id": "ref_react_dom",
@@ -2144,17 +2336,6 @@
       "source_location": "L27"
     },
     {
-      "id": "components_mood_card",
-      "label": "mood-card.tsx",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "mood-icons.tsx",
-      "file_type": "code",
-      "norm_label": "mood-card.tsx",
-      "source_file": "components/mood-card.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "components_mood_icons",
       "label": "mood-icons.tsx",
       "_origin": "ast",
@@ -2219,17 +2400,6 @@
       "norm_label": "moods",
       "source_file": "lib/moods.ts",
       "source_location": "L26"
-    },
-    {
-      "id": "lib_types",
-      "label": "types.ts",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "mood-icons.tsx",
-      "file_type": "code",
-      "norm_label": "types.ts",
-      "source_file": "lib/types.ts",
-      "source_location": "L1"
     },
     {
       "id": "lib_use_couple",
@@ -3575,7 +3745,7 @@
       "author": null,
       "captured_at": null,
       "community": 2,
-      "community_name": "app.tsx",
+      "community_name": "getSupabase",
       "contributor": null,
       "file_type": "concept",
       "norm_label": "supabase backend",
@@ -4004,7 +4174,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/app.tsx",
-      "source_location": "L80",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
@@ -4429,30 +4599,6 @@
     },
     {
       "source": "components_waiting_for_partner_waitingforpartner",
-      "target": "lib_pairing_loadinvite",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L31",
-      "weight": 1.0
-    },
-    {
-      "source": "components_waiting_for_partner_waitingforpartner",
-      "target": "components_waiting_for_partner_hoursleft",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L32",
-      "weight": 1.0
-    },
-    {
-      "source": "components_waiting_for_partner_waitingforpartner",
       "target": "lib_pairing_createinvite",
       "relation": "calls",
       "_origin": "ast",
@@ -4460,7 +4606,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L42",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -4472,31 +4618,151 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L49",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
       "source": "components_waiting_for_partner_waitingforpartner",
-      "target": "lib_pairing_acceptinvite",
+      "target": "lib_pairing_requestpair",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L67",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
-      "source": "components_waiting_for_partner_waitingforpartner_linkup",
-      "target": "lib_pairing_acceptinvite",
+      "source": "components_waiting_for_partner_waitingforpartner",
+      "target": "lib_pairing_cancelrequest",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L67",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner_waitingforpartner",
+      "target": "lib_pairing_approverequest",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L150",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner_waitingforpartner",
+      "target": "lib_pairing_declinerequest",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L161",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner_waitingforpartner",
+      "target": "components_waiting_for_partner_incomingrequest",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L179",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner_waitingforpartner",
+      "target": "lib_pairing_loadinvite",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner_waitingforpartner",
+      "target": "components_waiting_for_partner_withhours",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner_waitingforpartner",
+      "target": "lib_pairing_loadmyrequest",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner_waitingforpartner",
+      "target": "lib_supabase_client_getsupabase",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner_waitingforpartner",
+      "target": "lib_pairing_haspartner",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner_waitingforpartner_approve",
+      "target": "lib_pairing_approverequest",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L150",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner_waitingforpartner_decline",
+      "target": "lib_pairing_declinerequest",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
@@ -4508,19 +4774,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L42",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
       "source": "components_waiting_for_partner_waitingforpartner_makecode",
-      "target": "components_waiting_for_partner_hoursleft",
+      "target": "components_waiting_for_partner_withhours",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L45",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner_waitingforpartner_sendrequest",
+      "target": "lib_pairing_requestpair",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
@@ -4532,11 +4810,23 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L49",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
-      "source": "lib_pairing_acceptinvite",
+      "source": "components_waiting_for_partner_waitingforpartner_withdraw",
+      "target": "lib_pairing_cancelrequest",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_pairing_approverequest",
       "target": "lib_supabase_client_getsupabase",
       "relation": "calls",
       "_origin": "ast",
@@ -4544,7 +4834,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "lib/pairing.ts",
-      "source_location": "L25",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_pairing_cancelrequest",
+      "target": "lib_supabase_client_getsupabase",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "lib/pairing.ts",
+      "source_location": "L61",
       "weight": 1.0
     },
     {
@@ -4556,7 +4858,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "lib/pairing.ts",
-      "source_location": "L19",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_pairing_declinerequest",
+      "target": "lib_supabase_client_getsupabase",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "lib/pairing.ts",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_pairing_haspartner",
+      "target": "lib_supabase_client_getsupabase",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "lib/pairing.ts",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -4568,7 +4894,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "lib/pairing.ts",
-      "source_location": "L9",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_pairing_loadmyrequest",
+      "target": "lib_supabase_client_getsupabase",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "lib/pairing.ts",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_pairing_requestpair",
+      "target": "lib_supabase_client_getsupabase",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "lib/pairing.ts",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -4656,6 +5006,30 @@
       "weight": 1.0
     },
     {
+      "source": "tests_fake_supabase_fakesupabase_benapproves",
+      "target": "tests_fake_supabase_fakesupabase_link",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/fake-supabase.ts",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_fake_supabase_fakesupabase_benapproves",
+      "target": "tests_fake_supabase_fakesupabase_push",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/fake-supabase.ts",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
       "source": "tests_fake_supabase_fakesupabase_install",
       "target": "tests_fake_supabase_makesession",
       "relation": "calls",
@@ -4664,7 +5038,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L119",
+      "source_location": "L147",
       "weight": 1.0
     },
     {
@@ -4676,7 +5050,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L129",
+      "source_location": "L157",
       "weight": 1.0
     },
     {
@@ -4688,7 +5062,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L134",
+      "source_location": "L166",
       "weight": 1.0
     },
     {
@@ -4700,7 +5074,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L175",
+      "source_location": "L223",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_fake_supabase_fakesupabase_requestfromben",
+      "target": "tests_fake_supabase_fakesupabase_push",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/fake-supabase.ts",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -4712,7 +5098,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L68",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -4724,7 +5110,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L44",
+      "source_location": "L55",
       "weight": 1.0
     },
     {
@@ -4736,7 +5122,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L224",
+      "source_location": "L276",
       "weight": 1.0
     },
     {
@@ -4748,7 +5134,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L225",
+      "source_location": "L277",
       "weight": 1.0
     },
     {
@@ -4760,7 +5146,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L228",
+      "source_location": "L280",
       "weight": 1.0
     },
     {
@@ -4772,7 +5158,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L231",
+      "source_location": "L283",
       "weight": 1.0
     },
     {
@@ -4784,7 +5170,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L48",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -4801,19 +5187,31 @@
     },
     {
       "source": "tests_pairing_spec",
-      "target": "tests_pairing_spec_codeinput",
+      "target": "tests_pairing_spec_home",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/pairing.spec.ts",
-      "source_location": "L7",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
       "source": "tests_pairing_spec",
-      "target": "tests_pairing_spec_linkbutton",
+      "target": "tests_pairing_spec_linkrequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/pairing.spec.ts",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_pairing_spec",
+      "target": "tests_pairing_spec_codeinput",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4825,7 +5223,7 @@
     },
     {
       "source": "tests_pairing_spec",
-      "target": "tests_pairing_spec_home",
+      "target": "tests_pairing_spec_askbutton",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4856,7 +5254,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L54",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -4868,7 +5266,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L55",
+      "source_location": "L66",
       "weight": 1.0
     },
     {
@@ -4880,7 +5278,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L56",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -5329,7 +5727,7 @@
     },
     {
       "source": "components_waiting_for_partner",
-      "target": "lib_pairing_acceptinvite",
+      "target": "lib_supabase_client_getsupabase",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5337,6 +5735,30 @@
       "context": "import",
       "source_file": "components/waiting-for-partner.tsx",
       "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner",
+      "target": "lib_pairing_approverequest",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner",
+      "target": "lib_pairing_cancelrequest",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -5348,7 +5770,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L4",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner",
+      "target": "lib_pairing_declinerequest",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -5360,7 +5794,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L4",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner",
+      "target": "lib_pairing_haspartner",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -5372,7 +5818,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -5384,7 +5830,43 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L4",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner",
+      "target": "lib_pairing_loadmyrequest",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner",
+      "target": "lib_pairing_myrequest",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner",
+      "target": "lib_pairing_requestpair",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -5396,7 +5878,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "lib/pairing.ts",
-      "source_location": "L3",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -5768,7 +6250,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "tests/pairing.spec.ts",
-      "source_location": "L1",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -5780,7 +6262,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "tests/pairing.spec.ts",
-      "source_location": "L1",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -5792,7 +6274,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "tests/pairing.spec.ts",
-      "source_location": "L1",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -5804,7 +6286,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "tests/pairing.spec.ts",
-      "source_location": "L1",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -5816,7 +6298,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "tests/pairing.spec.ts",
-      "source_location": "L1",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -6360,7 +6842,7 @@
     },
     {
       "source": "components_waiting_for_partner",
-      "target": "lib_pairing",
+      "target": "lib_supabase_client",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6368,6 +6850,18 @@
       "context": "import",
       "source_file": "components/waiting-for-partner.tsx",
       "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner",
+      "target": "lib_pairing",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -6403,7 +6897,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "lib/pairing.ts",
-      "source_location": "L3",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -6606,7 +7100,7 @@
     },
     {
       "source": "tests_pairing_spec",
-      "target": "tests_fake_supabase",
+      "target": "ref_playwright_test",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6614,6 +7108,19 @@
       "context": "import",
       "source_file": "tests/pairing.spec.ts",
       "source_location": "L1",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "tests_pairing_spec",
+      "target": "tests_fake_supabase",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/pairing.spec.ts",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -6649,7 +7156,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L78",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
@@ -6661,7 +7168,7 @@
       "confidence_score": 1.0,
       "context": "re-export",
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L239",
+      "source_location": "L291",
       "weight": 1.0
     },
     {
@@ -6892,7 +7399,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/app.tsx",
-      "source_location": "L83",
+      "source_location": "L84",
       "weight": 1.0
     },
     {
@@ -7172,13 +7679,46 @@
     },
     {
       "source": "components_waiting_for_partner",
-      "target": "components_waiting_for_partner_hoursleft",
+      "target": "components_waiting_for_partner_props",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L16",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner",
+      "target": "components_waiting_for_partner_incomingrequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L290",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner",
+      "target": "components_waiting_for_partner_shown",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner",
+      "target": "components_waiting_for_partner_withhours",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -7189,18 +7729,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L23",
-      "weight": 1.0
-    },
-    {
-      "source": "components_waiting_for_partner",
-      "target": "components_waiting_for_partner_props",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L6",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -7211,18 +7740,51 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L39",
+      "source_location": "L102",
       "weight": 1.0
     },
     {
       "source": "components_waiting_for_partner_waitingforpartner",
-      "target": "components_waiting_for_partner_waitingforpartner_linkup",
+      "target": "components_waiting_for_partner_waitingforpartner_sendrequest",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/waiting-for-partner.tsx",
-      "source_location": "L63",
+      "source_location": "L126",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner_waitingforpartner",
+      "target": "components_waiting_for_partner_waitingforpartner_withdraw",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L139",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner_waitingforpartner",
+      "target": "components_waiting_for_partner_waitingforpartner_approve",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L147",
+      "weight": 1.0
+    },
+    {
+      "source": "components_waiting_for_partner_waitingforpartner",
+      "target": "components_waiting_for_partner_waitingforpartner_decline",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/waiting-for-partner.tsx",
+      "source_location": "L158",
       "weight": 1.0
     },
     {
@@ -7337,7 +7899,18 @@
     },
     {
       "source": "lib_pairing",
-      "target": "lib_pairing_createinvite",
+      "target": "lib_pairing_invite",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/pairing.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_pairing",
+      "target": "lib_pairing_myrequest",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7348,18 +7921,18 @@
     },
     {
       "source": "lib_pairing",
-      "target": "lib_pairing_acceptinvite",
+      "target": "lib_pairing_loadinvite",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "lib/pairing.ts",
-      "source_location": "L24",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
       "source": "lib_pairing",
-      "target": "lib_pairing_formatcode",
+      "target": "lib_pairing_createinvite",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7370,24 +7943,79 @@
     },
     {
       "source": "lib_pairing",
-      "target": "lib_pairing_invite",
+      "target": "lib_pairing_requestpair",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "lib/pairing.ts",
-      "source_location": "L5",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
       "source": "lib_pairing",
-      "target": "lib_pairing_loadinvite",
+      "target": "lib_pairing_loadmyrequest",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "lib/pairing.ts",
-      "source_location": "L8",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_pairing",
+      "target": "lib_pairing_cancelrequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/pairing.ts",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_pairing",
+      "target": "lib_pairing_approverequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/pairing.ts",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_pairing",
+      "target": "lib_pairing_declinerequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/pairing.ts",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_pairing",
+      "target": "lib_pairing_haspartner",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/pairing.ts",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_pairing",
+      "target": "lib_pairing_formatcode",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/pairing.ts",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -8019,13 +8647,24 @@
     },
     {
       "source": "tests_fake_supabase",
+      "target": "tests_fake_supabase_no_rows",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/fake-supabase.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_fake_supabase",
       "target": "tests_fake_supabase_table",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L17",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -8036,29 +8675,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L18",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_fake_supabase",
-      "target": "tests_fake_supabase_push",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/fake-supabase.ts",
-      "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_fake_supabase",
-      "target": "tests_fake_supabase_cors",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/fake-supabase.ts",
-      "source_location": "L21",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -8069,23 +8686,23 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L222",
+      "source_location": "L274",
       "weight": 1.0
     },
     {
       "source": "tests_fake_supabase",
-      "target": "tests_fake_supabase_b64",
+      "target": "tests_fake_supabase_push",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L28",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
       "source": "tests_fake_supabase",
-      "target": "tests_fake_supabase_makesession",
+      "target": "tests_fake_supabase_cors",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8096,13 +8713,35 @@
     },
     {
       "source": "tests_fake_supabase",
+      "target": "tests_fake_supabase_b64",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/fake-supabase.ts",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_fake_supabase",
+      "target": "tests_fake_supabase_makesession",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/fake-supabase.ts",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_fake_supabase",
       "target": "tests_fake_supabase_fakesupabase",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L53",
+      "source_location": "L64",
       "weight": 1.0
     },
     {
@@ -8315,15 +8954,6 @@
       "weight": 1.0
     },
     {
-      "source": "tests_pairing_spec",
-      "target": "test",
-      "relation": "dynamic_import",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/pairing.spec.ts"
-    },
-    {
       "source": "app_icon_app_icon",
       "target": "app_icon_two_lights_motif",
       "relation": "implements",
@@ -8336,24 +8966,13 @@
     },
     {
       "source": "tests_fake_supabase_fakesupabase",
-      "target": "tests_fake_supabase_fakesupabase_signin",
+      "target": "tests_fake_supabase_fakesupabase_benapproves",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L65",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_fake_supabase_fakesupabase",
-      "target": "tests_fake_supabase_fakesupabase_link",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/fake-supabase.ts",
-      "source_location": "L73",
+      "source_location": "L100",
       "weight": 1.0
     },
     {
@@ -8364,7 +8983,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L78",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
@@ -8375,7 +8994,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L85",
+      "source_location": "L113",
       "weight": 1.0
     },
     {
@@ -8386,7 +9005,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L90",
+      "source_location": "L118",
       "weight": 1.0
     },
     {
@@ -8397,7 +9016,40 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/fake-supabase.ts",
-      "source_location": "L97",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_fake_supabase_fakesupabase",
+      "target": "tests_fake_supabase_fakesupabase_signin",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/fake-supabase.ts",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_fake_supabase_fakesupabase",
+      "target": "tests_fake_supabase_fakesupabase_link",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/fake-supabase.ts",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_fake_supabase_fakesupabase",
+      "target": "tests_fake_supabase_fakesupabase_requestfromben",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/fake-supabase.ts",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -9824,5 +10476,5 @@
       "source_file": ".claude/skills/graphify/references/update.md"
     }
   ],
-  "built_at_commit": "ed99a249ecf30f5be5f45085f84d686213449dc6"
+  "built_at_commit": "d7a99e21991a7e6c1315cab1524ac06340388a85"
 }
