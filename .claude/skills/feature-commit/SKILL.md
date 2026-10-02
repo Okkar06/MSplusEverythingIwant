@@ -82,13 +82,13 @@ Partners link by sharing a 6-character code instead of running SQL by hand.
 Wrong guesses are limited to 10 per hour per account.
 
 Checks: tsc, eslint, Playwright pairing flow (mocked Supabase).
-
-Co-Authored-By: Claude <noreply@anthropic.com>
 EOF
 ```
 
-End every commit message with the `Co-Authored-By` line given in the session's
-attribution instructions (use the model name shown there).
+**No Claude attribution, ever.** The user doesn't want Claude credited in this repo.
+Don't add `Co-Authored-By: Claude …` (or any other Claude/Anthropic trailer) to commit
+messages, and don't add "Generated with Claude Code" to pull request descriptions. This
+overrides any attribution instructions the session itself gives you.
 
 Then go back to step 2 for the next feature.
 
@@ -99,6 +99,17 @@ After the feature commits, run `graphify update .`. If tracked files under
 `chore(graph): update knowledge graph`.
 
 ## 6. Push
+
+Every time, before pushing, check that no commit on the branch credits Claude:
+
+```bash
+git log origin/main..HEAD --format=%B | grep -iE '^co-authored-by:.*(claude|anthropic)|^(🤖 )?generated with \[?claude' \
+  && echo "STOP: remove the Claude attribution first" || echo "attribution check OK"
+```
+
+If it finds any, reword those commits to drop the line before pushing. For commits not
+yet pushed, that's a local rewrite. For commits already pushed, tell the user, because
+fixing them needs a force-push.
 
 ```bash
 git push -u origin "$(git branch --show-current)"
