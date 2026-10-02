@@ -12,3 +12,7 @@ After any UI or frontend change:
 6. If anything is broken, fix it and check again.
 Only say the task is done after this passes, and tell me what you checked.
 
+
+## Commit and push feature by feature
+- **feature-commit** (`.claude/skills/feature-commit/SKILL.md`): review, commit and push one feature at a time. Trigger: `/feature-commit`.
+Every session follows this. As soon as a feature is finished and working, use the feature-commit skill without waiting to be asked: split the changes into one commit per feature, run type-check, lint, tests and a code review on each, commit, then push the current branch. Never commit to or push `main`, and never force-push.
