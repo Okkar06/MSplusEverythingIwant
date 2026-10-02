@@ -11,7 +11,7 @@
 --   approve_pair_request()  owner: links you both
 --   decline_pair_request()  owner: refuses, and cancels the code (it has leaked)
 --
--- Replaces accept_pair_invite from 20261002000000_pair_invites.sql.
+-- Replaces accept_pair_invite from 20261002000000_pair_invites.sql (kept as a stub, below).
 
 
 -- ─── Requests live on the invite ─────────────────────────────────────────────
@@ -34,7 +34,20 @@ create unique index pair_invites_one_request_each
 -- (owner only) still decides who receives which rows.
 alter publication supabase_realtime add table public.pair_invites;
 
-drop function public.accept_pair_invite(text);
+-- The old one-step accept is retired, but kept as a stub (same signature and
+-- grants) so a page still running the previous app version gets a clear
+-- message instead of "function not found". Drop it in a later migration.
+create or replace function public.accept_pair_invite(invite_code text)
+returns uuid
+language plpgsql
+volatile
+security definer
+set search_path = ''
+as $$
+begin
+  raise exception 'The app was updated. Reload the page and try again.';
+end;
+$$;
 
 
 -- ─── Request ─────────────────────────────────────────────────────────────────

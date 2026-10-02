@@ -116,6 +116,22 @@ test.describe("using your partner's code", () => {
     await expect(askButton(page)).toBeVisible();
   });
 
+  test("a failed check while waiting isn't mistaken for a decline", async ({ page, supabase }) => {
+    await page.goto("/");
+    await codeInput(page).fill(PARTNER_CODE);
+    await askButton(page).click();
+    await expect(page.getByText("Waiting for Ben to accept…")).toBeVisible();
+
+    supabase.failNext.add("/rpc/my_pair_request");
+    await expect.poll(() => supabase.failNext.size, { timeout: 10_000 }).toBe(0);
+    // The failed poll tick was skipped: still waiting, and no "didn't accept".
+    await expect(page.getByText("Waiting for Ben to accept…")).toBeVisible();
+    await expect(page.getByText(/didn't accept/)).toHaveCount(0);
+
+    supabase.benApproves();
+    await expect(home(page)).toBeVisible();
+  });
+
   test("a pending request is shown again after a reload, and can be cancelled", async ({ page, supabase }) => {
     supabase.myRequest = { owner_name: "Ben" };
     await page.goto("/");

@@ -70,6 +70,8 @@ export class FakeSupabase {
   /** Ana's request on someone else's code, waiting for them to accept. */
   myRequest: { owner_name: string } | null = null;
   misses = 0;
+  /** Paths (e.g. "/rpc/my_pair_request") whose next call fails, as if offline. */
+  failNext = new Set<string>();
   /** Every request to the fake project, for assertions. */
   requests: Request[] = [];
   private pushers: Push[] = [];
@@ -139,6 +141,12 @@ export class FakeSupabase {
           },
           body: body === undefined ? "" : JSON.stringify(body),
         });
+      for (const failing of this.failNext) {
+        if (path.endsWith(failing)) {
+          this.failNext.delete(failing);
+          return route.fulfill({ status: 503, headers: cors, body: "" });
+        }
+      }
       const raise = (message: string) =>
         reply(400, { code: "P0001", details: null, hint: null, message });
 

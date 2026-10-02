@@ -60,7 +60,7 @@ export function WaitingForPartner({ userId, name, email, onPaired, onSignOut }: 
     Promise.all([loadInvite(), loadMyRequest()]).then(([found, mine]) => {
       if (cancelled) return;
       setInvite(found && withHours(found));
-      setRequest(mine);
+      setRequest(mine.request);
     });
 
     const supabase = getSupabase();
@@ -87,9 +87,13 @@ export function WaitingForPartner({ userId, name, email, onPaired, onSignOut }: 
     if (!request) return;
     const id = setInterval(async () => {
       if (document.visibilityState !== "visible") return;
-      if (await loadMyRequest()) return;
+      const mine = await loadMyRequest();
+      // Still waiting, or the check failed (offline?): try again next tick.
+      if (mine.failed || mine.request) return;
       // Gone: either approved (you now have a partner) or declined/expired.
-      if (await hasPartner(userId)) {
+      const linked = await hasPartner(userId);
+      if (linked === null) return;
+      if (linked) {
         onPaired();
         return;
       }

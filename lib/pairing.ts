@@ -51,10 +51,14 @@ export async function requestPair(
   return { request: { owner_name: data as string }, error: null };
 }
 
-/** Your request that's still waiting for an answer, if any. */
-export async function loadMyRequest(): Promise<MyRequest | null> {
-  const { data } = await getSupabase().rpc("my_pair_request").maybeSingle<MyRequest>();
-  return data;
+/**
+ * Your request that's still waiting for an answer, if any. `failed` is true
+ * when the check itself didn't work (e.g. offline), so callers don't mistake
+ * a network blip for "no request".
+ */
+export async function loadMyRequest(): Promise<{ request: MyRequest | null; failed: boolean }> {
+  const { data, error } = await getSupabase().rpc("my_pair_request").maybeSingle<MyRequest>();
+  return { request: data, failed: !!error };
 }
 
 export async function cancelRequest(): Promise<string | null> {
@@ -74,13 +78,17 @@ export async function declineRequest(): Promise<string | null> {
   return error?.message ?? null;
 }
 
-/** Whether your profile now points at a partner (i.e. your request was approved). */
-export async function hasPartner(userId: string): Promise<boolean> {
-  const { data } = await getSupabase()
+/**
+ * Whether your profile now points at a partner (i.e. your request was
+ * approved), or null if the check didn't work.
+ */
+export async function hasPartner(userId: string): Promise<boolean | null> {
+  const { data, error } = await getSupabase()
     .from("profiles")
     .select("partner_id")
     .eq("id", userId)
     .maybeSingle<{ partner_id: string | null }>();
+  if (error) return null;
   return !!data?.partner_id;
 }
 
