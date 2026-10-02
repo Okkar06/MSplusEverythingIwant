@@ -50,8 +50,11 @@ export function SignIn() {
     <section className="animate-fade-up rounded-lg bg-surface p-4 sm:p-6">
       <h1 className="font-display text-heading">Hello, you two</h1>
 
+      {/* Keyed so React builds new elements per step. Otherwise it reuses the
+          "Use a different email" button as the email form's submit button
+          mid-click, and that click sends the email again. */}
       {step === "email" ? (
-        <form onSubmit={sendLink} className="mt-6 flex flex-col gap-4">
+        <form key="email" onSubmit={sendLink} className="mt-6 flex flex-col gap-4">
           <p className="text-body text-ink-muted">
             Sign in with your email. We&apos;ll send you a link and a code.
           </p>
@@ -84,7 +87,7 @@ export function SignIn() {
           </button>
         </form>
       ) : (
-        <form onSubmit={verifyCode} className="mt-6 flex flex-col gap-4">
+        <form key="code" onSubmit={verifyCode} className="mt-6 flex flex-col gap-4">
           <p className="text-body text-ink-muted">
             Check <span className="font-medium text-ink">{email}</span>. Tap the link, or type the
             code here.
