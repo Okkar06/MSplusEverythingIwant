@@ -105,6 +105,19 @@ export class FakeSupabase {
     this.push("profiles", "UPDATE", this.profiles[ME]);
   }
 
+  /** Clears both links and both locations, as unpair() does. */
+  unlink() {
+    this.profiles[ME] = { ...this.profiles[ME], partner_id: null };
+    if (this.profiles[PARTNER]) this.profiles[PARTNER] = { ...this.profiles[PARTNER], partner_id: null };
+    this.locations = {};
+  }
+
+  /** Ben unlinks on his phone; Realtime tells Ana's app. */
+  benUnlinks() {
+    this.unlink();
+    this.push("profiles", "UPDATE", this.profiles[ME]);
+  }
+
   setMood(userId: string, mood: MoodValue, note: string | null = null) {
     const row = { user_id: userId, mood, note, updated_at: new Date().toISOString() };
     this.moods[userId] = row;
@@ -230,6 +243,11 @@ export class FakeSupabase {
         this.invite = null;
         this.link();
         return reply(200, PARTNER);
+      }
+      if (path === "/rest/v1/rpc/unpair") {
+        if (!this.profiles[ME].partner_id) return raise("You're not linked with anyone.");
+        this.unlink();
+        return reply(204);
       }
       if (path === "/rest/v1/rpc/decline_pair_request") {
         if (this.invite?.requested_name) this.invite = null;

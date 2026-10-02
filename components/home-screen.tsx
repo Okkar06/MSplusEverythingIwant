@@ -10,6 +10,7 @@ import { MoodPicker } from "./mood-picker";
 import { LocationCard } from "./location-card";
 import { MiniMap } from "./mini-map";
 import { NameCard } from "./name-card";
+import { UnlinkCard } from "./unlink-card";
 
 type Props = {
   couple: ReturnType<typeof useCouple>;
@@ -68,6 +69,16 @@ export function HomeScreen({ couple, me, partner, onSignOut }: Props) {
       />
 
       <NameCard name={me.display_name} onSave={couple.setName} onSignOut={onSignOut} delayMs={300} />
+
+      <UnlinkCard
+        partnerName={partner.display_name}
+        onUnlink={async () => {
+          // Turn sharing off first, so it doesn't quietly resume with a future partner.
+          await location.stop();
+          return couple.unlink();
+        }}
+        delayMs={360}
+      />
 
       {couple.error && (
         <p role="alert" className="text-center text-small text-ink">

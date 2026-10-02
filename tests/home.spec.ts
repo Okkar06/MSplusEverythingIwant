@@ -51,3 +51,35 @@ test("signing out goes back to the sign-in screen", async ({ page }) => {
   await page.getByRole("button", { name: "Sign out" }).click();
   await expect(page.getByRole("heading", { name: "Hello, you two" })).toBeVisible();
 });
+
+test.describe("unlinking", () => {
+  test("asks first, and keeping the link changes nothing", async ({ page, supabase }) => {
+    await page.goto("/");
+    const card = page.getByRole("region", { name: "Unlink" });
+    await card.getByRole("button", { name: "Unlink…" }).click();
+    await expect(card.getByText("Unlink from Ben?")).toBeVisible();
+    await card.getByRole("button", { name: "Keep linked" }).click();
+    await expect(card.getByText("Linked with Ben")).toBeVisible();
+    expect(supabase.profiles[ME].partner_id).toBe(PARTNER);
+    expect(supabase.requests.some((r) => r.url().endsWith("/rpc/unpair"))).toBe(false);
+  });
+
+  test("unlinking goes back to the waiting screen and stops sharing", async ({ page, supabase }) => {
+    await page.addInitScript(() => localStorage.setItem("share-location", "on"));
+    await page.goto("/");
+    const card = page.getByRole("region", { name: "Unlink" });
+    await card.getByRole("button", { name: "Unlink…" }).click();
+    await card.getByRole("button", { name: "Unlink", exact: true }).click();
+
+    await expect(page.getByRole("heading", { name: "Almost there" })).toBeVisible();
+    expect(supabase.profiles[ME].partner_id).toBeNull();
+    expect(await page.evaluate(() => localStorage.getItem("share-location"))).toBe("off");
+  });
+
+  test("when the partner unlinks, the screen moves on by itself", async ({ page, supabase }) => {
+    await page.goto("/");
+    await expect(page.getByRole("heading", { name: "You & Ben" })).toBeVisible();
+    supabase.benUnlinks();
+    await expect(page.getByRole("heading", { name: "Almost there" })).toBeVisible();
+  });
+});

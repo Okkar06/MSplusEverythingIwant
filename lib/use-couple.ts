@@ -137,5 +137,14 @@ export function useCouple(userId: string) {
     [userId],
   );
 
-  return { ...state, me, partner, reload, setMood, setName };
+  // Ends the link for both of you (see supabase/migrations/20261002020000_unpair.sql).
+  // The partner's app moves on by itself when Realtime brings their changed profile.
+  const unlink = useCallback(async () => {
+    const { error } = await getSupabase().rpc("unpair");
+    if (error) return error.message;
+    reload();
+    return null;
+  }, [reload]);
+
+  return { ...state, me, partner, reload, setMood, setName, unlink };
 }
