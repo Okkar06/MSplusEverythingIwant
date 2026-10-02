@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Two lights, you and partner (tokens: dark bg, you, partner). -->
+  <rect width="512" height="512" rx="112" fill="#17121C"/>
+  <circle cx="206" cy="256" r="110" fill="#FF7C8F"/>
+  <circle cx="306" cy="256" r="110" fill="#FFBE5C" fill-opacity="0.9"/>
+</svg>

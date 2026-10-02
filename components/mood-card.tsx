@@ -38,7 +38,11 @@ export function MoodCard({ name, tone, mood, now, delayMs = 0 }: Props) {
         )}
       </div>
 
-      <p className="mt-3 font-display text-title">{style ? style.label : "No mood yet"}</p>
+      {style ? (
+        <p className="mt-3 font-display text-title">{style.label}</p>
+      ) : (
+        <p className="mt-3 text-body text-ink-muted">No mood yet</p>
+      )}
       {mood?.note && <p className="mt-1 text-small text-ink-muted break-words">“{mood.note}”</p>}
       {mood && (
         <p className="mt-2 text-caption text-ink-muted">{timeAgo(mood.updated_at, now)}</p>

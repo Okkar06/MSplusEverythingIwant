@@ -10,6 +10,8 @@ const figtree = Figtree({ subsets: ["latin"], variable: "--font-figtree" });
 export const metadata: Metadata = {
   title: "MSplusEverythingIwant",
   description: "Mood and location sharing app",
+  // Full-screen when opened from the iOS home screen.
+  appleWebApp: { capable: true, title: "Us", statusBarStyle: "default" },
 };
 
 export const viewport: Viewport = {

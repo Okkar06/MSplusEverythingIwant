@@ -8,6 +8,8 @@ import { DistanceHero } from "./distance-hero";
 import { MoodCard } from "./mood-card";
 import { MoodPicker } from "./mood-picker";
 import { LocationCard } from "./location-card";
+import { MiniMap } from "./mini-map";
+import { NameCard } from "./name-card";
 
 type Props = {
   couple: ReturnType<typeof useCouple>;
@@ -19,26 +21,29 @@ type Props = {
 export function HomeScreen({ couple, me, partner, onSignOut }: Props) {
   const now = useNow();
   const location = useLocationSharing(me.id);
+  const mine = couple.locations[me.id];
+  const theirs = couple.locations[partner.id];
 
   return (
     <>
-      <header className="flex items-center justify-between">
+      <header>
         <h1 className="font-display text-heading">
           <span className="text-you">You</span> &amp;{" "}
           <span className="text-partner">{partner.display_name}</span>
         </h1>
-        <button className="h-11 px-2 text-small text-accent" onClick={onSignOut}>
-          Sign out
-        </button>
       </header>
 
       <DistanceHero
-        mine={couple.locations[me.id]}
-        theirs={couple.locations[partner.id]}
+        mine={mine}
+        theirs={theirs}
         partnerName={partner.display_name}
         sharing={location.sharing}
         now={now}
       />
+
+      {mine && theirs && (
+        <MiniMap mine={mine} theirs={theirs} partnerName={partner.display_name} now={now} delayMs={30} />
+      )}
 
       <div className="grid grid-cols-2 gap-4 sm:gap-6">
         <MoodCard name="You" tone="you" mood={couple.moods[me.id]} now={now} delayMs={60} />
@@ -61,6 +66,8 @@ export function HomeScreen({ couple, me, partner, onSignOut }: Props) {
         onStop={location.stop}
         delayMs={240}
       />
+
+      <NameCard name={me.display_name} onSave={couple.setName} onSignOut={onSignOut} delayMs={300} />
 
       {couple.error && (
         <p role="alert" className="text-center text-small text-ink">

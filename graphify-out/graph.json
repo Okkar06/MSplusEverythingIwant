@@ -36,19 +36,6 @@
         "source_file": ".claude/skills/graphify/SKILL.md"
       },
       {
-        "id": "create_next_app_default_icon_set",
-        "label": "create-next-app default 16x16 gray UI icons (file, globe, window)",
-        "nodes": [
-          "public_file_file_document_icon",
-          "public_globe_globe_icon",
-          "public_window_browser_window_icon"
-        ],
-        "relation": "form",
-        "confidence": "INFERRED",
-        "confidence_score": 0.85,
-        "source_file": "public/file.svg"
-      },
-      {
         "id": "graphify_auto_rebuild_mechanisms",
         "label": "graphify graph freshness mechanisms",
         "nodes": [
@@ -76,7 +63,7 @@
       "file_type": "code",
       "norm_label": "props",
       "source_file": "components/home-screen.tsx",
-      "source_location": "L12"
+      "source_location": "L14"
     },
     {
       "id": "components_location_card_props",
@@ -116,6 +103,19 @@
       "norm_label": "props",
       "source_file": "components/mood-picker.tsx",
       "source_location": "L8"
+    },
+    {
+      "id": "components_name_card_props",
+      "label": "Props",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "props",
+      "source_file": "components/name-card.tsx",
+      "source_location": "L5"
     },
     {
       "id": "lib_moods_moodstyle",
@@ -222,6 +222,19 @@
       "source_location": "L8"
     },
     {
+      "id": "components_mini_map_props",
+      "label": "Props",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "distance-hero.tsx",
+      "file_type": "code",
+      "norm_label": "props",
+      "source_file": "components/mini-map.tsx",
+      "source_location": "L15"
+    },
+    {
       "id": "lib_distance_point",
       "label": "Point",
       "_callable": true,
@@ -296,7 +309,7 @@
       "file_type": "code",
       "norm_label": "homescreen()",
       "source_file": "components/home-screen.tsx",
-      "source_location": "L19"
+      "source_location": "L21"
     },
     {
       "id": "components_location_card_locationcard",
@@ -359,6 +372,30 @@
       "source_location": "L18"
     },
     {
+      "id": "components_name_card_namecard",
+      "label": "NameCard()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "namecard()",
+      "source_file": "components/name-card.tsx",
+      "source_location": "L12"
+    },
+    {
+      "id": "components_name_card_namecard_save",
+      "label": "save()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "save()",
+      "source_file": "components/name-card.tsx",
+      "source_location": "L19"
+    },
+    {
       "id": "lib_time_usenow",
       "label": "useNow()",
       "_callable": true,
@@ -407,6 +444,42 @@
       "source_location": "L50"
     },
     {
+      "id": "components_mini_map_minimap",
+      "label": "MiniMap()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "distance-hero.tsx",
+      "file_type": "code",
+      "norm_label": "minimap()",
+      "source_file": "components/mini-map.tsx",
+      "source_location": "L45"
+    },
+    {
+      "id": "components_mini_map_project",
+      "label": "project()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "distance-hero.tsx",
+      "file_type": "code",
+      "norm_label": "project()",
+      "source_file": "components/mini-map.tsx",
+      "source_location": "L23"
+    },
+    {
+      "id": "lib_distance_compassdirection",
+      "label": "compassDirection()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "distance-hero.tsx",
+      "file_type": "code",
+      "norm_label": "compassdirection()",
+      "source_file": "lib/distance.ts",
+      "source_location": "L28"
+    },
+    {
       "id": "lib_distance_distancemeters",
       "label": "distanceMeters()",
       "_callable": true,
@@ -428,7 +501,7 @@
       "file_type": "code",
       "norm_label": "formatdistance()",
       "source_file": "lib/distance.ts",
-      "source_location": "L20"
+      "source_location": "L43"
     },
     {
       "id": "lib_time_islive",
@@ -632,7 +705,19 @@
       "file_type": "code",
       "norm_label": "rootlayout()",
       "source_file": "app/layout.tsx",
-      "source_location": "L22"
+      "source_location": "L24"
+    },
+    {
+      "id": "app_manifest_manifest",
+      "label": "manifest()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "layout.tsx",
+      "file_type": "code",
+      "norm_label": "manifest()",
+      "source_file": "app/manifest.ts",
+      "source_location": "L5"
     },
     {
       "id": "app_page_home",
@@ -967,6 +1052,28 @@
       "source_location": "L3"
     },
     {
+      "id": "playwright_config",
+      "label": "playwright.config.ts",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "playwright.config.ts",
+      "source_file": "playwright.config.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_example_spec",
+      "label": "example.spec.ts",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "example.spec.ts",
+      "source_file": "tests/example.spec.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "ref_eslint",
       "label": "eslint",
       "_origin": "ast",
@@ -975,7 +1082,7 @@
       "file_type": "concept",
       "norm_label": "eslint",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L23"
     },
     {
       "id": "ref_eslint_config_next",
@@ -986,7 +1093,18 @@
       "file_type": "concept",
       "norm_label": "eslint-config-next",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L24"
+    },
+    {
+      "id": "ref_playwright_test",
+      "label": "@playwright/test",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "@playwright/test",
+      "source_file": "package.json",
+      "source_location": "L18"
     },
     {
       "id": "ref_react_dom",
@@ -1008,7 +1126,7 @@
       "file_type": "concept",
       "norm_label": "supabase",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L25"
     },
     {
       "id": "ref_tailwindcss",
@@ -1019,7 +1137,7 @@
       "file_type": "concept",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "ref_tailwindcss_postcss",
@@ -1030,7 +1148,7 @@
       "file_type": "concept",
       "norm_label": "@tailwindcss/postcss",
       "source_file": "package.json",
-      "source_location": "L18"
+      "source_location": "L19"
     },
     {
       "id": "ref_types_node",
@@ -1041,7 +1159,7 @@
       "file_type": "concept",
       "norm_label": "@types/node",
       "source_file": "package.json",
-      "source_location": "L19"
+      "source_location": "L20"
     },
     {
       "id": "ref_types_react",
@@ -1052,7 +1170,7 @@
       "file_type": "concept",
       "norm_label": "@types/react",
       "source_file": "package.json",
-      "source_location": "L20"
+      "source_location": "L21"
     },
     {
       "id": "ref_types_react_dom",
@@ -1063,7 +1181,7 @@
       "file_type": "concept",
       "norm_label": "@types/react-dom",
       "source_file": "package.json",
-      "source_location": "L21"
+      "source_location": "L22"
     },
     {
       "id": "ref_typescript",
@@ -1074,7 +1192,7 @@
       "file_type": "concept",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L26"
+      "source_location": "L27"
     },
     {
       "id": "supabase_snippets_pair_partners",
@@ -1129,6 +1247,17 @@
       "file_type": "code",
       "norm_label": "mood-picker.tsx",
       "source_file": "components/mood-picker.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_name_card",
+      "label": "name-card.tsx",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "name-card.tsx",
+      "source_file": "components/name-card.tsx",
       "source_location": "L1"
     },
     {
@@ -1198,6 +1327,17 @@
       "source_location": "L18"
     },
     {
+      "id": "ref_react",
+      "label": "react",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "home-screen.tsx",
+      "file_type": "concept",
+      "norm_label": "react",
+      "source_file": "package.json",
+      "source_location": "L14"
+    },
+    {
       "id": "components_distance_hero",
       "label": "distance-hero.tsx",
       "_origin": "ast",
@@ -1206,6 +1346,17 @@
       "file_type": "code",
       "norm_label": "distance-hero.tsx",
       "source_file": "components/distance-hero.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_mini_map",
+      "label": "mini-map.tsx",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "distance-hero.tsx",
+      "file_type": "code",
+      "norm_label": "mini-map.tsx",
+      "source_file": "components/mini-map.tsx",
       "source_location": "L1"
     },
     {
@@ -1218,6 +1369,17 @@
       "norm_label": "distance.ts",
       "source_file": "lib/distance.ts",
       "source_location": "L1"
+    },
+    {
+      "id": "lib_distance_compass",
+      "label": "COMPASS",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "distance-hero.tsx",
+      "file_type": "code",
+      "norm_label": "compass",
+      "source_file": "lib/distance.ts",
+      "source_location": "L16"
     },
     {
       "id": "lib_time",
@@ -1262,17 +1424,6 @@
       "norm_label": "use-location-sharing.ts",
       "source_file": "lib/use-location-sharing.ts",
       "source_location": "L1"
-    },
-    {
-      "id": "ref_react",
-      "label": "react",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "distance-hero.tsx",
-      "file_type": "concept",
-      "norm_label": "react",
-      "source_file": "package.json",
-      "source_location": "L14"
     },
     {
       "id": "components_mood_icons",
@@ -1341,6 +1492,18 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "notes",
+      "source_file": "README.md",
+      "source_location": "L32"
+    },
+    {
+      "id": "readme_using_the_app",
+      "label": "Using the app",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "MSplusEverythingIwant",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "using the app",
       "source_file": "README.md",
       "source_location": "L23"
     },
@@ -1606,7 +1769,18 @@
       "file_type": "code",
       "norm_label": "viewport",
       "source_file": "app/layout.tsx",
-      "source_location": "L15"
+      "source_location": "L17"
+    },
+    {
+      "id": "app_manifest",
+      "label": "manifest.ts",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "layout.tsx",
+      "file_type": "code",
+      "norm_label": "manifest.ts",
+      "source_file": "app/manifest.ts",
+      "source_location": "L1"
     },
     {
       "id": "next_config",
@@ -1870,7 +2044,7 @@
       "file_type": "code",
       "norm_label": "eslint",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L23"
     },
     {
       "id": "package_devdependencies_eslint_config_next",
@@ -1881,7 +2055,18 @@
       "file_type": "code",
       "norm_label": "eslint-config-next",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L24"
+    },
+    {
+      "id": "package_devdependencies_playwright_test",
+      "label": "@playwright/test",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "@playwright/test",
+      "source_file": "package.json",
+      "source_location": "L18"
     },
     {
       "id": "package_devdependencies_supabase",
@@ -1892,7 +2077,7 @@
       "file_type": "code",
       "norm_label": "supabase",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L25"
     },
     {
       "id": "package_devdependencies_tailwindcss",
@@ -1903,7 +2088,7 @@
       "file_type": "code",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "package_devdependencies_tailwindcss_postcss",
@@ -1914,7 +2099,7 @@
       "file_type": "code",
       "norm_label": "@tailwindcss/postcss",
       "source_file": "package.json",
-      "source_location": "L18"
+      "source_location": "L19"
     },
     {
       "id": "package_devdependencies_types_node",
@@ -1925,7 +2110,7 @@
       "file_type": "code",
       "norm_label": "@types/node",
       "source_file": "package.json",
-      "source_location": "L19"
+      "source_location": "L20"
     },
     {
       "id": "package_devdependencies_types_react",
@@ -1936,7 +2121,7 @@
       "file_type": "code",
       "norm_label": "@types/react",
       "source_file": "package.json",
-      "source_location": "L20"
+      "source_location": "L21"
     },
     {
       "id": "package_devdependencies_types_react_dom",
@@ -1947,7 +2132,7 @@
       "file_type": "code",
       "norm_label": "@types/react-dom",
       "source_file": "package.json",
-      "source_location": "L21"
+      "source_location": "L22"
     },
     {
       "id": "package_devdependencies_typescript",
@@ -1958,7 +2143,7 @@
       "file_type": "code",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L26"
+      "source_location": "L27"
     },
     {
       "id": "postcss_config",
@@ -2822,81 +3007,6 @@
       "source_url": null
     },
     {
-      "id": "public_next_next_js_logo",
-      "label": "Next.js Wordmark Logo (next.svg)",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 6,
-      "community_name": "app.tsx",
-      "contributor": null,
-      "file_type": "image",
-      "norm_label": "next.js wordmark logo (next.svg)",
-      "source_file": "public/next.svg",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "public_vercel_vercel_logo",
-      "label": "Vercel Triangle Logo (vercel.svg)",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 6,
-      "community_name": "app.tsx",
-      "contributor": null,
-      "file_type": "image",
-      "norm_label": "vercel triangle logo (vercel.svg)",
-      "source_file": "public/vercel.svg",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "public_file_file_document_icon",
-      "label": "File Document Icon (file.svg)",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 8,
-      "community_name": "Browser Window Icon (window.svg)",
-      "contributor": null,
-      "file_type": "image",
-      "norm_label": "file document icon (file.svg)",
-      "source_file": "public/file.svg",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "public_globe_globe_icon",
-      "label": "Globe Icon (globe.svg)",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 8,
-      "community_name": "Browser Window Icon (window.svg)",
-      "contributor": null,
-      "file_type": "image",
-      "norm_label": "globe icon (globe.svg)",
-      "source_file": "public/globe.svg",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "public_window_browser_window_icon",
-      "label": "Browser Window Icon (window.svg)",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 8,
-      "community_name": "Browser Window Icon (window.svg)",
-      "contributor": null,
-      "file_type": "image",
-      "norm_label": "browser window icon (window.svg)",
-      "source_file": "public/window.svg",
-      "source_location": null,
-      "source_url": null
-    },
-    {
       "id": "app_globals",
       "label": "app_globals",
       "_origin": "semantic",
@@ -3135,7 +3245,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/home-screen.tsx",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -3147,7 +3257,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/home-screen.tsx",
-      "source_location": "L21",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -3159,7 +3269,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/home-screen.tsx",
-      "source_location": "L35",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "components_home_screen_homescreen",
+      "target": "components_mini_map_minimap",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/home-screen.tsx",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -3171,7 +3293,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/home-screen.tsx",
-      "source_location": "L44",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -3183,7 +3305,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/home-screen.tsx",
-      "source_location": "L54",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -3195,7 +3317,67 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/home-screen.tsx",
-      "source_location": "L56",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "components_home_screen_homescreen",
+      "target": "components_name_card_namecard",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/home-screen.tsx",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "components_mini_map_minimap",
+      "target": "lib_distance_distancemeters",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/mini-map.tsx",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "components_mini_map_minimap",
+      "target": "components_mini_map_project",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/mini-map.tsx",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "components_mini_map_minimap",
+      "target": "lib_time_islive",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/mini-map.tsx",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "components_mini_map_minimap",
+      "target": "lib_distance_compassdirection",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/mini-map.tsx",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
@@ -3219,7 +3401,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/mood-card.tsx",
-      "source_location": "L44",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -3620,6 +3802,30 @@
     },
     {
       "source": "components_home_screen",
+      "target": "components_mini_map_minimap",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/home-screen.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "components_home_screen",
+      "target": "components_name_card_namecard",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/home-screen.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "components_home_screen",
       "target": "lib_types_profile",
       "relation": "imports",
       "_origin": "ast",
@@ -3700,6 +3906,54 @@
       "context": "import",
       "source_file": "components/home-screen.tsx",
       "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "components_mini_map",
+      "target": "lib_distance_compassdirection",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/mini-map.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "components_mini_map",
+      "target": "lib_distance_distancemeters",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/mini-map.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "components_mini_map",
+      "target": "lib_time_islive",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/mini-map.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "components_mini_map",
+      "target": "lib_types_locationrow",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/mini-map.tsx",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -3980,7 +4234,7 @@
     },
     {
       "source": "package",
-      "target": "ref_tailwindcss_postcss",
+      "target": "ref_playwright_test",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3992,7 +4246,7 @@
     },
     {
       "source": "package",
-      "target": "ref_types_node",
+      "target": "ref_tailwindcss_postcss",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4004,7 +4258,7 @@
     },
     {
       "source": "package",
-      "target": "ref_types_react",
+      "target": "ref_types_node",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4016,7 +4270,7 @@
     },
     {
       "source": "package",
-      "target": "ref_types_react_dom",
+      "target": "ref_types_react",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4028,7 +4282,7 @@
     },
     {
       "source": "package",
-      "target": "ref_eslint",
+      "target": "ref_types_react_dom",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4040,7 +4294,7 @@
     },
     {
       "source": "package",
-      "target": "ref_eslint_config_next",
+      "target": "ref_eslint",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4052,7 +4306,7 @@
     },
     {
       "source": "package",
-      "target": "ref_supabase",
+      "target": "ref_eslint_config_next",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4064,7 +4318,7 @@
     },
     {
       "source": "package",
-      "target": "ref_tailwindcss",
+      "target": "ref_supabase",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4076,7 +4330,7 @@
     },
     {
       "source": "package",
-      "target": "ref_typescript",
+      "target": "ref_tailwindcss",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4084,6 +4338,18 @@
       "context": "import",
       "source_file": "package.json",
       "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_typescript",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -4109,6 +4375,19 @@
       "context": "import",
       "source_file": "app/layout.tsx",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_manifest",
+      "target": "ref_next",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/manifest.ts",
+      "source_location": "L1",
+      "type_only": true,
       "weight": 1.0
     },
     {
@@ -4271,6 +4550,30 @@
     },
     {
       "source": "components_home_screen",
+      "target": "components_mini_map",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/home-screen.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "components_home_screen",
+      "target": "components_name_card",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/home-screen.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "components_home_screen",
       "target": "lib_types",
       "relation": "imports_from",
       "_origin": "ast",
@@ -4356,6 +4659,43 @@
       "weight": 1.0
     },
     {
+      "source": "components_mini_map",
+      "target": "lib_distance",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/mini-map.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "components_mini_map",
+      "target": "lib_time",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/mini-map.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "components_mini_map",
+      "target": "lib_types",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/mini-map.tsx",
+      "source_location": "L5",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
       "source": "components_mood_card",
       "target": "components_mood_icons",
       "relation": "imports_from",
@@ -4477,6 +4817,18 @@
       "source_file": "components/mood-picker.tsx",
       "source_location": "L6",
       "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "components_name_card",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/name-card.tsx",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -4676,6 +5028,30 @@
       "weight": 1.0
     },
     {
+      "source": "playwright_config",
+      "target": "ref_playwright_test",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "playwright.config.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_example_spec",
+      "target": "ref_playwright_test",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/example.spec.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "app_layout",
       "target": "app_layout_metadata",
       "relation": "contains",
@@ -4694,7 +5070,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/layout.tsx",
-      "source_location": "L15",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -4705,7 +5081,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/layout.tsx",
-      "source_location": "L22",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -4728,6 +5104,17 @@
       "confidence_score": 1.0,
       "source_file": "app/layout.tsx",
       "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "app_manifest",
+      "target": "app_manifest_manifest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/manifest.ts",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -4848,7 +5235,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/home-screen.tsx",
-      "source_location": "L12",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -4859,7 +5246,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/home-screen.tsx",
-      "source_location": "L19",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -4882,6 +5269,39 @@
       "confidence_score": 1.0,
       "source_file": "components/location-card.tsx",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "components_mini_map",
+      "target": "components_mini_map_props",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/mini-map.tsx",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "components_mini_map",
+      "target": "components_mini_map_project",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/mini-map.tsx",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "components_mini_map",
+      "target": "components_mini_map_minimap",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/mini-map.tsx",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -4984,6 +5404,39 @@
       "weight": 1.0
     },
     {
+      "source": "components_name_card",
+      "target": "components_name_card_namecard",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/name-card.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "components_name_card",
+      "target": "components_name_card_props",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/name-card.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "components_name_card_namecard",
+      "target": "components_name_card_namecard_save",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/name-card.tsx",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
       "source": "components_sign_in",
       "target": "components_sign_in_signin",
       "relation": "contains",
@@ -5051,13 +5504,24 @@
     },
     {
       "source": "lib_distance",
-      "target": "lib_distance_formatdistance",
+      "target": "lib_distance_compass",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "lib/distance.ts",
-      "source_location": "L20",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_distance",
+      "target": "lib_distance_compassdirection",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/distance.ts",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -5069,6 +5533,17 @@
       "confidence_score": 1.0,
       "source_file": "lib/distance.ts",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_distance",
+      "target": "lib_distance_formatdistance",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/distance.ts",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -5458,7 +5933,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss_postcss",
+      "target": "package_devdependencies_playwright_test",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5469,7 +5944,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_types_node",
+      "target": "package_devdependencies_tailwindcss_postcss",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5480,7 +5955,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react",
+      "target": "package_devdependencies_types_node",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5491,7 +5966,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react_dom",
+      "target": "package_devdependencies_types_react",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5502,7 +5977,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint",
+      "target": "package_devdependencies_types_react_dom",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5513,7 +5988,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint_config_next",
+      "target": "package_devdependencies_eslint",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5524,7 +5999,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_supabase",
+      "target": "package_devdependencies_eslint_config_next",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5535,7 +6010,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss",
+      "target": "package_devdependencies_supabase",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5546,13 +6021,24 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_typescript",
+      "target": "package_devdependencies_tailwindcss",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_typescript",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -5623,13 +6109,24 @@
     },
     {
       "source": "readme_mspluseverythingiwant",
-      "target": "readme_notes",
+      "target": "readme_using_the_app",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
       "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_mspluseverythingiwant",
+      "target": "readme_notes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -7005,28 +7502,6 @@
       "weight": 1.0
     },
     {
-      "source": "public_next_next_js_logo",
-      "target": "app_page_home",
-      "relation": "references",
-      "_origin": "semantic",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "public/next.svg",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "public_vercel_vercel_logo",
-      "target": "app_page_home",
-      "relation": "references",
-      "_origin": "semantic",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "public/vercel.svg",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
       "source": "_claude_skills_graphify_references_update_incremental_update",
       "target": "_claude_skills_graphify_skill_manifest",
       "relation": "shares_data_with",
@@ -7049,28 +7524,6 @@
       "weight": 1.0
     },
     {
-      "source": "public_file_file_document_icon",
-      "target": "public_window_browser_window_icon",
-      "relation": "conceptually_related_to",
-      "_origin": "semantic",
-      "confidence": "INFERRED",
-      "confidence_score": 0.75,
-      "source_file": "public/file.svg",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "public_globe_globe_icon",
-      "target": "public_window_browser_window_icon",
-      "relation": "conceptually_related_to",
-      "_origin": "semantic",
-      "confidence": "INFERRED",
-      "confidence_score": 0.75,
-      "source_file": "public/globe.svg",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
       "source": "_claude_skills_graphify_references_update_build_merge",
       "target": "_claude_skills_graphify_skill_merge_extraction",
       "relation": "semantically_similar_to",
@@ -7078,17 +7531,6 @@
       "confidence": "INFERRED",
       "confidence_score": 0.75,
       "source_file": ".claude/skills/graphify/references/update.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "public_next_next_js_logo",
-      "target": "public_vercel_vercel_logo",
-      "relation": "conceptually_related_to",
-      "_origin": "semantic",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "public/next.svg",
       "source_location": null,
       "weight": 1.0
     },
@@ -7248,19 +7690,6 @@
       "source_file": ".claude/skills/graphify/SKILL.md"
     },
     {
-      "id": "create_next_app_default_icon_set",
-      "label": "create-next-app default 16x16 gray UI icons (file, globe, window)",
-      "nodes": [
-        "public_file_file_document_icon",
-        "public_globe_globe_icon",
-        "public_window_browser_window_icon"
-      ],
-      "relation": "form",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "public/file.svg"
-    },
-    {
       "id": "graphify_auto_rebuild_mechanisms",
       "label": "graphify graph freshness mechanisms",
       "nodes": [
@@ -7275,5 +7704,5 @@
       "source_file": ".claude/skills/graphify/references/update.md"
     }
   ],
-  "built_at_commit": "9c131a9c580caa81a76c6be2bc0902626950d9ad"
+  "built_at_commit": "ac9579ed0352b681fc18f75d62fab08b218e99af"
 }

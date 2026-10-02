@@ -115,5 +115,23 @@ export function useCouple(userId: string) {
     [userId],
   );
 
-  return { ...state, me, partner, reload, setMood };
+  // Profiles aren't on Realtime, so a new name updates locally here and your
+  // partner sees it the next time their app loads or reconnects.
+  const setName = useCallback(
+    async (displayName: string) => {
+      const { error } = await getSupabase()
+        .from("profiles")
+        .update({ display_name: displayName })
+        .eq("id", userId);
+      if (error) return error.message;
+      setState((s) => ({
+        ...s,
+        profiles: { ...s.profiles, [userId]: { ...s.profiles[userId], display_name: displayName } },
+      }));
+      return null;
+    },
+    [userId],
+  );
+
+  return { ...state, me, partner, reload, setMood, setName };
 }
