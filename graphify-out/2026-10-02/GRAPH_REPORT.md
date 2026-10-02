@@ -1,17 +1,17 @@
 # Graph Report - MSplusEverythingIwant  (2026-10-02)
 
 ## Corpus Check
-- 51 files · ~22,838 words
+- 55 files · ~24,638 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 4, .example 1, .css 1)
 
 ## Summary
-- 271 nodes · 447 edges · 19 communities (16 shown, 3 thin omitted)
+- 279 nodes · 454 edges · 20 communities (17 shown, 3 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `043dd011`
+- Built from commit: `92e3300f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -25,7 +25,7 @@
 - compilerOptions
 - 20261001000000_initial_schema.sql
 - layout.tsx
-- devDependencies
+- /feature-commit
 - MSplusEverythingIwant Mood + Location Sharing App
 - UI Self-check Before Finishing
 - playwright
@@ -34,14 +34,15 @@
 - PWA App Icon 512px (Overlapping Circles)
 - postcss.config.mjs
 - PWA Icon 192px (overlapping pink and amber circles)
+- devDependencies
 
 ## God Nodes (most connected - your core abstractions)
 1. `/graphify skill` - 18 edges
 2. `getSupabase()` - 16 edges
 3. `compilerOptions` - 16 edges
 4. `Design system (two-person distance & mood app)` - 13 edges
-5. `WaitingForPartner()` - 11 edges
-6. `HomeScreen()` - 11 edges
+5. `HomeScreen()` - 11 edges
+6. `WaitingForPartner()` - 11 edges
 7. `react` - 11 edges
 8. `graphify full build pipeline` - 10 edges
 9. `Base()` - 9 edges
@@ -50,13 +51,13 @@
 ## Surprising Connections (you probably didn't know these)
 - `UI Self-check Before Finishing` --semantically_similar_to--> `Playwright Tests CI Job`  [INFERRED] [semantically similar]
   .claude/CLAUDE.md → .github/workflows/playwright.yml
+- `MoodCard()` --calls--> `timeAgo()`  [EXTRACTED]
+  components/mood-card.tsx → lib/time.ts
 - `Home()` --calls--> `App()`  [EXTRACTED]
   app/page.tsx → components/app.tsx
-- `linkUp()` --calls--> `acceptInvite()`  [EXTRACTED]
-  components/waiting-for-partner.tsx → lib/pairing.ts
+- `SignedIn()` --calls--> `useCouple()`  [EXTRACTED]
+  components/app.tsx → lib/use-couple.ts
 - `sendLink()` --calls--> `getSupabase()`  [EXTRACTED]
-  components/sign-in.tsx → lib/supabase/client.ts
-- `verifyCode()` --calls--> `getSupabase()`  [EXTRACTED]
   components/sign-in.tsx → lib/supabase/client.ts
 
 ## Import Cycles
@@ -68,7 +69,7 @@
 - **User Onboarding Flow (sign-in, pair, share location)** — readme_magic_link_auth, readme_partner_pairing, readme_location_sharing, readme_supabase [EXTRACTED 1.00]
 - **graphify graph freshness mechanisms** — _claude_skills_graphify_references_update_incremental_update, _claude_skills_graphify_references_hooks_post_commit_hook, _claude_skills_graphify_references_add_watch_watch_mode, _claude_skills_graphify_references_add_watch_add_url [INFERRED 0.85]
 
-## Communities (19 total, 3 thin omitted)
+## Communities (20 total, 3 thin omitted)
 
 ### Community 0 - "home-screen.tsx"
 Cohesion: 0.10
@@ -79,16 +80,16 @@ Cohesion: 0.08
 Nodes (6): graphify Skill Trigger (/graphify), Community detection and labeling, EXTRACTED / INFERRED / AMBIGUOUS audit trail, graph.json, GRAPH_REPORT.md, /graphify skill
 
 ### Community 2 - "app.tsx"
-Cohesion: 0.14
-Nodes (26): Home(), App(), Auth, Loading(), SignedIn(), signOut(), useAuth(), SignIn() (+18 more)
+Cohesion: 0.15
+Nodes (25): Home(), App(), Auth, Loading(), SignedIn(), signOut(), useAuth(), SignIn() (+17 more)
 
 ### Community 3 - "package.json"
 Cohesion: 0.07
 Nodes (25): eslintConfig, dependencies, next, react, react-dom, @supabase/supabase-js, name, private (+17 more)
 
 ### Community 4 - "mood-icons.tsx"
-Cohesion: 0.12
-Nodes (25): Props, Base(), CalmIcon(), ExcitedIcon(), HappyIcon(), IconProps, ICONS, LovedIcon() (+17 more)
+Cohesion: 0.11
+Nodes (26): MoodCard(), Props, Base(), CalmIcon(), ExcitedIcon(), HappyIcon(), IconProps, ICONS (+18 more)
 
 ### Community 5 - "Design system (two-person distance & mood app)"
 Cohesion: 0.20
@@ -106,9 +107,9 @@ Nodes (7): locations_set_updated_at, moods_set_updated_at, on_auth_user_created,
 Cohesion: 0.17
 Nodes (6): figtree, fredoka, metadata, viewport, nextConfig, next
 
-### Community 9 - "devDependencies"
-Cohesion: 0.18
-Nodes (11): devDependencies, eslint, eslint-config-next, @playwright/test, supabase, tailwindcss, @tailwindcss/postcss, @types/node (+3 more)
+### Community 9 - "/feature-commit"
+Cohesion: 0.22
+Nodes (8): 1. Check where you are, 2. Group the changes into features, 3. Review before committing, 4. Commit, 5. Keep the knowledge graph current, 6. Push, 7. Report, /feature-commit
 
 ### Community 10 - "MSplusEverythingIwant Mood + Location Sharing App"
 Cohesion: 0.50
@@ -134,25 +135,29 @@ Nodes (3): App Icon (Two Lights), Icon Color Tokens (dark bg, you, partner), Two
 Cohesion: 0.67
 Nodes (3): PWA App Icon 512px (Overlapping Circles), Dark Background with Pink/Amber Accent Palette, Overlapping Pink and Amber Circles Motif
 
+### Community 19 - "devDependencies"
+Cohesion: 0.18
+Nodes (11): devDependencies, eslint, eslint-config-next, @playwright/test, supabase, tailwindcss, @tailwindcss/postcss, @types/node (+3 more)
+
 ## Knowledge Gaps
-- **89 isolated node(s):** `Auth`, `Props`, `ByUser`, `CoupleState`, `initial` (+84 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 111 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **96 isolated node(s):** `Props`, `Props`, `Props`, `Props`, `Props` (+91 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 118 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `react` connect `home-screen.tsx` to `app.tsx`, `package.json`, `mood-icons.tsx`?**
-  _High betweenness centrality (0.161) - this node is a cross-community bridge._
+  _High betweenness centrality (0.149) - this node is a cross-community bridge._
 - **Why does `next` connect `layout.tsx` to `package.json`?**
-  _High betweenness centrality (0.046) - this node is a cross-community bridge._
-- **Why does `devDependencies` connect `devDependencies` to `package.json`?**
   _High betweenness centrality (0.043) - this node is a cross-community bridge._
-- **What connects `Auth`, `Props`, `ByUser` to the rest of the system?**
-  _89 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `devDependencies` connect `devDependencies` to `package.json`?**
+  _High betweenness centrality (0.040) - this node is a cross-community bridge._
+- **What connects `Props`, `Props`, `Props` to the rest of the system?**
+  _96 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `home-screen.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.10365853658536585 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1024390243902439 - nodes in this community are weakly interconnected._
 - **Should `/graphify skill` be split into smaller, more focused modules?**
   _Cohesion score 0.08412698412698413 - nodes in this community are weakly interconnected._
 - **Should `app.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.13825757575757575 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.14838709677419354 - nodes in this community are weakly interconnected._

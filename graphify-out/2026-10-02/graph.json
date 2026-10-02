@@ -145,6 +145,19 @@
       "source_location": "L3"
     },
     {
+      "id": "lib_types_locationrow",
+      "label": "LocationRow",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "locationrow",
+      "source_file": "lib/types.ts",
+      "source_location": "L18"
+    },
+    {
       "id": "lib_use_location_sharing_fix",
       "label": "Fix",
       "_callable": true,
@@ -260,19 +273,6 @@
       "norm_label": "moodvalue",
       "source_file": "lib/moods.ts",
       "source_location": "L15"
-    },
-    {
-      "id": "lib_types_locationrow",
-      "label": "LocationRow",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "mood-icons.tsx",
-      "file_type": "code",
-      "norm_label": "locationrow",
-      "source_file": "lib/types.ts",
-      "source_location": "L18"
     },
     {
       "id": "lib_types_moodrow",
@@ -397,18 +397,6 @@
       "norm_label": "project()",
       "source_file": "components/mini-map.tsx",
       "source_location": "L23"
-    },
-    {
-      "id": "components_mood_card_moodcard",
-      "label": "MoodCard()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "home-screen.tsx",
-      "file_type": "code",
-      "norm_label": "moodcard()",
-      "source_file": "components/mood-card.tsx",
-      "source_location": "L16"
     },
     {
       "id": "components_mood_picker_moodpicker",
@@ -819,28 +807,16 @@
       "source_location": "L7"
     },
     {
-      "id": "lib_use_couple_usecouple",
-      "label": "useCouple()",
+      "id": "components_mood_card_moodcard",
+      "label": "MoodCard()",
       "_callable": true,
       "_origin": "ast",
-      "community": 2,
-      "community_name": "app.tsx",
+      "community": 4,
+      "community_name": "mood-icons.tsx",
       "file_type": "code",
-      "norm_label": "usecouple()",
-      "source_file": "lib/use-couple.ts",
-      "source_location": "L41"
-    },
-    {
-      "id": "lib_use_couple_usecouple_load",
-      "label": "load()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "app.tsx",
-      "file_type": "code",
-      "norm_label": "load()",
-      "source_file": "lib/use-couple.ts",
-      "source_location": "L49"
+      "norm_label": "moodcard()",
+      "source_file": "components/mood-card.tsx",
+      "source_location": "L16"
     },
     {
       "id": "components_mood_icons_base",
@@ -961,6 +937,30 @@
       "norm_label": "tiredicon()",
       "source_file": "components/mood-icons.tsx",
       "source_location": "L66"
+    },
+    {
+      "id": "lib_use_couple_usecouple",
+      "label": "useCouple()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "mood-icons.tsx",
+      "file_type": "code",
+      "norm_label": "usecouple()",
+      "source_file": "lib/use-couple.ts",
+      "source_location": "L41"
+    },
+    {
+      "id": "lib_use_couple_usecouple_load",
+      "label": "load()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "mood-icons.tsx",
+      "file_type": "code",
+      "norm_label": "load()",
+      "source_file": "lib/use-couple.ts",
+      "source_location": "L49"
     },
     {
       "id": "lib_use_couple_without",
@@ -1344,6 +1344,127 @@
       "source_location": null
     },
     {
+      "id": "package_devdependencies",
+      "label": "devDependencies",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "devdependencies",
+      "source_file": "package.json",
+      "source_location": "L17"
+    },
+    {
+      "id": "package_devdependencies_eslint",
+      "label": "eslint",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "eslint",
+      "source_file": "package.json",
+      "source_location": "L23"
+    },
+    {
+      "id": "package_devdependencies_eslint_config_next",
+      "label": "eslint-config-next",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "eslint-config-next",
+      "source_file": "package.json",
+      "source_location": "L24"
+    },
+    {
+      "id": "package_devdependencies_playwright_test",
+      "label": "@playwright/test",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "@playwright/test",
+      "source_file": "package.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "package_devdependencies_supabase",
+      "label": "supabase",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "supabase",
+      "source_file": "package.json",
+      "source_location": "L25"
+    },
+    {
+      "id": "package_devdependencies_tailwindcss",
+      "label": "tailwindcss",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "tailwindcss",
+      "source_file": "package.json",
+      "source_location": "L26"
+    },
+    {
+      "id": "package_devdependencies_tailwindcss_postcss",
+      "label": "@tailwindcss/postcss",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "@tailwindcss/postcss",
+      "source_file": "package.json",
+      "source_location": "L19"
+    },
+    {
+      "id": "package_devdependencies_types_node",
+      "label": "@types/node",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "@types/node",
+      "source_file": "package.json",
+      "source_location": "L20"
+    },
+    {
+      "id": "package_devdependencies_types_react",
+      "label": "@types/react",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "@types/react",
+      "source_file": "package.json",
+      "source_location": "L21"
+    },
+    {
+      "id": "package_devdependencies_types_react_dom",
+      "label": "@types/react-dom",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "@types/react-dom",
+      "source_file": "package.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "package_devdependencies_typescript",
+      "label": "typescript",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "typescript",
+      "source_file": "package.json",
+      "source_location": "L27"
+    },
+    {
       "id": "app_page",
       "label": "page.tsx",
       "_origin": "ast",
@@ -1605,17 +1726,6 @@
       "file_type": "code",
       "norm_label": "playwright.config.ts",
       "source_file": "playwright.config.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_example_spec",
-      "label": "example.spec.ts",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "example.spec.ts",
-      "source_file": "tests/example.spec.ts",
       "source_location": "L1"
     },
     {
@@ -2301,125 +2411,116 @@
       "source_location": "L13"
     },
     {
-      "id": "package_devdependencies",
-      "label": "devDependencies",
+      "id": "claude_skills_feature_commit_skill",
+      "label": "SKILL.md",
       "_origin": "ast",
       "community": 9,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "devdependencies",
-      "source_file": "package.json",
-      "source_location": "L17"
+      "community_name": "/feature-commit",
+      "file_type": "document",
+      "frontmatter": {
+        "name": "feature-commit",
+        "description": "Review, commit and push work one feature at a time. Use automatically as soon as a feature (one coherent, working change) is finished, without waiting to be asked; also when the user says /feature-commit, &#x27;commit this&#x27;, or &#x27;push&#x27;. Splits the working tree into one commit per feature, runs type-check, lint, tests and a code review on each, then pushes the current feature branch."
+      },
+      "node_kind": "page",
+      "norm_label": "skill.md",
+      "source_file": ".claude/skills/feature-commit/SKILL.md",
+      "source_location": "L1"
     },
     {
-      "id": "package_devdependencies_eslint",
-      "label": "eslint",
+      "id": "claude_skills_feature_commit_skill_1_check_where_you_are",
+      "label": "1. Check where you are",
       "_origin": "ast",
       "community": 9,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "eslint",
-      "source_file": "package.json",
-      "source_location": "L23"
+      "community_name": "/feature-commit",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. check where you are",
+      "source_file": ".claude/skills/feature-commit/SKILL.md",
+      "source_location": "L15"
     },
     {
-      "id": "package_devdependencies_eslint_config_next",
-      "label": "eslint-config-next",
+      "id": "claude_skills_feature_commit_skill_2_group_the_changes_into_features",
+      "label": "2. Group the changes into features",
       "_origin": "ast",
       "community": 9,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "eslint-config-next",
-      "source_file": "package.json",
-      "source_location": "L24"
+      "community_name": "/feature-commit",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. group the changes into features",
+      "source_file": ".claude/skills/feature-commit/SKILL.md",
+      "source_location": "L30"
     },
     {
-      "id": "package_devdependencies_playwright_test",
-      "label": "@playwright/test",
+      "id": "claude_skills_feature_commit_skill_3_review_before_committing",
+      "label": "3. Review before committing",
       "_origin": "ast",
       "community": 9,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "@playwright/test",
-      "source_file": "package.json",
-      "source_location": "L18"
+      "community_name": "/feature-commit",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. review before committing",
+      "source_file": ".claude/skills/feature-commit/SKILL.md",
+      "source_location": "L46"
     },
     {
-      "id": "package_devdependencies_supabase",
-      "label": "supabase",
+      "id": "claude_skills_feature_commit_skill_4_commit",
+      "label": "4. Commit",
       "_origin": "ast",
       "community": 9,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "supabase",
-      "source_file": "package.json",
-      "source_location": "L25"
+      "community_name": "/feature-commit",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. commit",
+      "source_file": ".claude/skills/feature-commit/SKILL.md",
+      "source_location": "L71"
     },
     {
-      "id": "package_devdependencies_tailwindcss",
-      "label": "tailwindcss",
+      "id": "claude_skills_feature_commit_skill_5_keep_the_knowledge_graph_current",
+      "label": "5. Keep the knowledge graph current",
       "_origin": "ast",
       "community": 9,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "tailwindcss",
-      "source_file": "package.json",
-      "source_location": "L26"
+      "community_name": "/feature-commit",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. keep the knowledge graph current",
+      "source_file": ".claude/skills/feature-commit/SKILL.md",
+      "source_location": "L95"
     },
     {
-      "id": "package_devdependencies_tailwindcss_postcss",
-      "label": "@tailwindcss/postcss",
+      "id": "claude_skills_feature_commit_skill_6_push",
+      "label": "6. Push",
       "_origin": "ast",
       "community": 9,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "@tailwindcss/postcss",
-      "source_file": "package.json",
-      "source_location": "L19"
+      "community_name": "/feature-commit",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "6. push",
+      "source_file": ".claude/skills/feature-commit/SKILL.md",
+      "source_location": "L101"
     },
     {
-      "id": "package_devdependencies_types_node",
-      "label": "@types/node",
+      "id": "claude_skills_feature_commit_skill_7_report",
+      "label": "7. Report",
       "_origin": "ast",
       "community": 9,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "@types/node",
-      "source_file": "package.json",
-      "source_location": "L20"
+      "community_name": "/feature-commit",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7. report",
+      "source_file": ".claude/skills/feature-commit/SKILL.md",
+      "source_location": "L112"
     },
     {
-      "id": "package_devdependencies_types_react",
-      "label": "@types/react",
+      "id": "claude_skills_feature_commit_skill_feature_commit",
+      "label": "/feature-commit",
       "_origin": "ast",
       "community": 9,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "@types/react",
-      "source_file": "package.json",
-      "source_location": "L21"
-    },
-    {
-      "id": "package_devdependencies_types_react_dom",
-      "label": "@types/react-dom",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "@types/react-dom",
-      "source_file": "package.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "package_devdependencies_typescript",
-      "label": "typescript",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "typescript",
-      "source_file": "package.json",
-      "source_location": "L27"
+      "community_name": "/feature-commit",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "/feature-commit",
+      "source_file": ".claude/skills/feature-commit/SKILL.md",
+      "source_location": "L6"
     },
     {
       "id": "_claude_skills_graphify_skill_community_detection",
@@ -5788,18 +5889,6 @@
       "weight": 1.0
     },
     {
-      "source": "tests_example_spec",
-      "target": "ref_playwright_test",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "tests/example.spec.ts",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
       "source": "mcp_mcp_server_playwright",
       "target": "mcp_package_playwright_mcp",
       "relation": "references",
@@ -5886,6 +5975,94 @@
       "confidence_score": 1.0,
       "source_file": "app/page.tsx",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_feature_commit_skill",
+      "target": "claude_skills_feature_commit_skill_feature_commit",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/feature-commit/SKILL.md",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_feature_commit_skill_feature_commit",
+      "target": "claude_skills_feature_commit_skill_6_push",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/feature-commit/SKILL.md",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_feature_commit_skill_feature_commit",
+      "target": "claude_skills_feature_commit_skill_7_report",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/feature-commit/SKILL.md",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_feature_commit_skill_feature_commit",
+      "target": "claude_skills_feature_commit_skill_1_check_where_you_are",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/feature-commit/SKILL.md",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_feature_commit_skill_feature_commit",
+      "target": "claude_skills_feature_commit_skill_2_group_the_changes_into_features",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/feature-commit/SKILL.md",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_feature_commit_skill_feature_commit",
+      "target": "claude_skills_feature_commit_skill_3_review_before_committing",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/feature-commit/SKILL.md",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_feature_commit_skill_feature_commit",
+      "target": "claude_skills_feature_commit_skill_4_commit",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/feature-commit/SKILL.md",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_feature_commit_skill_feature_commit",
+      "target": "claude_skills_feature_commit_skill_5_keep_the_knowledge_graph_current",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/feature-commit/SKILL.md",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -8687,5 +8864,5 @@
       "source_file": ".claude/skills/graphify/references/update.md"
     }
   ],
-  "built_at_commit": "043dd011424c652a39cd9364f8966aa194dc64a1"
+  "built_at_commit": "92e3300fc9e014a9c45b9f80814f5c1eb63b874e"
 }
