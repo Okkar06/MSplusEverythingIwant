@@ -13,9 +13,20 @@ export const PARTNER_CODE = "BEN234";
 const ORIGIN = "https://e2e.supabase.co"; // matches playwright.config.ts
 const STORAGE_KEY = "sb-e2e-auth-token";
 const MISS_LIMIT = 10;
+const NO_ROWS = {
+  code: "PGRST116",
+  details: "The result contains 0 rows",
+  hint: null,
+  message: "JSON object requested, multiple (or no) rows returned",
+};
 
-type Table = "profiles" | "moods" | "locations";
-type Invite = { code: string; expires_at: string };
+type Table = "profiles" | "moods" | "locations" | "pair_invites";
+type Invite = {
+  code: string;
+  expires_at: string;
+  requested_name: string | null;
+  requested_email: string | null;
+};
 type Push = (table: Table, type: "INSERT" | "UPDATE" | "DELETE", record: object) => void;
 
 const cors = {
@@ -54,8 +65,13 @@ export class FakeSupabase {
   profiles: Record<string, Profile> = { [ME]: { id: ME, display_name: "Ana", partner_id: null } };
   moods: Record<string, MoodRow> = {};
   locations: Record<string, LocationRow> = {};
+  /** Ana's own code, and any request waiting on it. */
   invite: Invite | null = null;
+  /** Ana's request on someone else's code, waiting for them to accept. */
+  myRequest: { owner_name: string } | null = null;
   misses = 0;
+  /** Paths (e.g. "/rpc/my_pair_request") whose next call fails, as if offline. */
+  failNext = new Set<string>();
   /** Every request to the fake project, for assertions. */
   requests: Request[] = [];
   private pushers: Push[] = [];
@@ -73,6 +89,20 @@ export class FakeSupabase {
   link() {
     this.profiles[ME] = { ...this.profiles[ME], partner_id: PARTNER };
     this.profiles[PARTNER] = { id: PARTNER, display_name: "Ben", partner_id: ME };
+  }
+
+  /** Ben types Ana's code on his phone: a request lands on her invite. */
+  requestFromBen() {
+    if (!this.invite) throw new Error("Ana has no code yet");
+    this.invite = { ...this.invite, requested_name: "Ben", requested_email: "ben@example.com" };
+    this.push("pair_invites", "UPDATE", { ...this.invite, owner_id: ME });
+  }
+
+  /** Ben accepts Ana's request on his code. */
+  benApproves() {
+    this.myRequest = null;
+    this.link();
+    this.push("profiles", "UPDATE", this.profiles[ME]);
   }
 
   setMood(userId: string, mood: MoodValue, note: string | null = null) {
@@ -111,6 +141,12 @@ export class FakeSupabase {
           },
           body: body === undefined ? "" : JSON.stringify(body),
         });
+      for (const failing of this.failNext) {
+        if (path.endsWith(failing)) {
+          this.failNext.delete(failing);
+          return route.fulfill({ status: 503, headers: cors, body: "" });
+        }
+      }
       const raise = (message: string) =>
         reply(400, { code: "P0001", details: null, hint: null, message });
 
@@ -126,7 +162,11 @@ export class FakeSupabase {
           this.profiles[ME] = { ...this.profiles[ME], ...request.postDataJSON() };
           return reply(204);
         }
-        return reply(200, this.visible(this.profiles, (p) => p.id));
+        const rows = this.visible(this.profiles, (p) => p.id);
+        const id = new URL(request.url()).searchParams.get("id")?.replace(/^eq\./, "");
+        const filtered = id ? rows.filter((p) => p.id === id) : rows;
+        if (wantsObject) return filtered.length ? reply(200, filtered[0]) : reply(406, NO_ROWS);
+        return reply(200, filtered);
       }
       if (path === "/rest/v1/moods") {
         if (request.method() === "POST") {
@@ -149,9 +189,7 @@ export class FakeSupabase {
       if (path === "/rest/v1/pair_invites") {
         const live = this.invite && Date.parse(this.invite.expires_at) > Date.now() ? [this.invite] : [];
         if (!wantsObject) return reply(200, live);
-        return live.length
-          ? reply(200, live[0])
-          : reply(406, { code: "PGRST116", details: "The result contains 0 rows", hint: null, message: "JSON object requested, multiple (or no) rows returned" });
+        return live.length ? reply(200, live[0]) : reply(406, NO_ROWS);
       }
 
       // ── RPCs (same rules as the migration) ──
@@ -159,10 +197,13 @@ export class FakeSupabase {
         this.invite = {
           code: ["K7P2MX", "QRS789", "HJW456"][this.nextCode++ % 3],
           expires_at: new Date(Date.now() + 86_400_000).toISOString(),
+          requested_name: null,
+          requested_email: null,
         };
-        return reply(200, wantsObject ? this.invite : [this.invite]);
+        const { code, expires_at } = this.invite;
+        return reply(200, wantsObject ? { code, expires_at } : [{ code, expires_at }]);
       }
-      if (path === "/rest/v1/rpc/accept_pair_invite") {
+      if (path === "/rest/v1/rpc/request_pair") {
         if (this.misses >= MISS_LIMIT) return raise("Too many tries. Wait a bit and try again.");
         const typed = String(request.postDataJSON().invite_code).replace(/[^a-z0-9]/gi, "").toUpperCase();
         if (this.invite && typed === this.invite.code) {
@@ -172,8 +213,27 @@ export class FakeSupabase {
           this.misses++;
           return reply(200, null);
         }
+        this.myRequest = { owner_name: "Ben" };
+        return reply(200, "Ben");
+      }
+      if (path === "/rest/v1/rpc/my_pair_request") {
+        const rows = this.myRequest ? [{ ...this.myRequest, expires_at: new Date(Date.now() + 86_400_000).toISOString() }] : [];
+        if (!wantsObject) return reply(200, rows);
+        return rows.length ? reply(200, rows[0]) : reply(406, NO_ROWS);
+      }
+      if (path === "/rest/v1/rpc/cancel_pair_request") {
+        this.myRequest = null;
+        return reply(204);
+      }
+      if (path === "/rest/v1/rpc/approve_pair_request") {
+        if (!this.invite?.requested_name) return raise("There's no request to accept.");
+        this.invite = null;
         this.link();
         return reply(200, PARTNER);
+      }
+      if (path === "/rest/v1/rpc/decline_pair_request") {
+        if (this.invite?.requested_name) this.invite = null;
+        return reply(204);
       }
 
       return reply(404, { message: `fake-supabase: no handler for ${request.method()} ${path}` });

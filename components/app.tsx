@@ -69,6 +69,7 @@ function SignedIn({ session }: { session: Session }) {
   if (!couple.me || !couple.partner) {
     return (
       <WaitingForPartner
+        userId={session.user.id}
         name={couple.me?.display_name}
         email={session.user.email}
         onPaired={couple.reload}
