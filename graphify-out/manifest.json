@@ -318,9 +318,9 @@
     "semantic_hash": ""
   },
   ".claude/skills/feature-commit/SKILL.md": {
-    "mtime": 1790930654.343816,
-    "seen": 1790930707.7850037,
-    "ast_hash": "68694ea2f73c6090e2449b0a52e8cb7e",
+    "mtime": 1790933776.1268973,
+    "seen": 1790933777.456658,
+    "ast_hash": "ebb98a1d67ce5df840fb2826728f28a6",
     "semantic_hash": ""
   },
   "supabase/migrations/20261002000000_pair_invites.sql": {

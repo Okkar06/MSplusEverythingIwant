@@ -1,17 +1,17 @@
 # Graph Report - MSplusEverythingIwant  (2026-10-02)
 
 ## Corpus Check
-- 54 files · ~24,669 words
+- 54 files · ~24,670 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 4, .example 1, .css 1)
 
 ## Summary
-- 305 nodes · 510 edges · 20 communities (17 shown, 3 thin omitted)
+- 304 nodes · 509 edges · 20 communities (17 shown, 3 thin omitted)
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9f86086d`
+- Built from commit: `0a45fe06`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -38,15 +38,15 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `/graphify skill` - 18 edges
-2. `compilerOptions` - 16 edges
-3. `getSupabase()` - 16 edges
+2. `getSupabase()` - 16 edges
+3. `compilerOptions` - 16 edges
 4. `Design system (two-person distance & mood app)` - 13 edges
 5. `FakeSupabase` - 11 edges
 6. `HomeScreen()` - 11 edges
 7. `WaitingForPartner()` - 11 edges
 8. `react` - 11 edges
 9. `graphify full build pipeline` - 10 edges
-10. `test` - 9 edges
+10. `Base()` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `UI Self-check Before Finishing` --semantically_similar_to--> `Playwright Tests CI Job`  [INFERRED] [semantically similar]
@@ -72,8 +72,8 @@
 ## Communities (20 total, 3 thin omitted)
 
 ### Community 0 - "home-screen.tsx"
-Cohesion: 0.11
-Nodes (29): DistanceHero(), Presence(), Props, HomeScreen(), Props, LocationCard(), Props, MiniMap() (+21 more)
+Cohesion: 0.10
+Nodes (31): DistanceHero(), Presence(), Props, HomeScreen(), Props, LocationCard(), Props, MiniMap() (+23 more)
 
 ### Community 1 - "/graphify skill"
 Cohesion: 0.08
@@ -89,7 +89,7 @@ Nodes (36): eslintConfig, dependencies, next, react, react-dom, @supabase/supaba
 
 ### Community 4 - "mood-icons.tsx"
 Cohesion: 0.11
-Nodes (27): Props, Base(), CalmIcon(), ExcitedIcon(), HappyIcon(), IconProps, ICONS, LovedIcon() (+19 more)
+Nodes (25): Props, Base(), CalmIcon(), ExcitedIcon(), HappyIcon(), IconProps, ICONS, LovedIcon() (+17 more)
 
 ### Community 5 - "Design system (two-person distance & mood app)"
 Cohesion: 0.20
@@ -140,21 +140,21 @@ Cohesion: 0.14
 Nodes (11): b64(), cors, FakeSupabase, Invite, makeSession(), ME, PARTNER, PARTNER_CODE (+3 more)
 
 ## Knowledge Gaps
-- **100 isolated node(s):** `Props`, `eslintConfig`, `nextConfig`, `Table`, `Invite` (+95 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 126 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **100 isolated node(s):** `Props`, `Props`, `Props`, `Props`, `Props` (+95 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 125 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `react` connect `home-screen.tsx` to `app.tsx`, `package.json`, `mood-icons.tsx`?**
-  _High betweenness centrality (0.122) - this node is a cross-community bridge._
+  _High betweenness centrality (0.123) - this node is a cross-community bridge._
 - **Why does `next` connect `layout.tsx` to `package.json`?**
-  _High betweenness centrality (0.042) - this node is a cross-community bridge._
-- **What connects `Props`, `eslintConfig`, `nextConfig` to the rest of the system?**
+  _High betweenness centrality (0.043) - this node is a cross-community bridge._
+- **What connects `Props`, `Props`, `Props` to the rest of the system?**
   _100 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `home-screen.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.1106612685560054 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10104529616724739 - nodes in this community are weakly interconnected._
 - **Should `/graphify skill` be split into smaller, more focused modules?**
   _Cohesion score 0.08412698412698413 - nodes in this community are weakly interconnected._
 - **Should `app.tsx` be split into smaller, more focused modules?**

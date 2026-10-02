@@ -1,7 +1,7 @@
 # Graph Report - MSplusEverythingIwant  (2026-10-02)
 
 ## Corpus Check
-- 54 files · ~24,670 words
+- 54 files · ~24,782 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 4, .example 1, .css 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0a45fe06`
+- Built from commit: `924e8f33`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -140,7 +140,7 @@ Cohesion: 0.14
 Nodes (11): b64(), cors, FakeSupabase, Invite, makeSession(), ME, PARTNER, PARTNER_CODE (+3 more)
 
 ## Knowledge Gaps
-- **100 isolated node(s):** `Props`, `Props`, `Props`, `Props`, `Props` (+95 more)
+- **100 isolated node(s):** `1. Check where you are`, `2. Group the changes into features`, `3. Review before committing`, `4. Commit`, `5. Keep the knowledge graph current` (+95 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 125 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -151,7 +151,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.123) - this node is a cross-community bridge._
 - **Why does `next` connect `layout.tsx` to `package.json`?**
   _High betweenness centrality (0.043) - this node is a cross-community bridge._
-- **What connects `Props`, `Props`, `Props` to the rest of the system?**
+- **What connects `1. Check where you are`, `2. Group the changes into features`, `3. Review before committing` to the rest of the system?**
   _100 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `home-screen.tsx` be split into smaller, more focused modules?**
   _Cohesion score 0.10104529616724739 - nodes in this community are weakly interconnected._
