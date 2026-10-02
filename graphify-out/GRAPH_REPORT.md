@@ -1,108 +1,163 @@
-# Graph Report - MSplusEverythingIwant  (2026-10-01)
+# Graph Report - MSplusEverythingIwant  (2026-10-02)
 
 ## Corpus Check
-- Corpus is ~1,001 words - fits in a single context window. You may not need a graph.
+- 54 files · ~24,782 words
+- Verdict: corpus is large enough that graph structure adds value.
+- Unclassified: 7 file(s) not represented in the graph (top: (none) 4, .example 1, .css 1)
 
 ## Summary
-- 81 nodes · 82 edges · 9 communities (8 shown, 1 thin omitted)
-- Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.84)
+- 304 nodes · 509 edges · 20 communities (17 shown, 3 thin omitted)
+- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
+## Graph Freshness
+- Built from commit: `924e8f33`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
+
 ## Community Hubs (Navigation)
-- TypeScript Config
-- Lint & Package Manifest
-- Next.js App Shell
-- Supabase & App Concept
-- Dev Dependencies
-- Runtime Dependencies
-- npm Scripts
-- Unused Template Icons
-- PostCSS Config
+- home-screen.tsx
+- /graphify skill
+- app.tsx
+- package.json
+- mood-icons.tsx
+- Design system (two-person distance & mood app)
+- compilerOptions
+- 20261001000000_initial_schema.sql
+- layout.tsx
+- /feature-commit
+- MSplusEverythingIwant Mood + Location Sharing App
+- UI Self-check Before Finishing
+- playwright
+- Apple Touch Icon (two overlapping circles)
+- App Icon (Two Lights)
+- PWA App Icon 512px (Overlapping Circles)
+- postcss.config.mjs
+- PWA Icon 192px (overlapping pink and amber circles)
+- fake-supabase.ts
 
 ## God Nodes (most connected - your core abstractions)
-1. `compilerOptions` - 16 edges
-2. `supabase` - 5 edges
-3. `scripts` - 5 edges
-4. `next` - 4 edges
-5. `MSplusEverythingIwant` - 4 edges
-6. `Home()` - 3 edges
-7. `Supabase` - 3 edges
-8. `NEXT_PUBLIC_SUPABASE_ANON_KEY` - 3 edges
-9. `@supabase/supabase-js` - 2 edges
-10. `eslint` - 2 edges
+1. `/graphify skill` - 18 edges
+2. `getSupabase()` - 16 edges
+3. `compilerOptions` - 16 edges
+4. `Design system (two-person distance & mood app)` - 13 edges
+5. `FakeSupabase` - 11 edges
+6. `HomeScreen()` - 11 edges
+7. `WaitingForPartner()` - 11 edges
+8. `react` - 11 edges
+9. `graphify full build pipeline` - 10 edges
+10. `Base()` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `supabase` --shares_data_with--> `NEXT_PUBLIC_SUPABASE_URL`  [INFERRED]
-  lib/supabase/client.ts → README.md
-- `supabase` --shares_data_with--> `NEXT_PUBLIC_SUPABASE_ANON_KEY`  [INFERRED]
-  lib/supabase/client.ts → README.md
-- `supabase` --implements--> `Supabase`  [INFERRED]
-  lib/supabase/client.ts → README.md
-- `Next.js Wordmark Logo (next.svg)` --references--> `Home()`  [EXTRACTED]
-  public/next.svg → app/page.tsx
-- `Vercel Triangle Logo (vercel.svg)` --references--> `Home()`  [EXTRACTED]
-  public/vercel.svg → app/page.tsx
+- `UI Self-check Before Finishing` --semantically_similar_to--> `Playwright Tests CI Job`  [INFERRED] [semantically similar]
+  .claude/CLAUDE.md → .github/workflows/playwright.yml
+- `FakeSupabase` --references--> `LocationRow`  [EXTRACTED]
+  tests/fake-supabase.ts → lib/types.ts
+- `FakeSupabase` --references--> `MoodRow`  [EXTRACTED]
+  tests/fake-supabase.ts → lib/types.ts
+- `FakeSupabase` --references--> `Profile`  [EXTRACTED]
+  tests/fake-supabase.ts → lib/types.ts
+- `Home()` --calls--> `App()`  [EXTRACTED]
+  app/page.tsx → components/app.tsx
 
 ## Import Cycles
 - None detected.
 
 ## Hyperedges (group relationships)
-- **create-next-app default 16x16 gray UI icons (file, globe, window)** — public_file_file_document_icon, public_globe_globe_icon, public_window_browser_window_icon [INFERRED 0.85]
-- **Supabase Client Env Configuration** — readme_env_local, readme_next_public_supabase_url, readme_next_public_supabase_anon_key, lib_supabase_client_supabase [INFERRED 0.85]
+- **Design token sync targets (tokens.json, globals.css, widgets, migration)** — design_design_tokens_json, design_globals_css, design_widgets, design_moods_check_constraint, design_mood_icons [EXTRACTED 1.00]
+- **graphify full build flow (extract, merge, build, guard)** — _claude_skills_graphify_skill_ast_structural_extraction, _claude_skills_graphify_skill_semantic_extraction_subagents, _claude_skills_graphify_skill_merge_extraction, _claude_skills_graphify_skill_community_detection, _claude_skills_graphify_skill_graph_health_check, _claude_skills_graphify_skill_shrink_guard, _claude_skills_graphify_skill_manifest [EXTRACTED 1.00]
+- **User Onboarding Flow (sign-in, pair, share location)** — readme_magic_link_auth, readme_partner_pairing, readme_location_sharing, readme_supabase [EXTRACTED 1.00]
+- **graphify graph freshness mechanisms** — _claude_skills_graphify_references_update_incremental_update, _claude_skills_graphify_references_hooks_post_commit_hook, _claude_skills_graphify_references_add_watch_watch_mode, _claude_skills_graphify_references_add_watch_add_url [INFERRED 0.85]
 
-## Communities (9 total, 1 thin omitted)
+## Communities (20 total, 3 thin omitted)
 
-### Community 0 - "TypeScript Config"
+### Community 0 - "home-screen.tsx"
+Cohesion: 0.10
+Nodes (31): DistanceHero(), Presence(), Props, HomeScreen(), Props, LocationCard(), Props, MiniMap() (+23 more)
+
+### Community 1 - "/graphify skill"
+Cohesion: 0.08
+Nodes (6): graphify Skill Trigger (/graphify), Community detection and labeling, EXTRACTED / INFERRED / AMBIGUOUS audit trail, graph.json, GRAPH_REPORT.md, /graphify skill
+
+### Community 2 - "app.tsx"
+Cohesion: 0.15
+Nodes (25): Home(), App(), Auth, Loading(), SignedIn(), signOut(), useAuth(), SignIn() (+17 more)
+
+### Community 3 - "package.json"
+Cohesion: 0.05
+Nodes (36): eslintConfig, dependencies, next, react, react-dom, @supabase/supabase-js, devDependencies, eslint (+28 more)
+
+### Community 4 - "mood-icons.tsx"
+Cohesion: 0.11
+Nodes (25): Props, Base(), CalmIcon(), ExcitedIcon(), HappyIcon(), IconProps, ICONS, LovedIcon() (+17 more)
+
+### Community 5 - "Design system (two-person distance & mood app)"
+Cohesion: 0.20
+Nodes (14): Semantic colour tokens, Design system (two-person distance & mood app), design/tokens.json, Distance count-up animation, app/globals.css, Mood colours, Custom mood icon set (components/mood-icons.tsx), moods.mood check constraint (+6 more)
+
+### Community 6 - "compilerOptions"
 Cohesion: 0.11
 Nodes (18): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+10 more)
 
-### Community 1 - "Lint & Package Manifest"
-Cohesion: 0.13
-Nodes (14): eslintConfig, name, private, version, eslint, eslint-config-next, react, react-dom (+6 more)
-
-### Community 2 - "Next.js App Shell"
-Cohesion: 0.20
-Nodes (7): app_globals, metadata, Home(), nextConfig, Next.js Wordmark Logo (next.svg), Vercel Triangle Logo (vercel.svg), next
-
-### Community 3 - "Supabase & App Concept"
+### Community 7 - "20261001000000_initial_schema.sql"
 Cohesion: 0.24
-Nodes (10): supabase, .env.local (from .env.example), Mood + Live-Location Sharing (two users), MSplusEverythingIwant, NEXT_PUBLIC_SUPABASE_ANON_KEY, NEXT_PUBLIC_SUPABASE_URL, Next.js, Keep Supabase Service Role Key Out of Browser (+2 more)
+Nodes (7): locations_set_updated_at, moods_set_updated_at, on_auth_user_created, public.is_me_or_partner(), public.locations, public.moods, public.profiles
 
-### Community 4 - "Dev Dependencies"
+### Community 8 - "layout.tsx"
+Cohesion: 0.17
+Nodes (6): figtree, fredoka, metadata, viewport, nextConfig, next
+
+### Community 9 - "/feature-commit"
 Cohesion: 0.22
-Nodes (9): devDependencies, eslint, eslint-config-next, tailwindcss, @tailwindcss/postcss, @types/node, @types/react, @types/react-dom (+1 more)
+Nodes (8): 1. Check where you are, 2. Group the changes into features, 3. Review before committing, 4. Commit, 5. Keep the knowledge graph current, 6. Push, 7. Report, /feature-commit
 
-### Community 5 - "Runtime Dependencies"
-Cohesion: 0.40
-Nodes (5): dependencies, next, react, react-dom, @supabase/supabase-js
+### Community 10 - "MSplusEverythingIwant Mood + Location Sharing App"
+Cohesion: 0.50
+Nodes (4): Share My Location / Distance, Email Magic Link / OTP Sign-in, MSplusEverythingIwant Mood + Location Sharing App, Partner Pairing (pair_partners.sql)
 
-### Community 6 - "npm Scripts"
-Cohesion: 0.40
-Nodes (5): scripts, build, dev, lint, start
+### Community 11 - "UI Self-check Before Finishing"
+Cohesion: 0.50
+Nodes (3): Playwright MCP Browser Tools, playwright-report Artifact Upload, Playwright Tests CI Job
 
-### Community 7 - "Unused Template Icons"
+### Community 12 - "playwright"
+Cohesion: 0.50
+Nodes (3): npx, playwright, @playwright/mcp
+
+### Community 13 - "Apple Touch Icon (two overlapping circles)"
 Cohesion: 0.67
-Nodes (3): File Document Icon (file.svg), Globe Icon (globe.svg), Browser Window Icon (window.svg)
+Nodes (3): Apple Touch Icon (two overlapping circles), Overlapping Circles Motif (Two Partners), PWA Home Screen Icon
+
+### Community 14 - "App Icon (Two Lights)"
+Cohesion: 0.67
+Nodes (3): App Icon (Two Lights), Icon Color Tokens (dark bg, you, partner), Two Lights Motif (You and Partner)
+
+### Community 15 - "PWA App Icon 512px (Overlapping Circles)"
+Cohesion: 0.67
+Nodes (3): PWA App Icon 512px (Overlapping Circles), Dark Background with Pink/Amber Accent Palette, Overlapping Pink and Amber Circles Motif
+
+### Community 19 - "fake-supabase.ts"
+Cohesion: 0.14
+Nodes (11): b64(), cors, FakeSupabase, Invite, makeSession(), ME, PARTNER, PARTNER_CODE (+3 more)
 
 ## Knowledge Gaps
-- **52 isolated node(s):** `metadata`, `eslintConfig`, `nextConfig`, `name`, `version` (+47 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 55 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **100 isolated node(s):** `1. Check where you are`, `2. Group the changes into features`, `3. Review before committing`, `4. Commit`, `5. Keep the knowledge graph current` (+95 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 125 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `next` connect `Next.js App Shell` to `Lint & Package Manifest`?**
-  _High betweenness centrality (0.156) - this node is a cross-community bridge._
-- **Why does `@supabase/supabase-js` connect `Supabase & App Concept` to `Lint & Package Manifest`?**
-  _High betweenness centrality (0.146) - this node is a cross-community bridge._
-- **Why does `devDependencies` connect `Dev Dependencies` to `Lint & Package Manifest`?**
-  _High betweenness centrality (0.130) - this node is a cross-community bridge._
-- **Are the 3 inferred relationships involving `supabase` (e.g. with `NEXT_PUBLIC_SUPABASE_ANON_KEY` and `NEXT_PUBLIC_SUPABASE_URL`) actually correct?**
-  _`supabase` has 3 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `metadata`, `eslintConfig`, `nextConfig` to the rest of the system?**
-  _52 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `TypeScript Config` be split into smaller, more focused modules?**
-  _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
-- **Should `Lint & Package Manifest` be split into smaller, more focused modules?**
-  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
+- **Why does `react` connect `home-screen.tsx` to `app.tsx`, `package.json`, `mood-icons.tsx`?**
+  _High betweenness centrality (0.123) - this node is a cross-community bridge._
+- **Why does `next` connect `layout.tsx` to `package.json`?**
+  _High betweenness centrality (0.043) - this node is a cross-community bridge._
+- **What connects `1. Check where you are`, `2. Group the changes into features`, `3. Review before committing` to the rest of the system?**
+  _100 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `home-screen.tsx` be split into smaller, more focused modules?**
+  _Cohesion score 0.10104529616724739 - nodes in this community are weakly interconnected._
+- **Should `/graphify skill` be split into smaller, more focused modules?**
+  _Cohesion score 0.08412698412698413 - nodes in this community are weakly interconnected._
+- **Should `app.tsx` be split into smaller, more focused modules?**
+  _Cohesion score 0.14838709677419354 - nodes in this community are weakly interconnected._
+- **Should `package.json` be split into smaller, more focused modules?**
+  _Cohesion score 0.05263157894736842 - nodes in this community are weakly interconnected._
