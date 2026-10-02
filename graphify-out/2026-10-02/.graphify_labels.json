@@ -18,5 +18,5 @@
   "16": "postcss.config.mjs",
   "17": "PWA Icon 192px (overlapping pink and amber circles)",
   "18": "pair_partners.sql",
-  "19": "devDependencies"
+  "19": "fake-supabase.ts"
 }

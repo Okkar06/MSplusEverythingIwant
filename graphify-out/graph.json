@@ -463,6 +463,42 @@
       "source_location": "L16"
     },
     {
+      "id": "components_mood_icons_moodicon",
+      "label": "MoodIcon()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "moodicon()",
+      "source_file": "components/mood-icons.tsx",
+      "source_location": "L113"
+    },
+    {
+      "id": "components_mood_picker_moodpicker",
+      "label": "MoodPicker()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "moodpicker()",
+      "source_file": "components/mood-picker.tsx",
+      "source_location": "L14"
+    },
+    {
+      "id": "components_mood_picker_moodpicker_savenote",
+      "label": "saveNote()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "savenote()",
+      "source_file": "components/mood-picker.tsx",
+      "source_location": "L18"
+    },
+    {
       "id": "components_name_card_namecard",
       "label": "NameCard()",
       "_callable": true,
@@ -1051,18 +1087,6 @@
       "source_location": "L93"
     },
     {
-      "id": "components_mood_icons_moodicon",
-      "label": "MoodIcon()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "mood-icons.tsx",
-      "file_type": "code",
-      "norm_label": "moodicon()",
-      "source_file": "components/mood-icons.tsx",
-      "source_location": "L113"
-    },
-    {
       "id": "components_mood_icons_sadicon",
       "label": "SadIcon()",
       "_callable": true,
@@ -1097,30 +1121,6 @@
       "norm_label": "tiredicon()",
       "source_file": "components/mood-icons.tsx",
       "source_location": "L66"
-    },
-    {
-      "id": "components_mood_picker_moodpicker",
-      "label": "MoodPicker()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "mood-icons.tsx",
-      "file_type": "code",
-      "norm_label": "moodpicker()",
-      "source_file": "components/mood-picker.tsx",
-      "source_location": "L14"
-    },
-    {
-      "id": "components_mood_picker_moodpicker_savenote",
-      "label": "saveNote()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "mood-icons.tsx",
-      "file_type": "code",
-      "norm_label": "savenote()",
-      "source_file": "components/mood-picker.tsx",
-      "source_location": "L18"
     },
     {
       "id": "lib_use_couple_usecouple",
@@ -1526,17 +1526,6 @@
       "norm_label": "pair_partners.sql",
       "source_file": "supabase/snippets/pair_partners.sql",
       "source_location": null
-    },
-    {
-      "id": "test",
-      "label": "@playwright/test",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "fake-supabase.ts",
-      "confidence": "EXTRACTED",
-      "file_type": "code",
-      "norm_label": "@playwright/test",
-      "source_file": "@playwright/test"
     },
     {
       "id": "tests_fake_supabase",
@@ -3874,6 +3863,18 @@
       "source_url": null
     },
     {
+      "id": "tests_fake_supabase_expect",
+      "label": "tests_fake_supabase_expect",
+      "_origin": "semantic",
+      "community": 19,
+      "community_name": "fake-supabase.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "tests_fake_supabase_expect",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "app_globals",
       "label": "app_globals",
       "_origin": "semantic",
@@ -3882,17 +3883,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "app_globals",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "tests_fake_supabase_expect",
-      "label": "tests_fake_supabase_expect",
-      "community": 19,
-      "community_name": "fake-supabase.ts",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "tests_fake_supabase_expect",
       "source_file": "",
       "type": "external"
     }
@@ -8314,15 +8304,6 @@
       "weight": 1.0
     },
     {
-      "source": "tests_pairing_spec",
-      "target": "test",
-      "relation": "dynamic_import",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/pairing.spec.ts"
-    },
-    {
       "source": "app_icon_app_icon",
       "target": "app_icon_two_lights_motif",
       "relation": "implements",
@@ -9823,5 +9804,5 @@
       "source_file": ".claude/skills/graphify/references/update.md"
     }
   ],
-  "built_at_commit": "9f86086d9eb84da2645977c6c497223c46e1314f"
+  "built_at_commit": "0a45fe06520f9f3af8238fc641d1f916e48b79c2"
 }

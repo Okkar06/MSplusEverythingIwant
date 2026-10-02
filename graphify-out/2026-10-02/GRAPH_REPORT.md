@@ -1,17 +1,17 @@
 # Graph Report - MSplusEverythingIwant  (2026-10-02)
 
 ## Corpus Check
-- 55 files · ~24,638 words
+- 54 files · ~24,669 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 4, .example 1, .css 1)
 
 ## Summary
-- 279 nodes · 454 edges · 20 communities (17 shown, 3 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.85)
+- 305 nodes · 510 edges · 20 communities (17 shown, 3 thin omitted)
+- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `92e3300f`
+- Built from commit: `9f86086d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -34,31 +34,31 @@
 - PWA App Icon 512px (Overlapping Circles)
 - postcss.config.mjs
 - PWA Icon 192px (overlapping pink and amber circles)
-- devDependencies
+- fake-supabase.ts
 
 ## God Nodes (most connected - your core abstractions)
 1. `/graphify skill` - 18 edges
-2. `getSupabase()` - 16 edges
-3. `compilerOptions` - 16 edges
+2. `compilerOptions` - 16 edges
+3. `getSupabase()` - 16 edges
 4. `Design system (two-person distance & mood app)` - 13 edges
-5. `HomeScreen()` - 11 edges
-6. `WaitingForPartner()` - 11 edges
-7. `react` - 11 edges
-8. `graphify full build pipeline` - 10 edges
-9. `Base()` - 9 edges
-10. `DistanceHero()` - 8 edges
+5. `FakeSupabase` - 11 edges
+6. `HomeScreen()` - 11 edges
+7. `WaitingForPartner()` - 11 edges
+8. `react` - 11 edges
+9. `graphify full build pipeline` - 10 edges
+10. `test` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `UI Self-check Before Finishing` --semantically_similar_to--> `Playwright Tests CI Job`  [INFERRED] [semantically similar]
   .claude/CLAUDE.md → .github/workflows/playwright.yml
-- `MoodCard()` --calls--> `timeAgo()`  [EXTRACTED]
-  components/mood-card.tsx → lib/time.ts
+- `FakeSupabase` --references--> `LocationRow`  [EXTRACTED]
+  tests/fake-supabase.ts → lib/types.ts
+- `FakeSupabase` --references--> `MoodRow`  [EXTRACTED]
+  tests/fake-supabase.ts → lib/types.ts
+- `FakeSupabase` --references--> `Profile`  [EXTRACTED]
+  tests/fake-supabase.ts → lib/types.ts
 - `Home()` --calls--> `App()`  [EXTRACTED]
   app/page.tsx → components/app.tsx
-- `SignedIn()` --calls--> `useCouple()`  [EXTRACTED]
-  components/app.tsx → lib/use-couple.ts
-- `sendLink()` --calls--> `getSupabase()`  [EXTRACTED]
-  components/sign-in.tsx → lib/supabase/client.ts
 
 ## Import Cycles
 - None detected.
@@ -72,8 +72,8 @@
 ## Communities (20 total, 3 thin omitted)
 
 ### Community 0 - "home-screen.tsx"
-Cohesion: 0.10
-Nodes (30): DistanceHero(), Presence(), Props, HomeScreen(), Props, LocationCard(), Props, MiniMap() (+22 more)
+Cohesion: 0.11
+Nodes (29): DistanceHero(), Presence(), Props, HomeScreen(), Props, LocationCard(), Props, MiniMap() (+21 more)
 
 ### Community 1 - "/graphify skill"
 Cohesion: 0.08
@@ -84,12 +84,12 @@ Cohesion: 0.15
 Nodes (25): Home(), App(), Auth, Loading(), SignedIn(), signOut(), useAuth(), SignIn() (+17 more)
 
 ### Community 3 - "package.json"
-Cohesion: 0.07
-Nodes (25): eslintConfig, dependencies, next, react, react-dom, @supabase/supabase-js, name, private (+17 more)
+Cohesion: 0.05
+Nodes (36): eslintConfig, dependencies, next, react, react-dom, @supabase/supabase-js, devDependencies, eslint (+28 more)
 
 ### Community 4 - "mood-icons.tsx"
 Cohesion: 0.11
-Nodes (26): MoodCard(), Props, Base(), CalmIcon(), ExcitedIcon(), HappyIcon(), IconProps, ICONS (+18 more)
+Nodes (27): Props, Base(), CalmIcon(), ExcitedIcon(), HappyIcon(), IconProps, ICONS, LovedIcon() (+19 more)
 
 ### Community 5 - "Design system (two-person distance & mood app)"
 Cohesion: 0.20
@@ -135,29 +135,29 @@ Nodes (3): App Icon (Two Lights), Icon Color Tokens (dark bg, you, partner), Two
 Cohesion: 0.67
 Nodes (3): PWA App Icon 512px (Overlapping Circles), Dark Background with Pink/Amber Accent Palette, Overlapping Pink and Amber Circles Motif
 
-### Community 19 - "devDependencies"
-Cohesion: 0.18
-Nodes (11): devDependencies, eslint, eslint-config-next, @playwright/test, supabase, tailwindcss, @tailwindcss/postcss, @types/node (+3 more)
+### Community 19 - "fake-supabase.ts"
+Cohesion: 0.14
+Nodes (11): b64(), cors, FakeSupabase, Invite, makeSession(), ME, PARTNER, PARTNER_CODE (+3 more)
 
 ## Knowledge Gaps
-- **96 isolated node(s):** `Props`, `Props`, `Props`, `Props`, `Props` (+91 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 118 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **100 isolated node(s):** `Props`, `eslintConfig`, `nextConfig`, `Table`, `Invite` (+95 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 126 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `react` connect `home-screen.tsx` to `app.tsx`, `package.json`, `mood-icons.tsx`?**
-  _High betweenness centrality (0.149) - this node is a cross-community bridge._
+  _High betweenness centrality (0.122) - this node is a cross-community bridge._
 - **Why does `next` connect `layout.tsx` to `package.json`?**
-  _High betweenness centrality (0.043) - this node is a cross-community bridge._
-- **Why does `devDependencies` connect `devDependencies` to `package.json`?**
-  _High betweenness centrality (0.040) - this node is a cross-community bridge._
-- **What connects `Props`, `Props`, `Props` to the rest of the system?**
-  _96 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.042) - this node is a cross-community bridge._
+- **What connects `Props`, `eslintConfig`, `nextConfig` to the rest of the system?**
+  _100 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `home-screen.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.1024390243902439 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1106612685560054 - nodes in this community are weakly interconnected._
 - **Should `/graphify skill` be split into smaller, more focused modules?**
   _Cohesion score 0.08412698412698413 - nodes in this community are weakly interconnected._
 - **Should `app.tsx` be split into smaller, more focused modules?**
   _Cohesion score 0.14838709677419354 - nodes in this community are weakly interconnected._
+- **Should `package.json` be split into smaller, more focused modules?**
+  _Cohesion score 0.05263157894736842 - nodes in this community are weakly interconnected._
