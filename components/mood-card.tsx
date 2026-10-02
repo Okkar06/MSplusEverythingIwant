@@ -17,6 +17,7 @@ export function MoodCard({ name, tone, mood, now, delayMs = 0 }: Props) {
   const style = mood ? MOODS[mood.mood] : undefined;
   return (
     <section
+      aria-label={tone === "you" ? "Your current mood" : `${name}'s current mood`}
       className="animate-fade-up flex flex-col items-center rounded-lg bg-surface p-4 text-center sm:p-6"
       style={{ animationDelay: `${delayMs}ms` }}
     >

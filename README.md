@@ -30,6 +30,18 @@ Mood + live-location sharing app for two users, built with Next.js and Supabase.
 4. Pick a mood, and turn on **Share my location** to see the distance between you.
    Location is only shared while the app is open, and only the latest spot is stored.
 
+## Tests
+
+```bash
+npx playwright test
+```
+
+End-to-end tests in `tests/` run against a production build on port 3199, built
+into `.next-e2e/` so they can run while `npm run dev` is up. Supabase is faked by
+`tests/fake-supabase.ts`, so no project or `.env.local` is needed. They run on a
+phone-sized Chromium and WebKit; on a fresh machine install the browsers with
+`npx playwright install --with-deps chromium webkit`.
+
 ## Notes
 
 - Do not put the Supabase service role/secret key in browser-exposed variables.
