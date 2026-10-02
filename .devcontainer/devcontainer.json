@@ -4,6 +4,6 @@
     "ghcr.io/devcontainers/features/python:1": {},
     "ghcr.io/devcontainers/features/git-lfs:1": {}
   },
-  "postCreateCommand": "curl -fsSL https://claude.ai/install.sh | bash && npx playwright install --with-deps chromium chrome && pipx install graphifyy && graphify hook install",
+  "postCreateCommand": "curl -fsSL https://claude.ai/install.sh | bash && npx playwright install --with-deps chromium chrome webkit && pipx install graphifyy && graphify hook install",
   "forwardPorts": [3000, 5173]
 }
