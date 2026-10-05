@@ -7,6 +7,10 @@ const PORT = 3199;
 
 export default defineConfig({
   testDir: "./tests",
+  // Only *.spec.ts: the database tests (tests/db/*.test.mjs) run under
+  // node:test (npm run test:db). A testIgnore glob would be matched against the
+  // absolute path, so a checkout inside any "db" folder would hide every test.
+  testMatch: "*.spec.ts",
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
