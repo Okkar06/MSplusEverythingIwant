@@ -21,3 +21,9 @@ the folder: the test should fail.
 
 The browser tests (`npx playwright test`) use a fake Supabase instead, so these
 are the only tests that run the real SQL.
+
+`--test-timeout=300000` in the `test:db` script is a backstop: if a test leaves
+a database open, the run fails after 5 minutes instead of hanging CI. Node
+applies it to each test file as a whole, so it's set well above a file's normal
+time (under a minute on a quiet machine, a minute or two on a busy one) to stay
+safe on a slow or busy runner.

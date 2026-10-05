@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test:db": "node --test --test-timeout=60000 \"tests/db/*.test.mjs\""
+    "test:db": "node --test --test-timeout=300000 \"tests/db/*.test.mjs\""
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.117.0",
