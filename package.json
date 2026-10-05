@@ -20,6 +20,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoskills": "^0.3.6",
     "eslint": "^9",
     "eslint-config-next": "16.3.6",
     "supabase": "^2.119.0",
