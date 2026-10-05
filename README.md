@@ -30,7 +30,9 @@ Mood + live-location sharing app for two users, built with Next.js and Supabase.
    `supabase/snippets/pair_partners.sql` in the SQL editor.)
 4. Pick a mood, and turn on **Share my location** to see the distance between you.
    Location is only shared while the app is open, and only the latest spot is stored.
-5. Either of you can unlink at any time from the bottom of the home screen. That clears the
+5. Send each other a heart, a hug or a "thinking of you" from the home screen. It pops up on
+   your partner's screen right away. Only the latest one is kept.
+6. Either of you can unlink at any time from the bottom of the home screen. That clears the
    link for both of you and deletes both stored locations.
 
 ## Tests
