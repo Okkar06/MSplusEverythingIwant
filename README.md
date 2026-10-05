@@ -33,7 +33,8 @@ Mood + live-location sharing app for two users, built with Next.js and Supabase.
 5. Send each other a heart, a hug or a "thinking of you" from the home screen. It pops up on
    your partner's screen right away. Only the latest one is kept.
 6. Either of you can unlink at any time from the bottom of the home screen. That clears the
-   link for both of you and deletes both stored locations.
+   link for both of you, deletes both stored locations and latest reactions, and clears mood
+   notes (they were written for each other). Moods themselves stay.
 
 ## Tests
 

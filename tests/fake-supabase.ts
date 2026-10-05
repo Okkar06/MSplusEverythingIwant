@@ -107,8 +107,10 @@ export class FakeSupabase {
     this.push("profiles", "UPDATE", this.profiles[ME]);
   }
 
-  /** Clears both links and both locations, as unpair() does. */
+  /** Clears both links, locations, reactions and mood notes, as unpair() does. */
   unlink() {
+    this.reactions = {};
+    for (const [id, m] of Object.entries(this.moods)) this.moods[id] = { ...m, note: null };
     this.profiles[ME] = { ...this.profiles[ME], partner_id: null };
     if (this.profiles[PARTNER]) this.profiles[PARTNER] = { ...this.profiles[PARTNER], partner_id: null };
     this.locations = {};

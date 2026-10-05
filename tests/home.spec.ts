@@ -76,6 +76,21 @@ test.describe("unlinking", () => {
     expect(await page.evaluate(() => localStorage.getItem("share-location"))).toBe("off");
   });
 
+  test("unlinking clears your mood note and reaction, but keeps your mood", async ({ page, supabase }) => {
+    supabase.setMood(ME, "loved", "miss you Ben");
+    supabase.reactions[ME] = { user_id: ME, kind: "hug", sent_at: new Date().toISOString() };
+    await page.goto("/");
+    const card = page.getByRole("region", { name: "Unlink" });
+    await expect(card.getByText(/mood notes are cleared/)).toHaveCount(0);
+    await card.getByRole("button", { name: "Unlink…" }).click();
+    await expect(card.getByText(/latest reactions are deleted, and your mood notes are cleared/)).toBeVisible();
+    await card.getByRole("button", { name: "Unlink", exact: true }).click();
+
+    await expect(page.getByRole("heading", { name: "Almost there" })).toBeVisible();
+    expect(supabase.moods[ME]).toMatchObject({ mood: "loved", note: null });
+    expect(supabase.reactions[ME]).toBeUndefined();
+  });
+
   test("when the partner unlinks, the screen moves on by itself", async ({ page, supabase }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { name: "You & Ben" })).toBeVisible();
