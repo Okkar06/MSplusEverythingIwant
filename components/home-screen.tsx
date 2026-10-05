@@ -10,6 +10,8 @@ import { MoodPicker } from "./mood-picker";
 import { LocationCard } from "./location-card";
 import { MiniMap } from "./mini-map";
 import { NameCard } from "./name-card";
+import { ReactionBar } from "./reaction-bar";
+import { ReactionBanner } from "./reaction-banner";
 import { UnlinkCard } from "./unlink-card";
 
 type Props = {
@@ -27,6 +29,8 @@ export function HomeScreen({ couple, me, partner, onSignOut }: Props) {
 
   return (
     <>
+      <ReactionBanner partnerName={partner.display_name} reaction={couple.reactions[partner.id]} now={now} />
+
       <header>
         <h1 className="font-display text-heading">
           <span className="text-you">You</span> &amp;{" "}
@@ -56,6 +60,8 @@ export function HomeScreen({ couple, me, partner, onSignOut }: Props) {
           delayMs={120}
         />
       </div>
+
+      <ReactionBar partnerName={partner.display_name} onSend={couple.sendReaction} delayMs={150} />
 
       <MoodPicker current={couple.moods[me.id]} onPick={couple.setMood} delayMs={180} />
 

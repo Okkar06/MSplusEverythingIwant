@@ -34,9 +34,9 @@ export function UnlinkCard({ partnerName, onUnlink, delayMs = 0 }: Props) {
         <div className="flex flex-col gap-2">
           <p className="text-body">Unlink from {partnerName}?</p>
           <p className="text-small text-ink-muted">
-            You&apos;ll both stop seeing each other&apos;s mood and location, and both your stored
-            locations are deleted. Your location sharing turns off. To link again, one of you
-            shares a new code.
+            You&apos;ll both stop seeing each other&apos;s mood and location. Both your stored
+            locations and latest reactions are deleted, and your mood notes are cleared. Your
+            location sharing turns off. To link again, one of you shares a new code.
           </p>
           <div className="mt-2 flex gap-2">
             <button

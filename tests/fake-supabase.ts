@@ -3,7 +3,8 @@
 // rows in memory, and records requests so tests can check what was sent.
 
 import { test as base, type BrowserContext, type Request } from "@playwright/test";
-import type { LocationRow, MoodRow, Profile } from "@/lib/types";
+import type { LocationRow, MoodRow, Profile, ReactionRow } from "@/lib/types";
+import type { ReactionKind } from "@/lib/reactions";
 import type { MoodValue } from "@/lib/moods";
 
 export const ME = "00000000-0000-4000-8000-00000000000a";
@@ -20,7 +21,7 @@ const NO_ROWS = {
   message: "JSON object requested, multiple (or no) rows returned",
 };
 
-type Table = "profiles" | "moods" | "locations" | "pair_invites";
+type Table = "profiles" | "moods" | "locations" | "pair_invites" | "reactions";
 type Invite = {
   code: string;
   expires_at: string;
@@ -65,6 +66,7 @@ export class FakeSupabase {
   profiles: Record<string, Profile> = { [ME]: { id: ME, display_name: "Ana", partner_id: null } };
   moods: Record<string, MoodRow> = {};
   locations: Record<string, LocationRow> = {};
+  reactions: Record<string, ReactionRow> = {};
   /** Ana's own code, and any request waiting on it. */
   invite: Invite | null = null;
   /** Ana's request on someone else's code, waiting for them to accept. */
@@ -105,8 +107,10 @@ export class FakeSupabase {
     this.push("profiles", "UPDATE", this.profiles[ME]);
   }
 
-  /** Clears both links and both locations, as unpair() does. */
+  /** Clears both links, locations, reactions and mood notes, as unpair() does. */
   unlink() {
+    this.reactions = {};
+    for (const [id, m] of Object.entries(this.moods)) this.moods[id] = { ...m, note: null };
     this.profiles[ME] = { ...this.profiles[ME], partner_id: null };
     if (this.profiles[PARTNER]) this.profiles[PARTNER] = { ...this.profiles[PARTNER], partner_id: null };
     this.locations = {};
@@ -116,6 +120,14 @@ export class FakeSupabase {
   benUnlinks() {
     this.unlink();
     this.push("profiles", "UPDATE", this.profiles[ME]);
+  }
+
+  /** Ben taps a reaction on his phone; Realtime brings it to Ana. */
+  benReacts(kind: ReactionKind, sentAt = new Date()) {
+    const row = { user_id: PARTNER, kind, sent_at: sentAt.toISOString() };
+    this.reactions[PARTNER] = row;
+    this.push("reactions", "UPDATE", row);
+    return row;
   }
 
   setMood(userId: string, mood: MoodValue, note: string | null = null) {
@@ -187,6 +199,15 @@ export class FakeSupabase {
           return reply(201, [this.setMood(ME, mood, note)]);
         }
         return reply(200, this.visible(this.moods, (m) => m.user_id));
+      }
+      if (path === "/rest/v1/reactions") {
+        if (request.method() === "POST") {
+          // As the trigger does: sent_at is always the server's clock.
+          const row = { user_id: ME, kind: request.postDataJSON().kind, sent_at: new Date().toISOString() };
+          this.reactions[ME] = row;
+          return reply(201);
+        }
+        return reply(200, this.visible(this.reactions, (r) => r.user_id));
       }
       if (path === "/rest/v1/locations") {
         if (request.method() === "POST") {
