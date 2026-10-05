@@ -15,6 +15,10 @@ export default defineConfig({
   use: {
     baseURL: `http://localhost:${PORT}`,
     trace: "on-first-retry",
+    // The app's service worker would take over pages and, in WebKit, send
+    // Supabase requests past the fake to the real network. Only
+    // tests/offline.spec.ts turns it back on, for the test of the worker itself.
+    serviceWorkers: "block",
   },
 
   // Phone-first app, so test on phone-sized screens.

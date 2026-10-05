@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { getSupabase } from "@/lib/supabase/client";
+import { clearSnapshots } from "@/lib/couple-snapshot";
+import { useOnline } from "@/lib/use-online";
 import { useCouple } from "@/lib/use-couple";
 import { SignIn } from "./sign-in";
 import { WaitingForPartner } from "./waiting-for-partner";
@@ -37,6 +39,8 @@ function useAuth(): Auth {
 }
 
 function signOut() {
+  // The saved copy holds your partner's last location: don't leave it behind.
+  clearSnapshots();
   getSupabase().auth.signOut();
 }
 
@@ -63,8 +67,9 @@ export function App() {
 
 function SignedIn({ session }: { session: Session }) {
   const couple = useCouple(session.user.id);
+  const online = useOnline();
 
-  if (couple.loading) return <Loading />;
+  if (couple.loading) return <Loading offline={!online} />;
 
   if (!couple.me || !couple.partner) {
     return (
@@ -81,14 +86,20 @@ function SignedIn({ session }: { session: Session }) {
   return <HomeScreen couple={couple} me={couple.me} partner={couple.partner} onSignOut={signOut} />;
 }
 
-function Loading() {
+function Loading({ offline = false }: { offline?: boolean }) {
   return (
-    <div className="flex flex-1 items-center justify-center" role="status">
+    <div className="flex flex-1 flex-col items-center justify-center gap-4" role="status">
       <span className="sr-only">Loading</span>
       <span className="relative flex size-4">
         <span className="absolute inset-0 rounded-full bg-you animate-breathe" />
         <span className="relative size-4 rounded-full bg-you" />
       </span>
+      {offline && (
+        <p className="max-w-xs text-center text-small text-ink-muted">
+          You&apos;re offline. This will load when you&apos;re back online, and after that the
+          app keeps a copy here for next time.
+        </p>
+      )}
     </div>
   );
 }

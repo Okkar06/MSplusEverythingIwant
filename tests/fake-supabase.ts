@@ -74,6 +74,17 @@ export class FakeSupabase {
   misses = 0;
   /** Paths (e.g. "/rpc/my_pair_request") whose next call fails, as if offline. */
   failNext = new Set<string>();
+  /** When true, Supabase is unreachable: every request fails and Realtime never connects. */
+  get down() {
+    return this._down;
+  }
+  set down(value: boolean) {
+    this._down = value;
+    if (value) this.wasDown = true;
+  }
+  private _down = false;
+  /** Whether this test took Supabase down at some point (see the console check below). */
+  wasDown = false;
   /** Every request to the fake project, for assertions. */
   requests: Request[] = [];
   private pushers: Push[] = [];
@@ -166,6 +177,9 @@ export class FakeSupabase {
           },
           body: body === undefined ? "" : JSON.stringify(body),
         });
+      // A 503, not route.abort(): after an abort, WebKit under Playwright sends
+      // later requests past the routes to the real network.
+      if (this.down) return route.fulfill({ status: 503, headers: cors, body: "" });
       for (const failing of this.failNext) {
         if (path.endsWith(failing)) {
           this.failNext.delete(failing);
@@ -281,6 +295,7 @@ export class FakeSupabase {
     // Realtime speaks the Phoenix protocol: [join_ref, ref, topic, event, payload].
     await context.routeWebSocket(/e2e\.supabase\.co\/realtime/, (ws) => {
       ws.onMessage((raw) => {
+        if (this.down) return; // no answer: the channel never subscribes
         const [joinRef, ref, topic, event, payload] = JSON.parse(String(raw));
         const send = (ev: string, body: object, msgRef: string | null = ref) =>
           ws.send(JSON.stringify([joinRef, msgRef, topic, ev, body]));
@@ -331,7 +346,11 @@ export const test = base.extend<{ supabase: FakeSupabase }>({
     });
 
     await provide(supabase);
-    base.expect(errors, "console errors").toEqual([]);
+    // WebKit logs a failed cross-origin request as "... due to access control
+    // checks". That's expected when a test took Supabase down on purpose, and
+    // still fails every other test.
+    const unexpected = supabase.wasDown ? errors.filter((e) => !/due to access control checks/.test(e)) : errors;
+    base.expect(unexpected, "console errors").toEqual([]);
   },
 });
 
