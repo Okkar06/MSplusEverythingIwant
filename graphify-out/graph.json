@@ -629,6 +629,19 @@
       "source_location": "L5"
     },
     {
+      "id": "lib_use_location_sharing_fix",
+      "label": "Fix",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "fix",
+      "source_file": "lib/use-location-sharing.ts",
+      "source_location": "L27"
+    },
+    {
       "id": "tests_fake_supabase_fakesupabase",
       "label": "FakeSupabase",
       "_callable": true,
@@ -733,19 +746,6 @@
       "source_location": "L7"
     },
     {
-      "id": "lib_types_reactionrow",
-      "label": "ReactionRow",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "reaction-banner.tsx",
-      "file_type": "code",
-      "norm_label": "reactionrow",
-      "source_file": "lib/types.ts",
-      "source_location": "L27"
-    },
-    {
       "id": "components_distance_hero_props",
       "label": "Props",
       "_callable": true,
@@ -783,19 +783,6 @@
       "norm_label": "point",
       "source_file": "lib/distance.ts",
       "source_location": "L3"
-    },
-    {
-      "id": "lib_use_location_sharing_fix",
-      "label": "Fix",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "distance-hero.tsx",
-      "file_type": "code",
-      "norm_label": "fix",
-      "source_file": "lib/use-location-sharing.ts",
-      "source_location": "L27"
     },
     {
       "id": "components_app_auth",
@@ -954,6 +941,19 @@
       "source_location": "L6"
     },
     {
+      "id": "lib_types_reactionrow",
+      "label": "ReactionRow",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "use-couple.ts",
+      "file_type": "code",
+      "norm_label": "reactionrow",
+      "source_file": "lib/types.ts",
+      "source_location": "L27"
+    },
+    {
       "id": "lib_use_couple_byuser",
       "label": "ByUser",
       "_callable": true,
@@ -1099,6 +1099,42 @@
       "norm_label": "usenow()",
       "source_file": "lib/time.ts",
       "source_location": "L6"
+    },
+    {
+      "id": "lib_use_location_sharing_readpref",
+      "label": "readPref()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "readpref()",
+      "source_file": "lib/use-location-sharing.ts",
+      "source_location": "L11"
+    },
+    {
+      "id": "lib_use_location_sharing_uselocationsharing",
+      "label": "useLocationSharing()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "uselocationsharing()",
+      "source_file": "lib/use-location-sharing.ts",
+      "source_location": "L33"
+    },
+    {
+      "id": "lib_use_location_sharing_writepref",
+      "label": "writePref()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "writepref()",
+      "source_file": "lib/use-location-sharing.ts",
+      "source_location": "L19"
     },
     {
       "id": "tests_fake_supabase_b64",
@@ -1497,6 +1533,114 @@
       "source_location": "L47"
     },
     {
+      "id": "tests_db_helpers_build",
+      "label": "build()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "code",
+      "norm_label": "build()",
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L36"
+    },
+    {
+      "id": "tests_db_helpers_createdb",
+      "label": "createDb()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "code",
+      "norm_label": "createdb()",
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L57"
+    },
+    {
+      "id": "tests_db_helpers_createdb_anon",
+      "label": "anon()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "code",
+      "norm_label": "anon()",
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L81"
+    },
+    {
+      "id": "tests_db_helpers_createdb_as",
+      "label": "as()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "code",
+      "norm_label": "as()",
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L69"
+    },
+    {
+      "id": "tests_db_helpers_createdb_link",
+      "label": "link()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "code",
+      "norm_label": "link()",
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L93"
+    },
+    {
+      "id": "tests_db_helpers_user",
+      "label": "user()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "code",
+      "norm_label": "user()",
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L34"
+    },
+    {
+      "id": "tests_db_pairing_test_code",
+      "label": "code()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "code",
+      "norm_label": "code()",
+      "source_file": "tests/db/pairing.test.mjs",
+      "source_location": "L17"
+    },
+    {
+      "id": "tests_db_pairing_test_request",
+      "label": "request()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "code",
+      "norm_label": "request()",
+      "source_file": "tests/db/pairing.test.mjs",
+      "source_location": "L18"
+    },
+    {
+      "id": "tests_db_pairing_test_setup",
+      "label": "setUp()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "code",
+      "norm_label": "setup()",
+      "source_file": "tests/db/pairing.test.mjs",
+      "source_location": "L145"
+    },
+    {
       "id": "components_distance_hero_distancehero",
       "label": "DistanceHero()",
       "_callable": true,
@@ -1627,42 +1771,6 @@
       "norm_label": "usecountup()",
       "source_file": "lib/use-count-up.ts",
       "source_location": "L15"
-    },
-    {
-      "id": "lib_use_location_sharing_readpref",
-      "label": "readPref()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "distance-hero.tsx",
-      "file_type": "code",
-      "norm_label": "readpref()",
-      "source_file": "lib/use-location-sharing.ts",
-      "source_location": "L11"
-    },
-    {
-      "id": "lib_use_location_sharing_uselocationsharing",
-      "label": "useLocationSharing()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "distance-hero.tsx",
-      "file_type": "code",
-      "norm_label": "uselocationsharing()",
-      "source_file": "lib/use-location-sharing.ts",
-      "source_location": "L33"
-    },
-    {
-      "id": "lib_use_location_sharing_writepref",
-      "label": "writePref()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "distance-hero.tsx",
-      "file_type": "code",
-      "norm_label": "writepref()",
-      "source_file": "lib/use-location-sharing.ts",
-      "source_location": "L19"
     },
     {
       "id": "app_page_home",
@@ -2025,18 +2133,6 @@
       "source_location": "L52"
     },
     {
-      "id": "lib_use_couple_without",
-      "label": "without()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "getSupabase",
-      "file_type": "code",
-      "norm_label": "without()",
-      "source_file": "lib/use-couple.ts",
-      "source_location": "L33"
-    },
-    {
       "id": "components_mood_card_moodcard",
       "label": "MoodCard()",
       "_callable": true,
@@ -2059,6 +2155,18 @@
       "norm_label": "moodicon()",
       "source_file": "components/mood-icons.tsx",
       "source_location": "L113"
+    },
+    {
+      "id": "lib_use_couple_without",
+      "label": "without()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "use-couple.ts",
+      "file_type": "code",
+      "norm_label": "without()",
+      "source_file": "lib/use-couple.ts",
+      "source_location": "L33"
     },
     {
       "id": "components_mood_icons_base",
@@ -2267,6 +2375,28 @@
       "norm_label": "unlink-card.tsx",
       "source_file": "components/unlink-card.tsx",
       "source_location": "L1"
+    },
+    {
+      "id": "lib_use_location_sharing",
+      "label": "use-location-sharing.ts",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "code",
+      "norm_label": "use-location-sharing.ts",
+      "source_file": "lib/use-location-sharing.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_react",
+      "label": "react",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "home-screen.tsx",
+      "file_type": "concept",
+      "norm_label": "react",
+      "source_file": "package.json",
+      "source_location": "L15"
     },
     {
       "id": "postcss_config",
@@ -2544,17 +2674,6 @@
       "source_location": "L3"
     },
     {
-      "id": "ref_autoskills",
-      "label": "autoskills",
-      "_origin": "ast",
-      "community": 20,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "autoskills",
-      "source_file": "package.json",
-      "source_location": "L23"
-    },
-    {
       "id": "ref_react_dom",
       "label": "react-dom",
       "_origin": "ast",
@@ -2563,7 +2682,7 @@
       "file_type": "concept",
       "norm_label": "react-dom",
       "source_file": "package.json",
-      "source_location": "L15"
+      "source_location": "L16"
     },
     {
       "id": "ref_supabase",
@@ -2574,7 +2693,7 @@
       "file_type": "concept",
       "norm_label": "supabase",
       "source_file": "package.json",
-      "source_location": "L26"
+      "source_location": "L27"
     },
     {
       "id": "ref_tailwindcss",
@@ -2585,7 +2704,7 @@
       "file_type": "concept",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L27"
+      "source_location": "L28"
     },
     {
       "id": "ref_tailwindcss_postcss",
@@ -2596,7 +2715,7 @@
       "file_type": "concept",
       "norm_label": "@tailwindcss/postcss",
       "source_file": "package.json",
-      "source_location": "L19"
+      "source_location": "L21"
     },
     {
       "id": "ref_types_node",
@@ -2607,7 +2726,7 @@
       "file_type": "concept",
       "norm_label": "@types/node",
       "source_file": "package.json",
-      "source_location": "L20"
+      "source_location": "L22"
     },
     {
       "id": "ref_types_react",
@@ -2618,7 +2737,7 @@
       "file_type": "concept",
       "norm_label": "@types/react",
       "source_file": "package.json",
-      "source_location": "L21"
+      "source_location": "L23"
     },
     {
       "id": "ref_types_react_dom",
@@ -2629,7 +2748,7 @@
       "file_type": "concept",
       "norm_label": "@types/react-dom",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L24"
     },
     {
       "id": "ref_typescript",
@@ -2640,7 +2759,7 @@
       "file_type": "concept",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L28"
+      "source_location": "L29"
     },
     {
       "id": "auth",
@@ -2926,7 +3045,7 @@
       "file_type": "concept",
       "norm_label": "@playwright/test",
       "source_file": "package.json",
-      "source_location": "L18"
+      "source_location": "L20"
     },
     {
       "id": "package_devdependencies",
@@ -2937,18 +3056,18 @@
       "file_type": "code",
       "norm_label": "devdependencies",
       "source_file": "package.json",
-      "source_location": "L17"
+      "source_location": "L18"
     },
     {
-      "id": "package_devdependencies_autoskills",
-      "label": "autoskills",
+      "id": "package_devdependencies_electric_sql_pglite",
+      "label": "@electric-sql/pglite",
       "_origin": "ast",
       "community": 30,
       "community_name": "devDependencies",
       "file_type": "code",
-      "norm_label": "autoskills",
+      "norm_label": "@electric-sql/pglite",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L19"
     },
     {
       "id": "package_devdependencies_eslint",
@@ -2959,7 +3078,7 @@
       "file_type": "code",
       "norm_label": "eslint",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L25"
     },
     {
       "id": "package_devdependencies_eslint_config_next",
@@ -2970,7 +3089,7 @@
       "file_type": "code",
       "norm_label": "eslint-config-next",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "package_devdependencies_playwright_test",
@@ -2981,7 +3100,7 @@
       "file_type": "code",
       "norm_label": "@playwright/test",
       "source_file": "package.json",
-      "source_location": "L18"
+      "source_location": "L20"
     },
     {
       "id": "package_devdependencies_supabase",
@@ -2992,7 +3111,7 @@
       "file_type": "code",
       "norm_label": "supabase",
       "source_file": "package.json",
-      "source_location": "L26"
+      "source_location": "L27"
     },
     {
       "id": "package_devdependencies_tailwindcss",
@@ -3003,7 +3122,7 @@
       "file_type": "code",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L27"
+      "source_location": "L28"
     },
     {
       "id": "package_devdependencies_tailwindcss_postcss",
@@ -3014,7 +3133,7 @@
       "file_type": "code",
       "norm_label": "@tailwindcss/postcss",
       "source_file": "package.json",
-      "source_location": "L19"
+      "source_location": "L21"
     },
     {
       "id": "package_devdependencies_types_node",
@@ -3025,7 +3144,7 @@
       "file_type": "code",
       "norm_label": "@types/node",
       "source_file": "package.json",
-      "source_location": "L20"
+      "source_location": "L22"
     },
     {
       "id": "package_devdependencies_types_react",
@@ -3036,7 +3155,7 @@
       "file_type": "code",
       "norm_label": "@types/react",
       "source_file": "package.json",
-      "source_location": "L21"
+      "source_location": "L23"
     },
     {
       "id": "package_devdependencies_types_react_dom",
@@ -3047,7 +3166,7 @@
       "file_type": "code",
       "norm_label": "@types/react-dom",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L24"
     },
     {
       "id": "package_devdependencies_typescript",
@@ -3058,7 +3177,7 @@
       "file_type": "code",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L28"
+      "source_location": "L29"
     },
     {
       "id": "public_pair_attempts",
@@ -3281,6 +3400,118 @@
       "source_location": "L9"
     },
     {
+      "id": "tests_db_access_test",
+      "label": "access.test.mjs",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "code",
+      "norm_label": "access.test.mjs",
+      "source_file": "tests/db/access.test.mjs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_db_access_test_a_b_c",
+      "label": "[A, B, C]",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "code",
+      "norm_label": "[a, b, c]",
+      "source_file": "tests/db/access.test.mjs",
+      "source_location": "L9"
+    },
+    {
+      "id": "tests_db_helpers",
+      "label": "helpers.mjs",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "code",
+      "norm_label": "helpers.mjs",
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_db_helpers_migrations",
+      "label": "MIGRATIONS",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "code",
+      "norm_label": "migrations",
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L9"
+    },
+    {
+      "id": "tests_db_helpers_templates",
+      "label": "templates",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "code",
+      "norm_label": "templates",
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L51"
+    },
+    {
+      "id": "tests_db_pairing_test",
+      "label": "pairing.test.mjs",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "code",
+      "norm_label": "pairing.test.mjs",
+      "source_file": "tests/db/pairing.test.mjs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_db_pairing_test_a_b_c_d_e",
+      "label": "[A, B, C, D, E]",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "code",
+      "norm_label": "[a, b, c, d, e]",
+      "source_file": "tests/db/pairing.test.mjs",
+      "source_location": "L8"
+    },
+    {
+      "id": "ref_electric_sql_pglite",
+      "label": "@electric-sql/pglite",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "concept",
+      "norm_label": "@electric-sql/pglite",
+      "source_file": "package.json",
+      "source_location": "L19"
+    },
+    {
+      "id": "tests_db_readme",
+      "label": "README.md",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "readme.md",
+      "source_file": "tests/db/README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_db_readme_database_tests",
+      "label": "Database tests",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "database tests",
+      "source_file": "tests/db/README.md",
+      "source_location": "L1"
+    },
+    {
       "id": "components_distance_hero",
       "label": "distance-hero.tsx",
       "_origin": "ast",
@@ -3358,17 +3589,6 @@
       "source_location": "L1"
     },
     {
-      "id": "lib_use_location_sharing",
-      "label": "use-location-sharing.ts",
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "distance-hero.tsx",
-      "file_type": "code",
-      "norm_label": "use-location-sharing.ts",
-      "source_file": "lib/use-location-sharing.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "app_page",
       "label": "page.tsx",
       "_origin": "ast",
@@ -3435,17 +3655,6 @@
       "source_location": "L1"
     },
     {
-      "id": "ref_react",
-      "label": "react",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "getSupabase",
-      "file_type": "concept",
-      "norm_label": "react",
-      "source_file": "package.json",
-      "source_location": "L14"
-    },
-    {
       "id": "ref_supabase_supabase_js",
       "label": "@supabase/supabase-js",
       "_origin": "ast",
@@ -3454,7 +3663,7 @@
       "file_type": "concept",
       "norm_label": "@supabase/supabase-js",
       "source_file": "package.json",
-      "source_location": "L12"
+      "source_location": "L13"
     },
     {
       "id": "components_mood_card",
@@ -3850,7 +4059,7 @@
       "file_type": "concept",
       "norm_label": "next",
       "source_file": "package.json",
-      "source_location": "L13"
+      "source_location": "L14"
     },
     {
       "id": "package_dependencies",
@@ -3861,7 +4070,7 @@
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "package.json",
-      "source_location": "L11"
+      "source_location": "L12"
     },
     {
       "id": "package_dependencies_next",
@@ -3872,7 +4081,7 @@
       "file_type": "code",
       "norm_label": "next",
       "source_file": "package.json",
-      "source_location": "L13"
+      "source_location": "L14"
     },
     {
       "id": "package_dependencies_react",
@@ -3883,7 +4092,7 @@
       "file_type": "code",
       "norm_label": "react",
       "source_file": "package.json",
-      "source_location": "L14"
+      "source_location": "L15"
     },
     {
       "id": "package_dependencies_react_dom",
@@ -3894,7 +4103,7 @@
       "file_type": "code",
       "norm_label": "react-dom",
       "source_file": "package.json",
-      "source_location": "L15"
+      "source_location": "L16"
     },
     {
       "id": "package_dependencies_supabase_supabase_js",
@@ -3905,7 +4114,7 @@
       "file_type": "code",
       "norm_label": "@supabase/supabase-js",
       "source_file": "package.json",
-      "source_location": "L12"
+      "source_location": "L13"
     },
     {
       "id": "package_scripts",
@@ -3963,6 +4172,17 @@
       "source_location": "L8"
     },
     {
+      "id": "package_scripts_test_db",
+      "label": "test:db",
+      "_origin": "ast",
+      "community": 74,
+      "community_name": "scripts",
+      "file_type": "code",
+      "norm_label": "test:db",
+      "source_file": "package.json",
+      "source_location": "L10"
+    },
+    {
       "id": "eslint_config",
       "label": "eslint.config.mjs",
       "_origin": "ast",
@@ -3993,7 +4213,7 @@
       "file_type": "concept",
       "norm_label": "eslint",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L25"
     },
     {
       "id": "ref_eslint_config_next",
@@ -4004,7 +4224,7 @@
       "file_type": "concept",
       "norm_label": "eslint-config-next",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "mcp",
@@ -5589,81 +5809,6 @@
       "source_url": null
     },
     {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_i18n_date_time_number_formats",
-      "label": "Date, Time & Number Formats",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 12,
-      "community_name": "Playwright Best Practices Skill",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "date, time & number formats",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/i18n.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_i18n_locale_fixture",
-      "label": "Locale Fixture",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 12,
-      "community_name": "Playwright Best Practices Skill",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "locale fixture",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/i18n.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_i18n_missing_translation_detection",
-      "label": "Missing Translation Detection",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 12,
-      "community_name": "Playwright Best Practices Skill",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "missing translation detection",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/i18n.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_i18n_rtl_layout_testing",
-      "label": "RTL Layout Testing",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 12,
-      "community_name": "Playwright Best Practices Skill",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "rtl layout testing",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/i18n.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_advanced_clock_mocking",
-      "label": "Date, Time & Clock Mocking",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 12,
-      "community_name": "Playwright Best Practices Skill",
-      "contributor": null,
-      "file_type": "document",
-      "norm_label": "date, time & clock mocking",
-      "source_file": ".agents/skills/playwright-best-practices/advanced/clock-mocking.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
       "id": "_agents_skills_playwright_best_practices_advanced_mobile_testing",
       "label": "Mobile & Responsive Testing",
       "_origin": "semantic",
@@ -5690,6 +5835,21 @@
       "file_type": "document",
       "norm_label": "browser apis: geolocation, permissions & more",
       "source_file": ".agents/skills/playwright-best-practices/browser-apis/browser-apis.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_browser_apis_service_workers",
+      "label": "Service Worker Testing",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 12,
+      "community_name": "Playwright Best Practices Skill",
+      "contributor": null,
+      "file_type": "document",
+      "norm_label": "service worker testing",
+      "source_file": ".agents/skills/playwright-best-practices/browser-apis/service-workers.md",
       "source_location": null,
       "source_url": null
     },
@@ -5754,52 +5914,6 @@
       "source_url": null
     },
     {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_i18n",
-      "label": "Internationalization (i18n) Testing",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 12,
-      "community_name": "Playwright Best Practices Skill",
-      "contributor": null,
-      "file_type": "document",
-      "norm_label": "internationalization (i18n) testing",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/i18n.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_advanced_authentication_flows_session_timeout",
-      "label": "Session Timeout Testing",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 12,
-      "community_name": "Playwright Best Practices Skill",
-      "contributor": null,
-      "file_type": "rationale",
-      "norm_label": "session timeout testing",
-      "source_file": ".agents/skills/playwright-best-practices/advanced/authentication-flows.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_advanced_clock_mocking_clock_api",
-      "label": "Playwright Clock API (page.clock)",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 12,
-      "community_name": "Playwright Best Practices Skill",
-      "contributor": null,
-      "file_type": "rationale",
-      "norm_label": "playwright clock api (page.clock)",
-      "rationale": "Control time deterministically instead of waiting real time, making time-dependent tests fast and stable.",
-      "source_file": ".agents/skills/playwright-best-practices/advanced/clock-mocking.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
       "id": "_agents_skills_playwright_best_practices_advanced_mobile_testing_device_emulation",
       "label": "Device Emulation & Touch Gestures",
       "_origin": "semantic",
@@ -5826,6 +5940,21 @@
       "file_type": "rationale",
       "norm_label": "geolocation & permissions emulation",
       "source_file": ".agents/skills/playwright-best-practices/browser-apis/browser-apis.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_browser_apis_service_workers_offline_testing",
+      "label": "Service Worker Cache & Offline Testing",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 12,
+      "community_name": "Playwright Best Practices Skill",
+      "contributor": null,
+      "file_type": "rationale",
+      "norm_label": "service worker cache & offline testing",
+      "source_file": ".agents/skills/playwright-best-practices/browser-apis/service-workers.md",
       "source_location": null,
       "source_url": null
     },
@@ -6374,81 +6503,6 @@
       "source_url": null
     },
     {
-      "id": "_agents_skills_playwright_best_practices_core_locators_filtering_chaining",
-      "label": "Locator Filtering & Chaining",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 15,
-      "community_name": "Assertions & Waiting",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "locator filtering & chaining",
-      "source_file": ".agents/skills/playwright-best-practices/core/locators.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_core_locators_getbyrole",
-      "label": "getByRole",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 15,
-      "community_name": "Assertions & Waiting",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "getbyrole",
-      "source_file": ".agents/skills/playwright-best-practices/core/locators.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_core_locators_getbytestid",
-      "label": "getByTestId",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 15,
-      "community_name": "Assertions & Waiting",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "getbytestid",
-      "source_file": ".agents/skills/playwright-best-practices/core/locators.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_debugging_debugging_playwright_inspector",
-      "label": "Playwright Inspector",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 15,
-      "community_name": "Assertions & Waiting",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "playwright inspector",
-      "source_file": ".agents/skills/playwright-best-practices/debugging/debugging.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_debugging_debugging_ui_mode",
-      "label": "UI Mode",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 15,
-      "community_name": "Assertions & Waiting",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "ui mode",
-      "source_file": ".agents/skills/playwright-best-practices/debugging/debugging.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
       "id": "_agents_skills_playwright_best_practices_debugging_flaky_tests_flakiness_types",
       "label": "Flakiness Categories",
       "_origin": "semantic",
@@ -6464,8 +6518,8 @@
       "source_url": null
     },
     {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_file_operations_download_fixture",
-      "label": "Download Fixture",
+      "id": "_agents_skills_playwright_best_practices_debugging_flaky_tests_quarantine",
+      "label": "Flaky Test Quarantine",
       "_origin": "semantic",
       "author": null,
       "captured_at": null,
@@ -6473,44 +6527,14 @@
       "community_name": "Assertions & Waiting",
       "contributor": null,
       "file_type": "concept",
-      "norm_label": "download fixture",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/file-operations.md",
+      "norm_label": "flaky test quarantine",
+      "source_file": ".agents/skills/playwright-best-practices/debugging/flaky-tests.md",
       "source_location": null,
       "source_url": null
     },
     {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_file_operations_file_content_verification",
-      "label": "File Content Verification",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 15,
-      "community_name": "Assertions & Waiting",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "file content verification",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/file-operations.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_file_operations_upload_from_buffer",
-      "label": "Upload from Buffer",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 15,
-      "community_name": "Assertions & Waiting",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "upload from buffer",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/file-operations.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_browser_apis_iframes",
-      "label": "iFrame Testing",
+      "id": "_agents_skills_playwright_best_practices_advanced_clock_mocking",
+      "label": "Date, Time & Clock Mocking",
       "_origin": "semantic",
       "author": null,
       "captured_at": null,
@@ -6518,8 +6542,8 @@
       "community_name": "Assertions & Waiting",
       "contributor": null,
       "file_type": "document",
-      "norm_label": "iframe testing",
-      "source_file": ".agents/skills/playwright-best-practices/browser-apis/iframes.md",
+      "norm_label": "date, time & clock mocking",
+      "source_file": ".agents/skills/playwright-best-practices/advanced/clock-mocking.md",
       "source_location": null,
       "source_url": null
     },
@@ -6539,8 +6563,8 @@
       "source_url": null
     },
     {
-      "id": "_agents_skills_playwright_best_practices_core_locators",
-      "label": "Locator Strategies",
+      "id": "_agents_skills_playwright_best_practices_debugging_flaky_tests",
+      "label": "Debugging and Managing Flaky Tests",
       "_origin": "semantic",
       "author": null,
       "captured_at": null,
@@ -6548,44 +6572,14 @@
       "community_name": "Assertions & Waiting",
       "contributor": null,
       "file_type": "document",
-      "norm_label": "locator strategies",
-      "source_file": ".agents/skills/playwright-best-practices/core/locators.md",
+      "norm_label": "debugging and managing flaky tests",
+      "source_file": ".agents/skills/playwright-best-practices/debugging/flaky-tests.md",
       "source_location": null,
       "source_url": null
     },
     {
-      "id": "_agents_skills_playwright_best_practices_debugging_debugging",
-      "label": "Debugging & Troubleshooting",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 15,
-      "community_name": "Assertions & Waiting",
-      "contributor": null,
-      "file_type": "document",
-      "norm_label": "debugging & troubleshooting",
-      "source_file": ".agents/skills/playwright-best-practices/debugging/debugging.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_file_operations",
-      "label": "File Upload & Download Testing (Basics)",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 15,
-      "community_name": "Assertions & Waiting",
-      "contributor": null,
-      "file_type": "document",
-      "norm_label": "file upload & download testing (basics)",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/file-operations.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_browser_apis_iframes_frame_locator",
-      "label": "frameLocator iFrame Access",
+      "id": "_agents_skills_playwright_best_practices_advanced_authentication_flows_session_timeout",
+      "label": "Session Timeout Testing",
       "_origin": "semantic",
       "author": null,
       "captured_at": null,
@@ -6593,8 +6587,24 @@
       "community_name": "Assertions & Waiting",
       "contributor": null,
       "file_type": "rationale",
-      "norm_label": "framelocator iframe access",
-      "source_file": ".agents/skills/playwright-best-practices/browser-apis/iframes.md",
+      "norm_label": "session timeout testing",
+      "source_file": ".agents/skills/playwright-best-practices/advanced/authentication-flows.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_advanced_clock_mocking_clock_api",
+      "label": "Playwright Clock API (page.clock)",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 15,
+      "community_name": "Assertions & Waiting",
+      "contributor": null,
+      "file_type": "rationale",
+      "norm_label": "playwright clock api (page.clock)",
+      "rationale": "Control time deterministically instead of waiting real time, making time-dependent tests fast and stable.",
+      "source_file": ".agents/skills/playwright-best-practices/advanced/clock-mocking.md",
       "source_location": null,
       "source_url": null
     },
@@ -8368,112 +8378,6 @@
       "source_url": null
     },
     {
-      "id": "_agents_skills_playwright_best_practices_core_locators_locator_priority_order",
-      "label": "Locator Priority Order",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 24,
-      "community_name": "Test Suite Structure",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "locator priority order",
-      "rationale": "Prefer user-facing locators (role, label, text) over CSS/XPath because they mirror how users perceive the page and survive markup refactors.",
-      "source_file": ".agents/skills/playwright-best-practices/core/locators.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_core_page_object_model_component_objects",
-      "label": "Component Objects",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 24,
-      "community_name": "Test Suite Structure",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "component objects",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_core_page_object_model_factory_functions",
-      "label": "Page Factory Functions",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 24,
-      "community_name": "Test Suite Structure",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "page factory functions",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_core_page_object_model_page_object_model",
-      "label": "Page Object Model",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 24,
-      "community_name": "Test Suite Structure",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "page object model",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_core_test_data_data_driven_testing",
-      "label": "Data-Driven Testing",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 24,
-      "community_name": "Test Suite Structure",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "data-driven testing",
-      "source_file": ".agents/skills/playwright-best-practices/core/test-data.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_core_test_data_factory_pattern",
-      "label": "Test Data Factory Pattern",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 24,
-      "community_name": "Test Suite Structure",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "test data factory pattern",
-      "source_file": ".agents/skills/playwright-best-practices/core/test-data.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_core_test_data_seeded_faker",
-      "label": "Seeded Faker",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 24,
-      "community_name": "Test Suite Structure",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "seeded faker",
-      "source_file": ".agents/skills/playwright-best-practices/core/test-data.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
       "id": "_agents_skills_playwright_best_practices_core_test_suite_structure_api_mocking",
       "label": "API Mocking (page.route)",
       "_origin": "semantic",
@@ -8580,36 +8484,6 @@
       "source_url": null
     },
     {
-      "id": "_agents_skills_playwright_best_practices_core_page_object_model",
-      "label": "Page Object Model (POM)",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 24,
-      "community_name": "Test Suite Structure",
-      "contributor": null,
-      "file_type": "document",
-      "norm_label": "page object model (pom)",
-      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_core_test_data",
-      "label": "Test Data Factories & Generators",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 24,
-      "community_name": "Test Suite Structure",
-      "contributor": null,
-      "file_type": "document",
-      "norm_label": "test data factories & generators",
-      "source_file": ".agents/skills/playwright-best-practices/core/test-data.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
       "id": "_agents_skills_playwright_best_practices_core_test_suite_structure",
       "label": "Test Suite Structure",
       "_origin": "semantic",
@@ -8640,13 +8514,134 @@
       "source_url": null
     },
     {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_api_testing_api_data_seeding",
+      "label": "API Data Seeding",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 25,
+      "community_name": "Authentication Testing",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "api data seeding",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/api-testing.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_api_testing_chained_api_calls",
+      "label": "Chained API Calls",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 25,
+      "community_name": "Authentication Testing",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "chained api calls",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/api-testing.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_api_testing_request_fixtures_for_authenticated_clients",
+      "label": "Request Fixtures for Authenticated Clients",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 25,
+      "community_name": "Authentication Testing",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "request fixtures for authenticated clients",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/api-testing.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_api_testing_schema_validation_with_zod",
+      "label": "Schema Validation with Zod",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 25,
+      "community_name": "Authentication Testing",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "schema validation with zod",
+      "rationale": "Validates response shape rather than brittle exact-value assertions.",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/api-testing.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_graphql_testing_authenticated_graphql_fixture",
+      "label": "Authenticated GraphQL Fixture",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 25,
+      "community_name": "Authentication Testing",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "authenticated graphql fixture",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/graphql-testing.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_graphql_testing_graphql_helper_function",
+      "label": "GraphQL Helper Function",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 25,
+      "community_name": "Authentication Testing",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "graphql helper function",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/graphql-testing.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_graphql_testing_graphql_validation_errors",
+      "label": "GraphQL Validation Errors",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 25,
+      "community_name": "Authentication Testing",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "graphql validation errors",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/graphql-testing.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_advanced_authentication",
+      "label": "Authentication Testing",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 25,
+      "community_name": "Authentication Testing",
+      "contributor": null,
+      "file_type": "document",
+      "norm_label": "authentication testing",
+      "source_file": ".agents/skills/playwright-best-practices/advanced/authentication.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
       "id": "_agents_skills_playwright_best_practices_architecture_pom_vs_fixtures",
       "label": "Organizing Reusable Test Code (POM vs Fixtures)",
       "_origin": "semantic",
       "author": null,
       "captured_at": null,
       "community": 25,
-      "community_name": "Choosing Test Types: E2E, Component, or API",
+      "community_name": "Authentication Testing",
       "contributor": null,
       "file_type": "document",
       "norm_label": "organizing reusable test code (pom vs fixtures)",
@@ -8661,7 +8656,7 @@
       "author": null,
       "captured_at": null,
       "community": 25,
-      "community_name": "Choosing Test Types: E2E, Component, or API",
+      "community_name": "Authentication Testing",
       "contributor": null,
       "file_type": "document",
       "norm_label": "choosing test types: e2e, component, or api",
@@ -8676,11 +8671,41 @@
       "author": null,
       "captured_at": null,
       "community": 25,
-      "community_name": "Choosing Test Types: E2E, Component, or API",
+      "community_name": "Authentication Testing",
       "contributor": null,
       "file_type": "document",
       "norm_label": "mocking strategy: real vs mock services",
       "source_file": ".agents/skills/playwright-best-practices/architecture/when-to-mock.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_api_testing",
+      "label": "API Testing",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 25,
+      "community_name": "Authentication Testing",
+      "contributor": null,
+      "file_type": "document",
+      "norm_label": "api testing",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/api-testing.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_graphql_testing",
+      "label": "GraphQL Testing",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 25,
+      "community_name": "Authentication Testing",
+      "contributor": null,
+      "file_type": "document",
+      "norm_label": "graphql testing",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/graphql-testing.md",
       "source_location": null,
       "source_url": null
     },
@@ -8691,7 +8716,7 @@
       "author": null,
       "captured_at": null,
       "community": 25,
-      "community_name": "Choosing Test Types: E2E, Component, or API",
+      "community_name": "Authentication Testing",
       "contributor": null,
       "file_type": "rationale",
       "norm_label": "storagestate session reuse",
@@ -8707,7 +8732,7 @@
       "author": null,
       "captured_at": null,
       "community": 25,
-      "community_name": "Choosing Test Types: E2E, Component, or API",
+      "community_name": "Authentication Testing",
       "contributor": null,
       "file_type": "rationale",
       "norm_label": "custom fixtures",
@@ -8723,7 +8748,7 @@
       "author": null,
       "captured_at": null,
       "community": 25,
-      "community_name": "Choosing Test Types: E2E, Component, or API",
+      "community_name": "Authentication Testing",
       "contributor": null,
       "file_type": "rationale",
       "norm_label": "helper functions",
@@ -8739,7 +8764,7 @@
       "author": null,
       "captured_at": null,
       "community": 25,
-      "community_name": "Choosing Test Types: E2E, Component, or API",
+      "community_name": "Authentication Testing",
       "contributor": null,
       "file_type": "rationale",
       "norm_label": "page object model",
@@ -8755,7 +8780,7 @@
       "author": null,
       "captured_at": null,
       "community": 25,
-      "community_name": "Choosing Test Types: E2E, Component, or API",
+      "community_name": "Authentication Testing",
       "contributor": null,
       "file_type": "rationale",
       "norm_label": "layering api, component & e2e tests",
@@ -8771,7 +8796,7 @@
       "author": null,
       "captured_at": null,
       "community": 25,
-      "community_name": "Choosing Test Types: E2E, Component, or API",
+      "community_name": "Authentication Testing",
       "contributor": null,
       "file_type": "rationale",
       "norm_label": "hybrid fixture-based mock control",
@@ -8786,7 +8811,7 @@
       "author": null,
       "captured_at": null,
       "community": 25,
-      "community_name": "Choosing Test Types: E2E, Component, or API",
+      "community_name": "Authentication Testing",
       "contributor": null,
       "file_type": "rationale",
       "norm_label": "mock at the boundary principle",
@@ -8867,21 +8892,6 @@
       "file_type": "document",
       "norm_label": "third-party service mocking",
       "source_file": ".agents/skills/playwright-best-practices/advanced/third-party.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_browser_apis_service_workers",
-      "label": "Service Worker Testing",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 26,
-      "community_name": "Advanced Network Interception",
-      "contributor": null,
-      "file_type": "document",
-      "norm_label": "service worker testing",
-      "source_file": ".agents/skills/playwright-best-practices/browser-apis/service-workers.md",
       "source_location": null,
       "source_url": null
     },
@@ -9048,21 +9058,6 @@
       "file_type": "rationale",
       "norm_label": "payment gateway mocking",
       "source_file": ".agents/skills/playwright-best-practices/advanced/third-party.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_browser_apis_service_workers_offline_testing",
-      "label": "Service Worker Cache & Offline Testing",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 26,
-      "community_name": "Advanced Network Interception",
-      "contributor": null,
-      "file_type": "rationale",
-      "norm_label": "service worker cache & offline testing",
-      "source_file": ".agents/skills/playwright-best-practices/browser-apis/service-workers.md",
       "source_location": null,
       "source_url": null
     },
@@ -9727,6 +9722,36 @@
       "source_url": null
     },
     {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_i18n_date_time_number_formats",
+      "label": "Date, Time & Number Formats",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 29,
+      "community_name": "Canvas & WebGL Testing",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "date, time & number formats",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/i18n.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_i18n_locale_fixture",
+      "label": "Locale Fixture",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 29,
+      "community_name": "Canvas & WebGL Testing",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "locale fixture",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/i18n.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
       "id": "_agents_skills_playwright_best_practices_testing_patterns_i18n_locale_specific_snapshots",
       "label": "Locale-Specific Snapshots",
       "_origin": "semantic",
@@ -9737,6 +9762,36 @@
       "contributor": null,
       "file_type": "concept",
       "norm_label": "locale-specific snapshots",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/i18n.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_i18n_missing_translation_detection",
+      "label": "Missing Translation Detection",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 29,
+      "community_name": "Canvas & WebGL Testing",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "missing translation detection",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/i18n.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_i18n_rtl_layout_testing",
+      "label": "RTL Layout Testing",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 29,
+      "community_name": "Canvas & WebGL Testing",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "rtl layout testing",
       "source_file": ".agents/skills/playwright-best-practices/testing-patterns/i18n.md",
       "source_location": null,
       "source_url": null
@@ -9814,6 +9869,21 @@
       "file_type": "document",
       "norm_label": "canvas & webgl testing",
       "source_file": ".agents/skills/playwright-best-practices/testing-patterns/canvas-webgl.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_i18n",
+      "label": "Internationalization (i18n) Testing",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 29,
+      "community_name": "Canvas & WebGL Testing",
+      "contributor": null,
+      "file_type": "document",
+      "norm_label": "internationalization (i18n) testing",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/i18n.md",
       "source_location": null,
       "source_url": null
     },
@@ -9985,142 +10055,6 @@
       "source_url": null
     },
     {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_api_testing_api_data_seeding",
-      "label": "API Data Seeding",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 34,
-      "community_name": "API Testing",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "api data seeding",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/api-testing.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_api_testing_chained_api_calls",
-      "label": "Chained API Calls",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 34,
-      "community_name": "API Testing",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "chained api calls",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/api-testing.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_api_testing_request_fixtures_for_authenticated_clients",
-      "label": "Request Fixtures for Authenticated Clients",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 34,
-      "community_name": "API Testing",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "request fixtures for authenticated clients",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/api-testing.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_api_testing_schema_validation_with_zod",
-      "label": "Schema Validation with Zod",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 34,
-      "community_name": "API Testing",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "schema validation with zod",
-      "rationale": "Validates response shape rather than brittle exact-value assertions.",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/api-testing.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_graphql_testing_authenticated_graphql_fixture",
-      "label": "Authenticated GraphQL Fixture",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 34,
-      "community_name": "API Testing",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "authenticated graphql fixture",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/graphql-testing.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_graphql_testing_graphql_helper_function",
-      "label": "GraphQL Helper Function",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 34,
-      "community_name": "API Testing",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "graphql helper function",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/graphql-testing.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_graphql_testing_graphql_validation_errors",
-      "label": "GraphQL Validation Errors",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 34,
-      "community_name": "API Testing",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "graphql validation errors",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/graphql-testing.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_api_testing",
-      "label": "API Testing",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 34,
-      "community_name": "API Testing",
-      "contributor": null,
-      "file_type": "document",
-      "norm_label": "api testing",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/api-testing.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_testing_patterns_graphql_testing",
-      "label": "GraphQL Testing",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 34,
-      "community_name": "API Testing",
-      "contributor": null,
-      "file_type": "document",
-      "norm_label": "graphql testing",
-      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/graphql-testing.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
       "id": "_agents_skills_playwright_best_practices_debugging_debugging_trace_viewer",
       "label": "Trace Viewer",
       "_origin": "semantic",
@@ -10147,6 +10081,36 @@
       "file_type": "concept",
       "norm_label": "ci-specific flakiness",
       "source_file": ".agents/skills/playwright-best-practices/debugging/flaky-tests.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_infrastructure_ci_cd_ci_cd_blob_report_merge",
+      "label": "Merge Sharded Blob Reports",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 36,
+      "community_name": "GitHub Actions for Playwright",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "merge sharded blob reports",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/ci-cd.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_infrastructure_ci_cd_ci_cd_sharding",
+      "label": "Test Sharding",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 36,
+      "community_name": "GitHub Actions for Playwright",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "test sharding",
+      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/ci-cd.md",
       "source_location": null,
       "source_url": null
     },
@@ -11325,6 +11289,187 @@
       "norm_label": "mspluseverythingiwant app",
       "rationale": "Mood + live-location sharing app for two users built with Next.js and Supabase.",
       "source_file": "README.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_core_locators_filtering_chaining",
+      "label": "Locator Filtering & Chaining",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 46,
+      "community_name": "Locator Strategies",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "locator filtering & chaining",
+      "source_file": ".agents/skills/playwright-best-practices/core/locators.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_core_locators_getbyrole",
+      "label": "getByRole",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 46,
+      "community_name": "Locator Strategies",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "getbyrole",
+      "source_file": ".agents/skills/playwright-best-practices/core/locators.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_core_locators_getbytestid",
+      "label": "getByTestId",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 46,
+      "community_name": "Locator Strategies",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "getbytestid",
+      "source_file": ".agents/skills/playwright-best-practices/core/locators.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_core_locators_locator_priority_order",
+      "label": "Locator Priority Order",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 46,
+      "community_name": "Locator Strategies",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "locator priority order",
+      "rationale": "Prefer user-facing locators (role, label, text) over CSS/XPath because they mirror how users perceive the page and survive markup refactors.",
+      "source_file": ".agents/skills/playwright-best-practices/core/locators.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_core_page_object_model_component_objects",
+      "label": "Component Objects",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 46,
+      "community_name": "Locator Strategies",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "component objects",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_core_page_object_model_factory_functions",
+      "label": "Page Factory Functions",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 46,
+      "community_name": "Locator Strategies",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "page factory functions",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_core_page_object_model_page_object_model",
+      "label": "Page Object Model",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 46,
+      "community_name": "Locator Strategies",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "page object model",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_core_test_data_factory_pattern",
+      "label": "Test Data Factory Pattern",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 46,
+      "community_name": "Locator Strategies",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "test data factory pattern",
+      "source_file": ".agents/skills/playwright-best-practices/core/test-data.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_browser_apis_iframes",
+      "label": "iFrame Testing",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 46,
+      "community_name": "Locator Strategies",
+      "contributor": null,
+      "file_type": "document",
+      "norm_label": "iframe testing",
+      "source_file": ".agents/skills/playwright-best-practices/browser-apis/iframes.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_core_locators",
+      "label": "Locator Strategies",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 46,
+      "community_name": "Locator Strategies",
+      "contributor": null,
+      "file_type": "document",
+      "norm_label": "locator strategies",
+      "source_file": ".agents/skills/playwright-best-practices/core/locators.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_core_page_object_model",
+      "label": "Page Object Model (POM)",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 46,
+      "community_name": "Locator Strategies",
+      "contributor": null,
+      "file_type": "document",
+      "norm_label": "page object model (pom)",
+      "source_file": ".agents/skills/playwright-best-practices/core/page-object-model.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_browser_apis_iframes_frame_locator",
+      "label": "frameLocator iFrame Access",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 46,
+      "community_name": "Locator Strategies",
+      "contributor": null,
+      "file_type": "rationale",
+      "norm_label": "framelocator iframe access",
+      "source_file": ".agents/skills/playwright-best-practices/browser-apis/iframes.md",
       "source_location": null,
       "source_url": null
     },
@@ -13315,17 +13460,32 @@
       "source_url": null
     },
     {
-      "id": "_agents_skills_playwright_best_practices_infrastructure_ci_cd_ci_cd_blob_report_merge",
-      "label": "Merge Sharded Blob Reports",
+      "id": "_agents_skills_playwright_best_practices_debugging_debugging_playwright_inspector",
+      "label": "Playwright Inspector",
       "_origin": "semantic",
       "author": null,
       "captured_at": null,
       "community": 66,
-      "community_name": "Performance & Parallelization",
+      "community_name": "Debugging & Troubleshooting",
       "contributor": null,
       "file_type": "concept",
-      "norm_label": "merge sharded blob reports",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/ci-cd.md",
+      "norm_label": "playwright inspector",
+      "source_file": ".agents/skills/playwright-best-practices/debugging/debugging.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_debugging_debugging_ui_mode",
+      "label": "UI Mode",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 66,
+      "community_name": "Debugging & Troubleshooting",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "ui mode",
+      "source_file": ".agents/skills/playwright-best-practices/debugging/debugging.md",
       "source_location": null,
       "source_url": null
     },
@@ -13336,25 +13496,10 @@
       "author": null,
       "captured_at": null,
       "community": 66,
-      "community_name": "Performance & Parallelization",
+      "community_name": "Debugging & Troubleshooting",
       "contributor": null,
       "file_type": "concept",
       "norm_label": "cache playwright browsers",
-      "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/ci-cd.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_infrastructure_ci_cd_ci_cd_sharding",
-      "label": "Test Sharding",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 66,
-      "community_name": "Performance & Parallelization",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "test sharding",
       "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/ci-cd.md",
       "source_location": null,
       "source_url": null
@@ -13366,7 +13511,7 @@
       "author": null,
       "captured_at": null,
       "community": 66,
-      "community_name": "Performance & Parallelization",
+      "community_name": "Debugging & Troubleshooting",
       "contributor": null,
       "file_type": "concept",
       "norm_label": "block unnecessary resources",
@@ -13381,7 +13526,7 @@
       "author": null,
       "captured_at": null,
       "community": 66,
-      "community_name": "Performance & Parallelization",
+      "community_name": "Debugging & Troubleshooting",
       "contributor": null,
       "file_type": "concept",
       "norm_label": "cache api responses",
@@ -13396,7 +13541,7 @@
       "author": null,
       "captured_at": null,
       "community": 66,
-      "community_name": "Performance & Parallelization",
+      "community_name": "Debugging & Troubleshooting",
       "contributor": null,
       "file_type": "concept",
       "norm_label": "lazy navigation",
@@ -13411,7 +13556,7 @@
       "author": null,
       "captured_at": null,
       "community": 66,
-      "community_name": "Performance & Parallelization",
+      "community_name": "Debugging & Troubleshooting",
       "contributor": null,
       "file_type": "concept",
       "norm_label": "reuse authentication",
@@ -13427,7 +13572,7 @@
       "author": null,
       "captured_at": null,
       "community": 66,
-      "community_name": "Performance & Parallelization",
+      "community_name": "Debugging & Troubleshooting",
       "contributor": null,
       "file_type": "concept",
       "norm_label": "coverage thresholds",
@@ -13442,7 +13587,7 @@
       "author": null,
       "captured_at": null,
       "community": 66,
-      "community_name": "Performance & Parallelization",
+      "community_name": "Debugging & Troubleshooting",
       "contributor": null,
       "file_type": "concept",
       "norm_label": "istanbul format conversion",
@@ -13457,11 +13602,56 @@
       "author": null,
       "captured_at": null,
       "community": 66,
-      "community_name": "Performance & Parallelization",
+      "community_name": "Debugging & Troubleshooting",
       "contributor": null,
       "file_type": "concept",
       "norm_label": "v8 coverage fixture",
       "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/test-coverage.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_file_operations_download_fixture",
+      "label": "Download Fixture",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 66,
+      "community_name": "Debugging & Troubleshooting",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "download fixture",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/file-operations.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_file_operations_file_content_verification",
+      "label": "File Content Verification",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 66,
+      "community_name": "Debugging & Troubleshooting",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "file content verification",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/file-operations.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_file_operations_upload_from_buffer",
+      "label": "Upload from Buffer",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 66,
+      "community_name": "Debugging & Troubleshooting",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "upload from buffer",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/file-operations.md",
       "source_location": null,
       "source_url": null
     },
@@ -13472,7 +13662,7 @@
       "author": null,
       "captured_at": null,
       "community": 66,
-      "community_name": "Performance & Parallelization",
+      "community_name": "Debugging & Troubleshooting",
       "contributor": null,
       "file_type": "concept",
       "norm_label": "core web vitals",
@@ -13487,7 +13677,7 @@
       "author": null,
       "captured_at": null,
       "community": 66,
-      "community_name": "Performance & Parallelization",
+      "community_name": "Debugging & Troubleshooting",
       "contributor": null,
       "file_type": "concept",
       "norm_label": "lighthouse integration",
@@ -13502,11 +13692,26 @@
       "author": null,
       "captured_at": null,
       "community": 66,
-      "community_name": "Performance & Parallelization",
+      "community_name": "Debugging & Troubleshooting",
       "contributor": null,
       "file_type": "concept",
       "norm_label": "performance budgets",
       "source_file": ".agents/skills/playwright-best-practices/testing-patterns/performance-testing.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_debugging_debugging",
+      "label": "Debugging & Troubleshooting",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 66,
+      "community_name": "Debugging & Troubleshooting",
+      "contributor": null,
+      "file_type": "document",
+      "norm_label": "debugging & troubleshooting",
+      "source_file": ".agents/skills/playwright-best-practices/debugging/debugging.md",
       "source_location": null,
       "source_url": null
     },
@@ -13517,7 +13722,7 @@
       "author": null,
       "captured_at": null,
       "community": 66,
-      "community_name": "Performance & Parallelization",
+      "community_name": "Debugging & Troubleshooting",
       "contributor": null,
       "file_type": "document",
       "norm_label": "ci/cd integration",
@@ -13532,7 +13737,7 @@
       "author": null,
       "captured_at": null,
       "community": 66,
-      "community_name": "Performance & Parallelization",
+      "community_name": "Debugging & Troubleshooting",
       "contributor": null,
       "file_type": "document",
       "norm_label": "performance & parallelization",
@@ -13547,11 +13752,26 @@
       "author": null,
       "captured_at": null,
       "community": 66,
-      "community_name": "Performance & Parallelization",
+      "community_name": "Debugging & Troubleshooting",
       "contributor": null,
       "file_type": "document",
       "norm_label": "test coverage",
       "source_file": ".agents/skills/playwright-best-practices/infrastructure-ci-cd/test-coverage.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_testing_patterns_file_operations",
+      "label": "File Upload & Download Testing (Basics)",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 66,
+      "community_name": "Debugging & Troubleshooting",
+      "contributor": null,
+      "file_type": "document",
+      "norm_label": "file upload & download testing (basics)",
+      "source_file": ".agents/skills/playwright-best-practices/testing-patterns/file-operations.md",
       "source_location": null,
       "source_url": null
     },
@@ -13562,7 +13782,7 @@
       "author": null,
       "captured_at": null,
       "community": 66,
-      "community_name": "Performance & Parallelization",
+      "community_name": "Debugging & Troubleshooting",
       "contributor": null,
       "file_type": "document",
       "norm_label": "performance testing & web vitals",
@@ -14644,8 +14864,8 @@
       "source_url": null
     },
     {
-      "id": "_agents_skills_playwright_best_practices_debugging_flaky_tests_quarantine",
-      "label": "Flaky Test Quarantine",
+      "id": "_agents_skills_playwright_best_practices_core_test_data_data_driven_testing",
+      "label": "Data-Driven Testing",
       "_origin": "semantic",
       "author": null,
       "captured_at": null,
@@ -14653,8 +14873,23 @@
       "community_name": "Fixtures & Hooks",
       "contributor": null,
       "file_type": "concept",
-      "norm_label": "flaky test quarantine",
-      "source_file": ".agents/skills/playwright-best-practices/debugging/flaky-tests.md",
+      "norm_label": "data-driven testing",
+      "source_file": ".agents/skills/playwright-best-practices/core/test-data.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "_agents_skills_playwright_best_practices_core_test_data_seeded_faker",
+      "label": "Seeded Faker",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 8,
+      "community_name": "Fixtures & Hooks",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "seeded faker",
+      "source_file": ".agents/skills/playwright-best-practices/core/test-data.md",
       "source_location": null,
       "source_url": null
     },
@@ -14670,21 +14905,6 @@
       "file_type": "concept",
       "norm_label": "nextauth.js authentication",
       "source_file": ".agents/skills/playwright-best-practices/frameworks/nextjs.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "_agents_skills_playwright_best_practices_advanced_authentication",
-      "label": "Authentication Testing",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 8,
-      "community_name": "Fixtures & Hooks",
-      "contributor": null,
-      "file_type": "document",
-      "norm_label": "authentication testing",
-      "source_file": ".agents/skills/playwright-best-practices/advanced/authentication.md",
       "source_location": null,
       "source_url": null
     },
@@ -14734,8 +14954,8 @@
       "source_url": null
     },
     {
-      "id": "_agents_skills_playwright_best_practices_debugging_flaky_tests",
-      "label": "Debugging and Managing Flaky Tests",
+      "id": "_agents_skills_playwright_best_practices_core_test_data",
+      "label": "Test Data Factories & Generators",
       "_origin": "semantic",
       "author": null,
       "captured_at": null,
@@ -14743,8 +14963,8 @@
       "community_name": "Fixtures & Hooks",
       "contributor": null,
       "file_type": "document",
-      "norm_label": "debugging and managing flaky tests",
-      "source_file": ".agents/skills/playwright-best-practices/debugging/flaky-tests.md",
+      "norm_label": "test data factories & generators",
+      "source_file": ".agents/skills/playwright-best-practices/core/test-data.md",
       "source_location": null,
       "source_url": null
     },
@@ -15800,6 +16020,50 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "app_globals",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_node_assert",
+      "label": "ref_node_assert",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_node_assert",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_node_fs",
+      "label": "ref_node_fs",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_node_fs",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_node_test",
+      "label": "ref_node_test",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_node_test",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_node_url",
+      "label": "ref_node_url",
+      "community": 34,
+      "community_name": "helpers.mjs",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_node_url",
       "source_file": "",
       "type": "external"
     }
@@ -16874,6 +17138,30 @@
       "weight": 1.0
     },
     {
+      "source": "tests_db_helpers_build",
+      "target": "tests_db_helpers_user",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_helpers_createdb",
+      "target": "tests_db_helpers_build",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
       "source": "tests_fake_supabase_fakesupabase_benapproves",
       "target": "tests_fake_supabase_fakesupabase_link",
       "relation": "calls",
@@ -17111,6 +17399,42 @@
       "context": "call",
       "source_file": "lib/use-couple.ts",
       "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_pairing_test",
+      "target": "tests_db_pairing_test_setup",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/db/pairing.test.mjs",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_pairing_test",
+      "target": "tests_db_pairing_test_code",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/db/pairing.test.mjs",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_pairing_test",
+      "target": "tests_db_pairing_test_request",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/db/pairing.test.mjs",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -18154,7 +18478,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -18166,7 +18490,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -18178,7 +18502,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -18190,24 +18514,12 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
       "source": "package",
-      "target": "ref_playwright_test",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "package.json",
-      "source_location": "L18",
-      "weight": 1.0
-    },
-    {
-      "source": "package",
-      "target": "ref_tailwindcss_postcss",
+      "target": "ref_electric_sql_pglite",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -18219,7 +18531,7 @@
     },
     {
       "source": "package",
-      "target": "ref_types_node",
+      "target": "ref_playwright_test",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -18231,7 +18543,7 @@
     },
     {
       "source": "package",
-      "target": "ref_types_react",
+      "target": "ref_tailwindcss_postcss",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -18243,7 +18555,7 @@
     },
     {
       "source": "package",
-      "target": "ref_types_react_dom",
+      "target": "ref_types_node",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -18255,7 +18567,7 @@
     },
     {
       "source": "package",
-      "target": "ref_autoskills",
+      "target": "ref_types_react",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -18267,7 +18579,7 @@
     },
     {
       "source": "package",
-      "target": "ref_eslint",
+      "target": "ref_types_react_dom",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -18279,7 +18591,7 @@
     },
     {
       "source": "package",
-      "target": "ref_eslint_config_next",
+      "target": "ref_eslint",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -18291,7 +18603,7 @@
     },
     {
       "source": "package",
-      "target": "ref_supabase",
+      "target": "ref_eslint_config_next",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -18303,7 +18615,7 @@
     },
     {
       "source": "package",
-      "target": "ref_tailwindcss",
+      "target": "ref_supabase",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -18315,7 +18627,7 @@
     },
     {
       "source": "package",
-      "target": "ref_typescript",
+      "target": "ref_tailwindcss",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -18323,6 +18635,66 @@
       "context": "import",
       "source_file": "package.json",
       "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_typescript",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_access_test",
+      "target": "tests_db_helpers_createdb",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/db/access.test.mjs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_access_test",
+      "target": "tests_db_helpers_user",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/db/access.test.mjs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_pairing_test",
+      "target": "tests_db_helpers_createdb",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/db/pairing.test.mjs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_pairing_test",
+      "target": "tests_db_helpers_user",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/db/pairing.test.mjs",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -19495,6 +19867,114 @@
       "context": "import",
       "source_file": "playwright.config.ts",
       "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_access_test",
+      "target": "ref_node_test",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/db/access.test.mjs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_access_test",
+      "target": "ref_node_assert",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/db/access.test.mjs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_access_test",
+      "target": "tests_db_helpers",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/db/access.test.mjs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_helpers",
+      "target": "ref_electric_sql_pglite",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_helpers",
+      "target": "ref_node_fs",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_helpers",
+      "target": "ref_node_url",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_pairing_test",
+      "target": "ref_node_test",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/db/pairing.test.mjs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_pairing_test",
+      "target": "ref_node_assert",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/db/pairing.test.mjs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_pairing_test",
+      "target": "tests_db_helpers",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/db/pairing.test.mjs",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -20898,7 +21378,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -20909,7 +21389,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -20964,7 +21444,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -20975,7 +21455,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -20986,7 +21466,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -20997,23 +21477,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_playwright_test",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L18",
-      "weight": 1.0
-    },
-    {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss_postcss",
+      "target": "package_devdependencies_electric_sql_pglite",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -21024,7 +21493,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_types_node",
+      "target": "package_devdependencies_playwright_test",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -21035,7 +21504,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react",
+      "target": "package_devdependencies_tailwindcss_postcss",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -21046,7 +21515,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react_dom",
+      "target": "package_devdependencies_types_node",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -21057,7 +21526,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_autoskills",
+      "target": "package_devdependencies_types_react",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -21068,7 +21537,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint",
+      "target": "package_devdependencies_types_react_dom",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -21079,7 +21548,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint_config_next",
+      "target": "package_devdependencies_eslint",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -21090,7 +21559,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_supabase",
+      "target": "package_devdependencies_eslint_config_next",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -21101,7 +21570,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss",
+      "target": "package_devdependencies_supabase",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -21112,13 +21581,35 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_typescript",
+      "target": "package_devdependencies_tailwindcss",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_typescript",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_test_db",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -21482,6 +21973,94 @@
       "confidence_score": 1.0,
       "source_file": "supabase/migrations/20261005020000_unpair_clears_reactions_and_notes.sql",
       "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_access_test",
+      "target": "tests_db_access_test_a_b_c",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/db/access.test.mjs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_helpers",
+      "target": "tests_db_helpers_user",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_helpers",
+      "target": "tests_db_helpers_build",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_helpers",
+      "target": "tests_db_helpers_templates",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_helpers",
+      "target": "tests_db_helpers_createdb",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_helpers",
+      "target": "tests_db_helpers_migrations",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_pairing_test",
+      "target": "tests_db_pairing_test_a_b_c_d_e",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/db/pairing.test.mjs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_readme",
+      "target": "tests_db_readme_database_tests",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/db/README.md",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -23200,6 +23779,54 @@
       "context": "collection",
       "source_file": "components/reaction-icons.tsx",
       "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_helpers_createdb",
+      "target": "tests_db_helpers_createdb_anon",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "collection",
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_helpers_createdb",
+      "target": "tests_db_helpers_createdb_as",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "collection",
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_helpers_createdb",
+      "target": "tests_db_helpers_createdb_link",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "collection",
+      "source_file": "tests/db/helpers.mjs",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_db_readme_database_tests",
+      "target": "tests_db_helpers_createdb_anon",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "anon",
+      "source_file": "tests/db/README.md",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -35424,5 +36051,5 @@
       "source_file": ".agents/skills/supabase-postgres-best-practices/references/conn-pooling.md"
     }
   ],
-  "built_at_commit": "49ee462275d6195c8078e7e4d7245977f242f337"
+  "built_at_commit": "b4503f8946f5f032ebec1e8a74c67c368f6d1d04"
 }
