@@ -41,8 +41,8 @@ function b64(value: object) {
   return Buffer.from(JSON.stringify(value)).toString("base64url");
 }
 
-function makeSession() {
-  const expiresAt = Math.floor(Date.now() / 1000) + 86_400;
+function makeSession({ expired = false } = {}) {
+  const expiresAt = Math.floor(Date.now() / 1000) + (expired ? -3_600 : 86_400);
   const user = {
     id: ME,
     aud: "authenticated",
@@ -91,12 +91,15 @@ export class FakeSupabase {
   private nextCode = 0;
 
   /** Starts the browser already signed in as Ana. */
-  async signIn(context: BrowserContext) {
+  async signIn(context: BrowserContext, { expired = false } = {}) {
     await context.addInitScript(
       ([key, session]) => localStorage.setItem(key, session),
-      [STORAGE_KEY, JSON.stringify(makeSession())] as const,
+      [STORAGE_KEY, JSON.stringify(makeSession({ expired }))] as const,
     );
   }
+
+  /** When true, refreshing the session is refused, as if it was revoked elsewhere. */
+  refreshRevoked = false;
 
   /** Makes Ben a profile, linked with Ana both ways. */
   link() {
@@ -194,6 +197,12 @@ export class FakeSupabase {
       if (path === "/auth/v1/verify") return reply(200, makeSession());
       if (path === "/auth/v1/logout") return reply(204);
       if (path === "/auth/v1/user") return reply(200, makeSession().user);
+      if (path === "/auth/v1/token") {
+        if (this.refreshRevoked) {
+          return reply(400, { code: 400, error_code: "refresh_token_not_found", msg: "Invalid Refresh Token: Refresh Token Not Found" });
+        }
+        return reply(200, makeSession());
+      }
 
       // ── Tables ──
       if (path === "/rest/v1/profiles") {

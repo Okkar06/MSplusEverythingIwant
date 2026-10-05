@@ -157,3 +157,43 @@ test.describe("with the service worker", () => {
     await context.setOffline(false);
   });
 });
+
+// Regression: an expired session (they last about an hour) used to land on the
+// sign-in screen when opened offline, instead of the saved copy.
+test("opened offline after the session expired, it still shows the saved copy", async ({ page, context, supabase }) => {
+  await page.goto("/");
+  await expect(bensMood(page).getByText("Calm")).toBeVisible();
+
+  await supabase.signIn(context, { expired: true }); // runs after the fresh one: wins
+  supabase.down = true;
+  supabase.setMood(PARTNER, "excited");
+  await page.reload();
+  await expect(home(page)).toBeVisible();
+  await expect(bensMood(page).getByText("Calm")).toBeVisible();
+  await expect(notice(page)).toBeVisible();
+  // The auth library keeps retrying the refresh; it used to give up to the
+  // sign-in screen after about 10 seconds.
+  await page.waitForTimeout(12_000);
+  await expect(page.getByRole("heading", { name: "Hello, you two" })).toHaveCount(0);
+  await expect(home(page)).toBeVisible();
+
+  // Back online: the refresh succeeds and fresh data arrives.
+  supabase.down = false;
+  await page.reload();
+  await expect(bensMood(page).getByText("Excited")).toBeVisible();
+  await expect(notice(page)).toHaveCount(0);
+});
+
+test("a session revoked elsewhere also deletes the saved copy", async ({ page, context, supabase }) => {
+  // A saved copy from an earlier visit, and a session that has to be refreshed
+  // but can't be (signed out on another device, or revoked).
+  await context.addInitScript((k) => {
+    localStorage.setItem(k, JSON.stringify({ savedAt: new Date().toISOString(), profiles: { x: {} }, moods: {}, locations: {} }));
+  }, SNAPSHOT_KEY);
+  await supabase.signIn(context, { expired: true });
+  supabase.refreshRevoked = true;
+
+  await page.goto("/");
+  await expect(page.getByRole("heading", { name: "Hello, you two" })).toBeVisible();
+  await expect.poll(() => page.evaluate((k) => localStorage.getItem(k), SNAPSHOT_KEY)).toBeNull();
+});

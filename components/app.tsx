@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type { Session } from "@supabase/supabase-js";
-import { getSupabase } from "@/lib/supabase/client";
+import { getSupabase, storedUser } from "@/lib/supabase/client";
 import { clearSnapshots } from "@/lib/couple-snapshot";
 import { useOnline } from "@/lib/use-online";
 import { useCouple } from "@/lib/use-couple";
@@ -13,7 +12,7 @@ import { HomeScreen } from "./home-screen";
 type Auth =
   | { status: "loading" }
   | { status: "signed-out" }
-  | { status: "signed-in"; session: Session }
+  | { status: "signed-in"; userId: string; email: string | undefined }
   | { status: "misconfigured"; message: string };
 
 function useAuth(): Auth {
@@ -28,9 +27,33 @@ function useAuth(): Auth {
       queueMicrotask(() => setAuth({ status: "misconfigured", message }));
       return;
     }
-    // Fires once straight away with the stored session (INITIAL_SESSION), then on every change.
-    const { data } = supabase.auth.onAuthStateChange((_event, session) => {
-      setAuth(session ? { status: "signed-in", session } : { status: "signed-out" });
+    // If this device has a stored session, show its saved copy right away. The
+    // first auth event can take several seconds when the session has expired
+    // and the refresh has to be retried (e.g. offline); the events below then
+    // correct this either way.
+    const stored = storedUser();
+    if (stored) {
+      queueMicrotask(() =>
+        setAuth((a) => (a.status === "loading" ? { status: "signed-in", userId: stored.id, email: stored.email } : a)),
+      );
+    }
+
+    // Fires once with the stored session (INITIAL_SESSION), then on every change.
+    const { data } = supabase.auth.onAuthStateChange((event, session) => {
+      // Also when signed out elsewhere or the session was revoked, not only
+      // via our Sign out button: the saved copy holds your partner's location.
+      if (event === "SIGNED_OUT") clearSnapshots();
+      if (session) {
+        setAuth({ status: "signed-in", userId: session.user.id, email: session.user.email });
+        return;
+      }
+      // No usable session, but one is still stored: it has expired and couldn't
+      // be refreshed (offline, or Supabase unreachable). The library keeps
+      // retrying, so stay on this device's saved copy rather than showing a
+      // sign-in form that can't work offline. A real sign-out deletes the
+      // stored session and fires SIGNED_OUT, which lands here with none stored.
+      const still = event === "SIGNED_OUT" ? null : storedUser();
+      setAuth(still ? { status: "signed-in", userId: still.id, email: still.email } : { status: "signed-out" });
     });
     return () => data.subscription.unsubscribe();
   }, []);
@@ -60,13 +83,13 @@ export function App() {
         </section>
       )}
       {auth.status === "signed-out" && <SignIn />}
-      {auth.status === "signed-in" && <SignedIn session={auth.session} />}
+      {auth.status === "signed-in" && <SignedIn userId={auth.userId} email={auth.email} />}
     </main>
   );
 }
 
-function SignedIn({ session }: { session: Session }) {
-  const couple = useCouple(session.user.id);
+function SignedIn({ userId, email }: { userId: string; email: string | undefined }) {
+  const couple = useCouple(userId);
   const online = useOnline();
 
   if (couple.loading) return <Loading offline={!online} />;
@@ -74,9 +97,9 @@ function SignedIn({ session }: { session: Session }) {
   if (!couple.me || !couple.partner) {
     return (
       <WaitingForPartner
-        userId={session.user.id}
+        userId={userId}
         name={couple.me?.display_name}
-        email={session.user.email}
+        email={email}
         onPaired={couple.reload}
         onSignOut={signOut}
       />
