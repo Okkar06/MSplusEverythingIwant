@@ -9,9 +9,46 @@
 //
 // Bump VERSION to drop every old cache on the next visit.
 
-const VERSION = "v1";
+const VERSION = "v2";
 const CACHE = `us-${VERSION}`;
 const SHELL = "/";
+
+const STATIC = "/_next/static/";
+
+/** The path of a same-origin URL, or null for anything else (including ../ tricks). */
+function ownPath(url) {
+  try {
+    const u = new URL(url, self.location.origin);
+    return u.origin === self.location.origin ? u.pathname : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Static files the cached page references. */
+async function shellAssets(cache) {
+  const res = await cache.match(SHELL);
+  if (!res) return [];
+  const html = await res.text();
+  return [...html.matchAll(/(?:src|href)="(\/_next\/static\/[^"]+)"/g)].map((m) => m[1]);
+}
+
+/**
+ * Drop cached static files the current app no longer uses. Every deploy
+ * renames its chunks, so without this the cache would only ever grow.
+ */
+async function pruneStatic(cache, keep) {
+  const keepSet = new Set([...keep, ...(await shellAssets(cache))]);
+  const keys = await cache.keys();
+  await Promise.all(
+    keys
+      .filter((req) => {
+        const path = ownPath(req.url);
+        return path?.startsWith(STATIC) && !keepSet.has(path);
+      })
+      .map((req) => cache.delete(req)),
+  );
+}
 
 // Cache the page and every static file it references, so the first offline
 // open works even if this worker only took over after those files loaded.
@@ -45,14 +82,20 @@ self.addEventListener("activate", (event) => {
 // The page sends the static files it already loaded: Next loads some chunks at
 // runtime that aren't in the HTML, and the first visit fetches them before this
 // worker takes over, so cacheShell() alone can miss them.
+// That list is also what the running app uses, so anything else under
+// /_next/static (from an older deploy) is pruned.
 self.addEventListener("message", (event) => {
   const urls = event.data?.type === "cache-assets" ? event.data.urls : null;
   if (!Array.isArray(urls)) return;
-  const own = urls.filter((u) => typeof u === "string" && u.startsWith("/_next/static/"));
+  // Resolve each URL first, so "/_next/static/../../x" can't cache "/x".
+  const own = urls
+    .map((u) => (typeof u === "string" ? ownPath(u) : null))
+    .filter((path) => path?.startsWith(STATIC));
   event.waitUntil(
-    caches.open(CACHE).then((cache) =>
-      Promise.all(own.map((url) => cache.match(url).then((hit) => hit ?? cache.add(url).catch(() => {})))),
-    ),
+    caches.open(CACHE).then(async (cache) => {
+      await Promise.all(own.map((url) => cache.match(url).then((hit) => hit ?? cache.add(url).catch(() => {}))));
+      await pruneStatic(cache, own);
+    }),
   );
 });
 
@@ -68,7 +111,8 @@ self.addEventListener("fetch", (event) => {
         .then((res) => {
           if (res.ok && url.pathname === SHELL) {
             const copy = res.clone();
-            caches.open(CACHE).then((c) => c.put(SHELL, copy));
+            // Keep the worker alive until the copy is written.
+            event.waitUntil(caches.open(CACHE).then((c) => c.put(SHELL, copy)));
           }
           return res;
         })
@@ -77,7 +121,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  if (url.pathname.startsWith("/_next/static/")) {
+  if (url.pathname.startsWith(STATIC)) {
     event.respondWith(
       caches.match(request).then(
         (hit) =>
@@ -85,7 +129,7 @@ self.addEventListener("fetch", (event) => {
           fetch(request).then((res) => {
             if (res.ok) {
               const copy = res.clone();
-              caches.open(CACHE).then((c) => c.put(request, copy));
+              event.waitUntil(caches.open(CACHE).then((c) => c.put(request, copy)));
             }
             return res;
           }),
@@ -99,12 +143,14 @@ self.addEventListener("fetch", (event) => {
       caches.open(CACHE).then(async (cache) => {
         const hit = await cache.match(request);
         const fresh = fetch(request)
-          .then((res) => {
-            if (res.ok) cache.put(request, res.clone());
-            return res;
-          })
+          .then((res) => (res.ok ? cache.put(request, res.clone()).then(() => res) : res))
           .catch(() => hit);
-        return hit ?? fresh;
+        if (!hit) return fresh;
+        // Answer from the cache now, and keep the worker alive for the refresh.
+        // waitUntil has to be called here, while respondWith is still pending:
+        // called later, once the event has finished, it throws.
+        event.waitUntil(fresh);
+        return hit;
       }),
     );
   }

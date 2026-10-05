@@ -156,6 +156,55 @@ test.describe("with the service worker", () => {
     await expect(notice(page)).toHaveText(/You're offline/);
     await context.setOffline(false);
   });
+
+  /** Waits until the service worker controls the page. */
+  async function controlled(page: Page) {
+    await page.evaluate(async () => {
+      await navigator.serviceWorker.ready;
+      if (!navigator.serviceWorker.controller) {
+        await new Promise((r) => navigator.serviceWorker.addEventListener("controllerchange", r, { once: true }));
+      }
+    });
+  }
+
+  test("only static files can be cached through the worker's message", async ({ page, browserName }) => {
+    test.skip(browserName !== "chromium", "Service-worker tests run in Chromium only.");
+    await page.goto("/");
+    await expect(home(page)).toBeVisible();
+    await controlled(page);
+    // "/_next/static/../../sw.js" resolves to /sw.js, which exists: it must not be cached.
+    await page.evaluate(() =>
+      navigator.serviceWorker.controller!.postMessage({ type: "cache-assets", urls: ["/_next/static/../../sw.js"] }),
+    );
+    await page.waitForTimeout(1_000);
+    expect(await page.evaluate(async () => !!(await caches.match("/sw.js")))).toBe(false);
+  });
+
+  test("static files from an older deploy are pruned", async ({ page, browserName }) => {
+    test.skip(browserName !== "chromium", "Service-worker tests run in Chromium only.");
+    await page.goto("/");
+    await expect(home(page)).toBeVisible();
+    await controlled(page);
+    const OLD = "/_next/static/chunks/from-an-older-deploy.js";
+    await page.evaluate(async (url) => {
+      const name = (await caches.keys()).find((k) => k.startsWith("us-"))!;
+      await (await caches.open(name)).put(url, new Response("// old"));
+    }, OLD);
+    expect(await page.evaluate(async (url) => !!(await caches.match(url)), OLD)).toBe(true);
+
+    await page.reload(); // the page posts its current files, and the rest is pruned
+    await expect(home(page)).toBeVisible();
+    await expect.poll(() => page.evaluate(async (url) => !!(await caches.match(url)), OLD)).toBe(false);
+    // ...while the files the app uses now are still cached.
+    const missing = await page.evaluate(async () => {
+      const loaded = performance
+        .getEntriesByType("resource")
+        .map((e) => new URL(e.name).pathname)
+        .filter((p) => p.startsWith("/_next/static/"));
+      return (await Promise.all(loaded.map((p) => caches.match(p)))).filter((hit) => !hit).length;
+    });
+    expect(missing).toBe(0);
+  });
 });
 
 // Regression: an expired session (they last about an hour) used to land on the
