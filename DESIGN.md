@@ -137,3 +137,8 @@ The widgets are tiny views of the same two things: distance and moods.
 - Small widget: the distance number (display face) plus both mood icons in their mood colours.
 - Medium widget: add names and "updated X min ago" in `ink-muted`.
 - Don't animate counting on widgets (the OS doesn't allow it smoothly). Just show the latest value.
+- Data: one call, `select widget_summary()` (an RPC as the signed-in user), returns everything a
+  widget shows: `me` and `partner` (name, mood, when the mood was set, whether each is `live`),
+  `distance_m` (rounded to 10 m) and `distance_as_of`. It never includes coordinates or mood
+  notes, because widget data sits on the lock screen and in the OS widget cache. `partner` is
+  `null` until the link is mutual; `distance_m` also needs both of you sharing a location.
