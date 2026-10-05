@@ -1,17 +1,17 @@
 # Graph Report - MSplusEverythingIwant  (2026-10-05)
 
 ## Corpus Check
-- 291 files · ~185,556 words
+- 290 files · ~184,862 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 8 file(s) not represented in the graph (top: (none) 4, .toml 2, .example 1)
 
 ## Summary
-- 1070 nodes · 1699 edges · 97 communities (69 shown, 28 thin omitted)
+- 1067 nodes · 1696 edges · 97 communities (68 shown, 29 thin omitted)
 - Extraction: 86% EXTRACTED · 14% INFERRED · 0% AMBIGUOUS · INFERRED: 241 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `49ee4622`
+- Built from commit: `a609ff82`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -40,7 +40,7 @@
 - 20261001000000_initial_schema.sql
 - Next.js Best Practices Skill
 - Test Suite Structure
-- Choosing Test Types: E2E, Component, or API
+- Authentication Testing
 - Advanced Network Interception
 - Playwright Configuration
 - Error & Edge Case Testing
@@ -49,7 +49,7 @@
 - 20261002010000_pair_approval.sql
 - Self-Hosting Next.js
 - reaction-banner.tsx
-- API Testing
+- Locator Strategies
 - distance-hero.tsx
 - GitHub Actions for Playwright
 - React Compiler
@@ -75,7 +75,7 @@
 - dependencies
 - Suspense Boundaries
 - Parallel & Intercepting Routes
-- Performance & Parallelization
+- Debugging & Troubleshooting
 - Early Length Check for Array Comparisons
 - Use Transitions for Non-Urgent Updates
 - Optimize RLS Policies for Performance
@@ -120,11 +120,11 @@
   .claude/CLAUDE.md → README.md
 - `next build vs next dev .next/ Conflict` --semantically_similar_to--> `E2E Playwright Tests`  [INFERRED] [semantically similar]
   .claude/skills/feature-commit/SKILL.md → README.md
-- `FakeSupabase` --references--> `LocationRow`  [EXTRACTED]
+- `FakeSupabase` --references--> `Profile`  [EXTRACTED]
   tests/fake-supabase.ts → lib/types.ts
 - `FakeSupabase` --references--> `MoodRow`  [EXTRACTED]
   tests/fake-supabase.ts → lib/types.ts
-- `FakeSupabase` --references--> `Profile`  [EXTRACTED]
+- `FakeSupabase` --references--> `LocationRow`  [EXTRACTED]
   tests/fake-supabase.ts → lib/types.ts
 
 ## Import Cycles
@@ -171,11 +171,11 @@
 - **Tailwind v4 CSS-first config features** — _agents_skills_tailwind_css_patterns_references_configuration_css_first_config, _agents_skills_tailwind_css_patterns_references_configuration_custom_utilities, _agents_skills_tailwind_css_patterns_references_animations_custom_animations, _agents_skills_tailwind_css_patterns_references_reference_custom_variants, _agents_skills_tailwind_css_patterns_references_configuration_vite_integration [INFERRED 0.85]
 - **Postgres connection management rules** — _agents_skills_supabase_postgres_best_practices_references_conn_pooling_use_connection_pooling, _agents_skills_supabase_postgres_best_practices_references_conn_limits_set_connection_limits, _agents_skills_supabase_postgres_best_practices_references_conn_idle_timeout_configure_idle_timeouts, _agents_skills_supabase_postgres_best_practices_references_conn_prepared_statements_prepared_statements_with_pooling, _agents_skills_supabase_postgres_best_practices_references__sections_conn_category [INFERRED 0.95]
 
-## Communities (97 total, 28 thin omitted)
+## Communities (97 total, 29 thin omitted)
 
 ### Community 0 - "home-screen.tsx"
-Cohesion: 0.18
-Nodes (10): HomeScreen(), Props, LocationCard(), Props, MoodPicker(), NameCard(), Props, Props (+2 more)
+Cohesion: 0.14
+Nodes (15): HomeScreen(), Props, LocationCard(), Props, MoodPicker(), NameCard(), Props, Props (+7 more)
 
 ### Community 1 - "React Best Practices (compiled AGENTS.md)"
 Cohesion: 0.14
@@ -190,8 +190,8 @@ Cohesion: 0.10
 Nodes (13): @playwright/test, b64(), cors, FakeSupabase, Invite, makeSession(), ME, NO_ROWS (+5 more)
 
 ### Community 4 - "getSupabase"
-Cohesion: 0.11
-Nodes (37): Home(), App(), Auth, Loading(), SignedIn(), signOut(), useAuth(), SignIn() (+29 more)
+Cohesion: 0.12
+Nodes (36): Home(), App(), Auth, Loading(), SignedIn(), signOut(), useAuth(), SignIn() (+28 more)
 
 ### Community 5 - "Accessibility Skill (SKILL.md)"
 Cohesion: 0.11
@@ -206,8 +206,8 @@ Cohesion: 0.12
 Nodes (3): Node.js Advanced Patterns, Node.js Backend Patterns Skill, Node.js Best Practices Skill
 
 ### Community 8 - "Fixtures & Hooks"
-Cohesion: 0.15
-Nodes (19): Authentication Testing, Fixtures & Hooks, Custom Fixtures, beforeEach/afterAll Hooks, Storage State Authentication, Transaction Rollback Pattern, Worker-Scoped Fixtures, Global Setup & Teardown (+11 more)
+Cohesion: 0.14
+Nodes (19): Fixtures & Hooks, Custom Fixtures, beforeEach/afterAll Hooks, Storage State Authentication, Transaction Rollback Pattern, Worker-Scoped Fixtures, Global Setup & Teardown, Database Snapshot Pattern (+11 more)
 
 ### Community 9 - "feature-commit skill"
 Cohesion: 0.13
@@ -222,8 +222,8 @@ Cohesion: 0.11
 Nodes (18): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+10 more)
 
 ### Community 12 - "Playwright Best Practices Skill"
-Cohesion: 0.11
-Nodes (18): Validate AI Skill Workflow, Agnix Agent Config Lint (agent-sh/agnix), Date, Time & Clock Mocking, Mobile & Responsive Testing, Browser APIs: Geolocation, Permissions & More, MIT License (Currents Software Inc.), Playwright Best Practices README, Playwright Best Practices Skill (+10 more)
+Cohesion: 0.15
+Nodes (13): Validate AI Skill Workflow, Agnix Agent Config Lint (agent-sh/agnix), Mobile & Responsive Testing, Browser APIs: Geolocation, Permissions & More, Service Worker Testing, MIT License (Currents Software Inc.), Playwright Best Practices README, Playwright Best Practices Skill (+5 more)
 
 ### Community 13 - "Functions"
 Cohesion: 0.15
@@ -234,8 +234,8 @@ Cohesion: 0.19
 Nodes (15): 'use cache' directive, Custom cache handler (Redis/S3), Cache key generation, cacheComponents config flag, cacheLife() cache profiles, cacheTag(), Next.js Cache Components Skill, Partial Prerendering (PPR) (+7 more)
 
 ### Community 15 - "Assertions & Waiting"
-Cohesion: 0.11
-Nodes (19): iFrame Testing, Assertions & Waiting, Auto-Waiting, Custom Matchers, Soft Assertions, toPass() / expect.poll() Polling, Web-First Assertions, Locator Strategies (+11 more)
+Cohesion: 0.18
+Nodes (10): Date, Time & Clock Mocking, Assertions & Waiting, Auto-Waiting, Custom Matchers, Soft Assertions, toPass() / expect.poll() Polling, Web-First Assertions, Debugging and Managing Flaky Tests (+2 more)
 
 ### Community 16 - "Drag and Drop Testing"
 Cohesion: 0.18
@@ -266,16 +266,16 @@ Cohesion: 0.21
 Nodes (12): Debug Tricks, Dev server MCP endpoint (get_errors, get_routes, ...), Rebuild specific routes (Next.js 16+), Font Optimization, next/font (Google & local fonts), Hydration Errors, Hydration mismatch causes (browser APIs, dates, random IDs, invalid nesting), Scripts (+4 more)
 
 ### Community 24 - "Test Suite Structure"
-Cohesion: 0.10
-Nodes (22): Test Annotations & Organization, Custom Annotations, Fixme & Fail Annotations, Skip Annotations, Test Steps (test.step), Locator Priority Order, Page Object Model (POM), Component Objects (+14 more)
+Cohesion: 0.18
+Nodes (13): Test Annotations & Organization, Custom Annotations, Fixme & Fail Annotations, Skip Annotations, Test Steps (test.step), Test Suite Structure, API Mocking (page.route), Test Directory Structure (+5 more)
 
-### Community 25 - "Choosing Test Types: E2E, Component, or API"
-Cohesion: 0.24
-Nodes (3): Organizing Reusable Test Code (POM vs Fixtures), Choosing Test Types: E2E, Component, or API, Mocking Strategy: Real vs Mock Services
+### Community 25 - "Authentication Testing"
+Cohesion: 0.13
+Nodes (13): Authentication Testing, Organizing Reusable Test Code (POM vs Fixtures), Choosing Test Types: E2E, Component, or API, Mocking Strategy: Real vs Mock Services, API Testing, API Data Seeding, Chained API Calls, Request Fixtures for Authenticated Clients (+5 more)
 
 ### Community 26 - "Advanced Network Interception"
-Cohesion: 0.14
-Nodes (7): Complex Authentication Flow Patterns, Multi-Tab, Window & Popup Testing, Multi-User & Collaboration Testing, Advanced Network Interception, Third-Party Service Mocking, Service Worker Testing, WebSocket & Real-Time Testing
+Cohesion: 0.16
+Nodes (6): Complex Authentication Flow Patterns, Multi-Tab, Window & Popup Testing, Multi-User & Collaboration Testing, Advanced Network Interception, Third-Party Service Mocking, WebSocket & Real-Time Testing
 
 ### Community 27 - "Playwright Configuration"
 Cohesion: 0.11
@@ -286,8 +286,8 @@ Cohesion: 0.13
 Nodes (17): Browser Console & JavaScript Error Handling, Auto-Fail Console Fixture, Uncaught Exception (pageerror) Detection, Error & Edge Case Testing, Error Boundary Testing, Form Validation Testing, Network Failure Testing, Offline Testing (+9 more)
 
 ### Community 29 - "Canvas & WebGL Testing"
-Cohesion: 0.20
-Nodes (11): Canvas & WebGL Testing, Canvas Screenshot Testing, Chart Library Testing, Frame-by-Frame Testing, WebGL Testing, Locale-Specific Snapshots, Visual Regression Testing, Cross-Browser Visual Testing (+3 more)
+Cohesion: 0.13
+Nodes (16): Canvas & WebGL Testing, Canvas Screenshot Testing, Chart Library Testing, Frame-by-Frame Testing, WebGL Testing, Internationalization (i18n) Testing, Date, Time & Number Formats, Locale Fixture (+8 more)
 
 ### Community 30 - "devDependencies"
 Cohesion: 0.17
@@ -302,20 +302,20 @@ Cohesion: 0.27
 Nodes (10): Image Optimization, next/image, remotePatterns config, Build-time vs runtime environment variables, Self-Hosting Next.js, Docker deployment, Health check endpoint, OpenNext (+2 more)
 
 ### Community 33 - "reaction-banner.tsx"
-Cohesion: 0.13
-Nodes (22): Props, ReactionBanner(), dismiss(), readSeen(), subscribeVisibility(), usePageVisible(), writeSeen(), Props (+14 more)
+Cohesion: 0.14
+Nodes (20): Props, ReactionBanner(), dismiss(), readSeen(), subscribeVisibility(), usePageVisible(), writeSeen(), Props (+12 more)
 
-### Community 34 - "API Testing"
-Cohesion: 0.25
-Nodes (9): API Testing, API Data Seeding, Chained API Calls, Request Fixtures for Authenticated Clients, Schema Validation with Zod, GraphQL Testing, Authenticated GraphQL Fixture, GraphQL Helper Function (+1 more)
+### Community 34 - "Locator Strategies"
+Cohesion: 0.18
+Nodes (11): iFrame Testing, Locator Strategies, Locator Filtering & Chaining, getByRole, getByTestId, Locator Priority Order, Page Object Model (POM), Component Objects (+3 more)
 
 ### Community 35 - "distance-hero.tsx"
-Cohesion: 0.15
-Nodes (20): DistanceHero(), Presence(), Props, MiniMap(), project(), Props, COMPASS, compassDirection() (+12 more)
+Cohesion: 0.19
+Nodes (16): DistanceHero(), Presence(), Props, MiniMap(), project(), Props, COMPASS, compassDirection() (+8 more)
 
 ### Community 36 - "GitHub Actions for Playwright"
-Cohesion: 0.07
-Nodes (32): Trace Viewer, CI-Specific Flakiness, Container-Based Testing, Dev Container Setup, Docker Compose Stack, Official Playwright Docker Image, GitHub Actions for Playwright, Reusable Workflow (+24 more)
+Cohesion: 0.06
+Nodes (34): Trace Viewer, CI-Specific Flakiness, Merge Sharded Blob Reports, Test Sharding, Container-Based Testing, Dev Container Setup, Docker Compose Stack, Official Playwright Docker Image (+26 more)
 
 ### Community 39 - "Tailwind CSS Patterns Skill"
 Cohesion: 0.27
@@ -326,8 +326,8 @@ Cohesion: 0.28
 Nodes (9): File Conventions, middleware.ts (Next.js 14-15), proxy.ts (Next.js 16+ replaces middleware.ts), Runtime Selection, Edge runtime, Node.js runtime (default), Next.js Upgrade Skill, Incremental upgrade path (+1 more)
 
 ### Community 41 - "use-couple.ts"
-Cohesion: 0.20
-Nodes (14): MoodCard(), Props, MoodIcon(), Props, MOOD_VALUES, MOODS, MoodStyle, MoodValue (+6 more)
+Cohesion: 0.18
+Nodes (16): MoodCard(), Props, MoodIcon(), Props, MOOD_VALUES, MOODS, MoodStyle, MoodValue (+8 more)
 
 ### Community 42 - "mood-icons.tsx"
 Cohesion: 0.29
@@ -336,10 +336,6 @@ Nodes (11): Base(), CalmIcon(), ExcitedIcon(), HappyIcon(), IconProps, ICONS, Lo
 ### Community 43 - "MSplusEverythingIwant App"
 Cohesion: 0.31
 Nodes (8): Live Location Sharing, Email Magic Link Sign-in, Mood Sharing, MSplusEverythingIwant App, Next.js, Partner Linking via Invite Code, Supabase, Unlink Partner
-
-### Community 44 - "20261005010000_reactions.sql"
-Cohesion: 0.29
-Nodes (3): public.reactions, reactions_set_sent_at, public.unpair()
 
 ### Community 45 - "20261002000000_pair_invites.sql"
 Cohesion: 0.43
@@ -405,9 +401,9 @@ Nodes (5): Avoiding data waterfalls (Promise.all, streaming, preload), Navigatio
 Cohesion: 0.60
 Nodes (5): default.tsx (critical for parallel routes), Parallel & Intercepting Routes, Intercepting routes ((.) matchers) modal, Close modal with router.back(), Parallel route slots (@slot)
 
-### Community 66 - "Performance & Parallelization"
-Cohesion: 0.15
-Nodes (17): CI/CD Integration, Merge Sharded Blob Reports, Cache Playwright Browsers, Test Sharding, Performance & Parallelization, Block Unnecessary Resources, Cache API Responses, Lazy Navigation (+9 more)
+### Community 66 - "Debugging & Troubleshooting"
+Cohesion: 0.11
+Nodes (22): Debugging & Troubleshooting, Playwright Inspector, UI Mode, CI/CD Integration, Cache Playwright Browsers, Performance & Parallelization, Block Unnecessary Resources, Cache API Responses (+14 more)
 
 ### Community 69 - "Early Length Check for Array Comparisons"
 Cohesion: 0.40
@@ -454,24 +450,24 @@ Nodes (3): PWA App Icon 512px (Overlapping Circles), Dark Background with Pink/A
   .agents/skills/react-best-practices/rules/server-cache-lru.md · relation: conceptually_related_to
 
 ## Knowledge Gaps
-- **291 isolated node(s):** `Props`, `NO_ROWS`, `Table`, `Invite`, `Push` (+286 more)
+- **291 isolated node(s):** `Props`, `Props`, `Props`, `IconProps`, `ICONS` (+286 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 403 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **28 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **29 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **What is the exact relationship between `Cross-Request LRU Caching` and `Use Connection Pooling`?**
   _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
-- **Why does `Playwright Best Practices Skill` connect `Playwright Best Practices Skill` to `Performance & Parallelization`, `Component Testing`, `GitHub Actions for Playwright`, `API Testing`, `Fixtures & Hooks`, `Assertions & Waiting`, `Drag and Drop Testing`, `Test Suite Structure`, `Choosing Test Types: E2E, Component, or API`, `Advanced Network Interception`, `Playwright Configuration`, `Error & Edge Case Testing`, `Canvas & WebGL Testing`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
-- **Why does `react` connect `getSupabase` to `home-screen.tsx`, `reaction-banner.tsx`, `distance-hero.tsx`, `use-couple.ts`, `mood-icons.tsx`, `package.json`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
-- **Why does `devDependencies` connect `devDependencies` to `package.json`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **What connects `Props`, `NO_ROWS`, `Table` to the rest of the system?**
+- **Why does `Playwright Best Practices Skill` connect `Playwright Best Practices Skill` to `Locator Strategies`, `Debugging & Troubleshooting`, `GitHub Actions for Playwright`, `Component Testing`, `Fixtures & Hooks`, `Assertions & Waiting`, `Drag and Drop Testing`, `Test Suite Structure`, `Authentication Testing`, `Advanced Network Interception`, `Playwright Configuration`, `Error & Edge Case Testing`, `Canvas & WebGL Testing`?**
+  _High betweenness centrality (0.035) - this node is a cross-community bridge._
+- **Why does `react` connect `home-screen.tsx` to `reaction-banner.tsx`, `distance-hero.tsx`, `getSupabase`, `use-couple.ts`, `mood-icons.tsx`, `package.json`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+- **Why does `Next.js Best Practices Skill` connect `Next.js Best Practices Skill` to `Self-Hosting Next.js`, `Parallel & Intercepting Routes`, `File Conventions`, `Functions`, `Data Patterns`, `Bundling`, `Error Handling`, `Suspense Boundaries`?**
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **What connects `Props`, `Props`, `Props` to the rest of the system?**
   _291 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `home-screen.tsx` be split into smaller, more focused modules?**
+  _Cohesion score 0.1422924901185771 - nodes in this community are weakly interconnected._
 - **Should `React Best Practices (compiled AGENTS.md)` be split into smaller, more focused modules?**
   _Cohesion score 0.1353658536585366 - nodes in this community are weakly interconnected._
-- **Should `/graphify skill` be split into smaller, more focused modules?**
-  _Cohesion score 0.08739495798319327 - nodes in this community are weakly interconnected._
