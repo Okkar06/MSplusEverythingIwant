@@ -10,6 +10,7 @@ import { MoodPicker } from "./mood-picker";
 import { LocationCard } from "./location-card";
 import { MiniMap } from "./mini-map";
 import { NameCard } from "./name-card";
+import { SavedCopyNotice } from "./saved-copy-notice";
 import { ReactionBar } from "./reaction-bar";
 import { ReactionBanner } from "./reaction-banner";
 import { UnlinkCard } from "./unlink-card";
@@ -30,6 +31,8 @@ export function HomeScreen({ couple, me, partner, onSignOut }: Props) {
   return (
     <>
       <ReactionBanner partnerName={partner.display_name} reaction={couple.reactions[partner.id]} now={now} />
+
+      {couple.savedAt && <SavedCopyNotice savedAt={couple.savedAt} now={now} />}
 
       <header>
         <h1 className="font-display text-heading">

@@ -41,8 +41,8 @@ function b64(value: object) {
   return Buffer.from(JSON.stringify(value)).toString("base64url");
 }
 
-function makeSession() {
-  const expiresAt = Math.floor(Date.now() / 1000) + 86_400;
+function makeSession({ expired = false } = {}) {
+  const expiresAt = Math.floor(Date.now() / 1000) + (expired ? -3_600 : 86_400);
   const user = {
     id: ME,
     aud: "authenticated",
@@ -74,18 +74,32 @@ export class FakeSupabase {
   misses = 0;
   /** Paths (e.g. "/rpc/my_pair_request") whose next call fails, as if offline. */
   failNext = new Set<string>();
+  /** When true, Supabase is unreachable: every request fails and Realtime never connects. */
+  get down() {
+    return this._down;
+  }
+  set down(value: boolean) {
+    this._down = value;
+    if (value) this.wasDown = true;
+  }
+  private _down = false;
+  /** Whether this test took Supabase down at some point (see the console check below). */
+  wasDown = false;
   /** Every request to the fake project, for assertions. */
   requests: Request[] = [];
   private pushers: Push[] = [];
   private nextCode = 0;
 
   /** Starts the browser already signed in as Ana. */
-  async signIn(context: BrowserContext) {
+  async signIn(context: BrowserContext, { expired = false } = {}) {
     await context.addInitScript(
       ([key, session]) => localStorage.setItem(key, session),
-      [STORAGE_KEY, JSON.stringify(makeSession())] as const,
+      [STORAGE_KEY, JSON.stringify(makeSession({ expired }))] as const,
     );
   }
+
+  /** When true, refreshing the session is refused, as if it was revoked elsewhere. */
+  refreshRevoked = false;
 
   /** Makes Ben a profile, linked with Ana both ways. */
   link() {
@@ -166,6 +180,11 @@ export class FakeSupabase {
           },
           body: body === undefined ? "" : JSON.stringify(body),
         });
+      // A 503, not route.abort(): after an abort, WebKit under Playwright sends
+      // later requests past the routes to the real network.
+      // With a message, like a real gateway error: an empty one reads as "no error"
+      // in supabase-js callers that check error.message.
+      if (this.down) return reply(503, { message: "Service Unavailable" });
       for (const failing of this.failNext) {
         if (path.endsWith(failing)) {
           this.failNext.delete(failing);
@@ -180,6 +199,12 @@ export class FakeSupabase {
       if (path === "/auth/v1/verify") return reply(200, makeSession());
       if (path === "/auth/v1/logout") return reply(204);
       if (path === "/auth/v1/user") return reply(200, makeSession().user);
+      if (path === "/auth/v1/token") {
+        if (this.refreshRevoked) {
+          return reply(400, { code: 400, error_code: "refresh_token_not_found", msg: "Invalid Refresh Token: Refresh Token Not Found" });
+        }
+        return reply(200, makeSession());
+      }
 
       // ── Tables ──
       if (path === "/rest/v1/profiles") {
@@ -281,6 +306,7 @@ export class FakeSupabase {
     // Realtime speaks the Phoenix protocol: [join_ref, ref, topic, event, payload].
     await context.routeWebSocket(/e2e\.supabase\.co\/realtime/, (ws) => {
       ws.onMessage((raw) => {
+        if (this.down) return; // no answer: the channel never subscribes
         const [joinRef, ref, topic, event, payload] = JSON.parse(String(raw));
         const send = (ev: string, body: object, msgRef: string | null = ref) =>
           ws.send(JSON.stringify([joinRef, msgRef, topic, ev, body]));
@@ -331,7 +357,11 @@ export const test = base.extend<{ supabase: FakeSupabase }>({
     });
 
     await provide(supabase);
-    base.expect(errors, "console errors").toEqual([]);
+    // WebKit logs a failed cross-origin request as "... due to access control
+    // checks". That's expected when a test took Supabase down on purpose, and
+    // still fails every other test.
+    const unexpected = supabase.wasDown ? errors.filter((e) => !/due to access control checks/.test(e)) : errors;
+    base.expect(unexpected, "console errors").toEqual([]);
   },
 });
 

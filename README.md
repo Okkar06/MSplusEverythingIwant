@@ -36,6 +36,14 @@ Mood + live-location sharing app for two users, built with Next.js and Supabase.
    link for both of you, deletes both stored locations and latest reactions, and clears mood
    notes (they were written for each other). Moods themselves stay.
 
+## Offline
+
+Installed on a phone's home screen, the app opens without a connection: a
+service worker (`public/sw.js`, production builds only) caches the app itself,
+and the last data you saw (names, moods, locations) is kept on the device and
+shown with a "Showing what you last saw" note until it can reconnect. That copy
+is deleted when you sign out.
+
 ## Tests
 
 ```bash

@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { getSupabase } from "./supabase/client";
+import { readSnapshot, writeSnapshot } from "./couple-snapshot";
 import type { LocationRow, MoodRow, Profile, ReactionRow } from "./types";
 import type { MoodValue } from "./moods";
 import type { ReactionKind } from "./reactions";
@@ -15,6 +16,8 @@ type CoupleState = {
   moods: ByUser<MoodRow>;
   locations: ByUser<LocationRow>;
   reactions: ByUser<ReactionRow>;
+  /** Set while showing data saved on this device instead of fresh data. */
+  savedAt: string | null;
 };
 
 const initial: CoupleState = {
@@ -24,7 +27,15 @@ const initial: CoupleState = {
   moods: {},
   locations: {},
   reactions: {},
+  savedAt: null,
 };
+
+/** Start from this device's saved copy, if any, so the app works offline. */
+function startState(userId: string): CoupleState {
+  const snap = typeof window === "undefined" ? null : readSnapshot(userId);
+  if (!snap) return initial;
+  return { ...initial, loading: false, ...snap, reactions: {}, savedAt: snap.savedAt };
+}
 
 function byUser<T extends { user_id: string }>(rows: T[]): ByUser<T> {
   return Object.fromEntries(rows.map((row) => [row.user_id, row]));
@@ -42,7 +53,7 @@ function without<T>(map: ByUser<T>, userId: string): ByUser<T> {
  * Row-level security decides what comes back, so this only ever sees the two of you.
  */
 export function useCouple(userId: string) {
-  const [state, setState] = useState<CoupleState>(initial);
+  const [state, setState] = useState<CoupleState>(() => startState(userId));
   const [reloadKey, setReloadKey] = useState(0);
 
   useEffect(() => {
@@ -58,15 +69,22 @@ export function useCouple(userId: string) {
       ]);
       if (cancelled) return;
       const error = profiles.error ?? moods.error ?? locations.error ?? reactions.error;
+      // A failed load (e.g. offline) keeps the saved copy on screen rather
+      // than replacing it with nothing.
+      if (error) {
+        setState((s) => (s.savedAt ? s : { ...s, loading: false, error: error.message }));
+        return;
+      }
       setState({
         loading: false,
-        error: error ? error.message : null,
+        error: null,
         profiles: Object.fromEntries(
           ((profiles.data ?? []) as Profile[]).map((p) => [p.id, p]),
         ),
         moods: byUser((moods.data ?? []) as MoodRow[]),
         locations: byUser((locations.data ?? []) as LocationRow[]),
         reactions: byUser((reactions.data ?? []) as ReactionRow[]),
+        savedAt: null,
       });
     }
 
@@ -112,6 +130,12 @@ export function useCouple(userId: string) {
       supabase.removeChannel(channel);
     };
   }, [userId, reloadKey]);
+
+  // Keep this device's copy up to date with every fresh load and live change.
+  useEffect(() => {
+    if (state.loading || state.error || state.savedAt) return;
+    writeSnapshot(userId, { profiles: state.profiles, moods: state.moods, locations: state.locations });
+  }, [userId, state.loading, state.error, state.savedAt, state.profiles, state.moods, state.locations]);
 
   const me = state.profiles[userId];
   // A partner only counts once the link is mutual; until then RLS hides their profile.
