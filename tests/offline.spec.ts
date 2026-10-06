@@ -246,3 +246,81 @@ test("a session revoked elsewhere also deletes the saved copy", async ({ page, c
   await expect(page.getByRole("heading", { name: "Hello, you two" })).toBeVisible();
   await expect.poll(() => page.evaluate((k) => localStorage.getItem(k), SNAPSHOT_KEY)).toBeNull();
 });
+
+const snapshot = (page: Page) =>
+  page.evaluate((k) => JSON.parse(localStorage.getItem(k) ?? "null"), SNAPSHOT_KEY);
+
+test("reactions aren't kept in the saved copy", async ({ page, supabase }) => {
+  supabase.benReacts("hug");
+  await page.goto("/");
+  await expect(home(page)).toBeVisible();
+  await expect.poll(async () => (await snapshot(page))?.moods?.[PARTNER]?.mood).toBe("calm");
+  expect(await snapshot(page)).not.toHaveProperty("reactions");
+});
+
+test("a live change is saved too, not only the first load", async ({ page, supabase }) => {
+  await page.goto("/");
+  await expect(bensMood(page).getByText("Calm")).toBeVisible();
+  supabase.push("moods", "UPDATE", supabase.setMood(PARTNER, "missing_you"));
+  await expect(bensMood(page).getByText("Missing you")).toBeVisible();
+  await expect.poll(async () => (await snapshot(page))?.moods?.[PARTNER]?.mood).toBe("missing_you");
+});
+
+test("unlinking rewrites the saved copy without the ex-partner", async ({ page, supabase }) => {
+  supabase.locations[PARTNER] = {
+    user_id: PARTNER, latitude: 51.5, longitude: -0.12, accuracy_m: 10, updated_at: new Date().toISOString(),
+  };
+  await page.goto("/");
+  await expect(home(page)).toBeVisible();
+  await expect.poll(async () => Object.keys((await snapshot(page))?.profiles ?? {})).toContain(PARTNER);
+
+  const card = page.getByRole("region", { name: "Unlink" });
+  await card.getByRole("button", { name: "Unlink…" }).click();
+  await card.getByRole("button", { name: "Unlink", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Almost there" })).toBeVisible();
+
+  await expect.poll(async () => Object.keys((await snapshot(page))?.profiles ?? {})).toEqual([ME]);
+  const snap = await snapshot(page);
+  expect(snap.moods).not.toHaveProperty(PARTNER);
+  expect(snap.locations).not.toHaveProperty(PARTNER);
+});
+
+test("a saved copy belonging to someone else is never shown", async ({ page, context, supabase }) => {
+  // e.g. left behind under another key by an older version or another account
+  await context.addInitScript((k) => {
+    localStorage.setItem(k, JSON.stringify({ savedAt: new Date().toISOString(), profiles: {}, moods: {}, locations: {} }));
+  }, SNAPSHOT_KEY);
+  supabase.down = true;
+  await page.goto("/");
+  // Without your own profile in it, it's not trusted: keep loading instead.
+  await expect(page.getByRole("status").getByText("Loading")).toBeAttached();
+  await page.waitForTimeout(1_000);
+  await expect(page.getByRole("heading", { name: "Almost there" })).toHaveCount(0);
+  await expect(notice(page)).toHaveCount(0);
+});
+
+test("when Supabase comes back, the saved copy is replaced without a reload", async ({ page, supabase }) => {
+  test.slow(); // Realtime retries the join on a backoff of several seconds
+  await page.goto("/");
+  await expect(home(page)).toBeVisible();
+  supabase.down = true;
+  await page.reload();
+  await expect(notice(page)).toBeVisible();
+
+  supabase.setMood(PARTNER, "excited");
+  supabase.down = false;
+  await expect(bensMood(page).getByText("Excited")).toBeVisible({ timeout: 45_000 });
+  await expect(notice(page)).toHaveCount(0);
+});
+
+test("changing your mood while on the saved copy says it didn't go through", async ({ page, supabase }) => {
+  await page.goto("/");
+  await expect(home(page)).toBeVisible();
+  supabase.down = true;
+  await page.reload();
+  await expect(notice(page)).toBeVisible();
+  await page.getByRole("radio", { name: "Happy" }).click();
+  await expect(page.getByRole("alert").filter({ hasText: "Something went wrong" })).toBeVisible();
+  // ...and the saved copy stays on screen.
+  await expect(bensMood(page).getByText("Calm")).toBeVisible();
+});

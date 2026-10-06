@@ -182,7 +182,9 @@ export class FakeSupabase {
         });
       // A 503, not route.abort(): after an abort, WebKit under Playwright sends
       // later requests past the routes to the real network.
-      if (this.down) return route.fulfill({ status: 503, headers: cors, body: "" });
+      // With a message, like a real gateway error: an empty one reads as "no error"
+      // in supabase-js callers that check error.message.
+      if (this.down) return reply(503, { message: "Service Unavailable" });
       for (const failing of this.failNext) {
         if (path.endsWith(failing)) {
           this.failNext.delete(failing);
