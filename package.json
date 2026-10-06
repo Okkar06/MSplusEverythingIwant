@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:db": "node --test --test-timeout=300000 \"tests/db/*.test.mjs\""
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.117.0",
@@ -15,11 +16,13 @@
     "react-dom": "19.2.8"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "^0.5.8",
     "@playwright/test": "^1.63.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoskills": "^0.3.6",
     "eslint": "^9",
     "eslint-config-next": "16.3.6",
     "supabase": "^2.119.0",

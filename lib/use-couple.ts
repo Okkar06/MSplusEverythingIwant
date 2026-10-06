@@ -2,8 +2,9 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { getSupabase } from "./supabase/client";
-import type { LocationRow, MoodRow, Profile } from "./types";
+import type { LocationRow, MoodRow, Profile, ReactionRow } from "./types";
 import type { MoodValue } from "./moods";
+import type { ReactionKind } from "./reactions";
 
 type ByUser<T> = Record<string, T>;
 
@@ -13,6 +14,7 @@ type CoupleState = {
   profiles: ByUser<Profile>;
   moods: ByUser<MoodRow>;
   locations: ByUser<LocationRow>;
+  reactions: ByUser<ReactionRow>;
 };
 
 const initial: CoupleState = {
@@ -21,6 +23,7 @@ const initial: CoupleState = {
   profiles: {},
   moods: {},
   locations: {},
+  reactions: {},
 };
 
 function byUser<T extends { user_id: string }>(rows: T[]): ByUser<T> {
@@ -34,8 +37,8 @@ function without<T>(map: ByUser<T>, userId: string): ByUser<T> {
 }
 
 /**
- * Loads your profile, your partner's profile, and both current moods and
- * locations, then keeps them up to date over Supabase Realtime.
+ * Loads your profile, your partner's profile, and both current moods,
+ * locations and latest reactions, then keeps them up to date over Supabase Realtime.
  * Row-level security decides what comes back, so this only ever sees the two of you.
  */
 export function useCouple(userId: string) {
@@ -47,13 +50,14 @@ export function useCouple(userId: string) {
     let cancelled = false;
 
     async function load() {
-      const [profiles, moods, locations] = await Promise.all([
+      const [profiles, moods, locations, reactions] = await Promise.all([
         supabase.from("profiles").select("id, display_name, partner_id"),
         supabase.from("moods").select("user_id, mood, note, updated_at"),
         supabase.from("locations").select("user_id, latitude, longitude, accuracy_m, updated_at"),
+        supabase.from("reactions").select("user_id, kind, sent_at"),
       ]);
       if (cancelled) return;
-      const error = profiles.error ?? moods.error ?? locations.error;
+      const error = profiles.error ?? moods.error ?? locations.error ?? reactions.error;
       setState({
         loading: false,
         error: error ? error.message : null,
@@ -62,6 +66,7 @@ export function useCouple(userId: string) {
         ),
         moods: byUser((moods.data ?? []) as MoodRow[]),
         locations: byUser((locations.data ?? []) as LocationRow[]),
+        reactions: byUser((reactions.data ?? []) as ReactionRow[]),
       });
     }
 
@@ -92,6 +97,11 @@ export function useCouple(userId: string) {
               },
         );
       })
+      .on("postgres_changes", { event: "*", schema: "public", table: "reactions" }, (payload) => {
+        if (payload.eventType === "DELETE") return; // reactions are never deleted, only replaced
+        const row = payload.new as ReactionRow;
+        setState((s) => ({ ...s, reactions: { ...s.reactions, [row.user_id]: row } }));
+      })
       .subscribe((status) => {
         // Reload on (re)connect so nothing missed while offline is lost.
         if (status === "SUBSCRIBED") load();
@@ -116,6 +126,15 @@ export function useCouple(userId: string) {
       setState((s) => ({ ...s, moods: { ...s.moods, [userId]: row } }));
       const { error } = await getSupabase().from("moods").upsert({ user_id: userId, mood, note });
       if (error) setState((s) => ({ ...s, error: error.message }));
+    },
+    [userId],
+  );
+
+  // Your partner gets it over Realtime. The row's sent_at is set by the server.
+  const sendReaction = useCallback(
+    async (kind: ReactionKind) => {
+      const { error } = await getSupabase().from("reactions").upsert({ user_id: userId, kind });
+      return error ? error.message : null;
     },
     [userId],
   );
@@ -146,5 +165,5 @@ export function useCouple(userId: string) {
     return null;
   }, [reload]);
 
-  return { ...state, me, partner, reload, setMood, setName, unlink };
+  return { ...state, me, partner, reload, setMood, setName, sendReaction, unlink };
 }

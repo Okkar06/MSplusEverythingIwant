@@ -1,6 +1,7 @@
 // Row shapes for the tables in supabase/migrations/20261001000000_initial_schema.sql.
 
 import type { MoodValue } from "./moods";
+import type { ReactionKind } from "./reactions";
 
 export type Profile = {
   id: string;
@@ -21,4 +22,10 @@ export type LocationRow = {
   longitude: number;
   accuracy_m: number | null;
   updated_at: string;
+};
+
+export type ReactionRow = {
+  user_id: string;
+  kind: ReactionKind;
+  sent_at: string;
 };
