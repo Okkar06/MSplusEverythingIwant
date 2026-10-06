@@ -75,10 +75,8 @@ target, PR number (or "create PR"), strategy (merge commit, as this repo's histo
 does), CI status, and whether it's up to date with the target. **Wait for approval.**
 - Never force-push or rewrite history on shared branches.
 - Changes reach `main` only through a pull request.
-- On conflicts, stop and don't change anything yet. Message the builder session first
-  (SendMessage), explaining which files conflict and what each side changed, and agree on
-  the resolution with them. Then show it to the user and wait for approval. The resolved
-  branch goes back to /code-tester before merging. `references/merge.md` has the steps.
+- On conflicts, stop and change nothing; follow `references/merge.md` → Conflicts
+  (agree it with the builder first, then the user).
 
 ## 8. Summary
 

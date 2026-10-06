@@ -24,8 +24,10 @@ git log --oneline -5
   `git checkout -b feat/<short-slug>` (use `fix/`, `chore/` or `docs/` to match the work).
 - If `.git/index.lock` exists, another session is committing. Wait for it to clear;
   don't delete it.
-- Pull first if the branch is behind: `git pull --rebase`. If that conflicts, stop and
-  tell the user.
+- Pull first if the branch is behind: `git pull --rebase`. If that conflicts, run
+  `git rebase --abort` and follow the Conflicts steps in
+  `.claude/skills/code-reviewer/references/merge.md` (agree it with the builder session
+  first, then the user). Don't resolve it yourself.
 
 ## 2. Group the changes into features
 
@@ -118,7 +120,7 @@ git push -u origin "$(git branch --show-current)"
 - Never force-push (`--force`, `--force-with-lease`) unless the user asks.
 - Never push to `main`; changes reach `main` through a pull request.
 - If the push is rejected because the remote moved, `git pull --rebase`, re-run the
-  checks, and push again. If the rebase conflicts, stop and tell the user.
+  checks, and push again. If the rebase conflicts, abort it and handle it as in step 1.
 
 ## 7. Report
 
