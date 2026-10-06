@@ -1,6 +1,8 @@
 ---
 name: code-tester
 description: "QA tester for this repo: tests what another session built before it goes to /code-reviewer. Use when the user types /code-tester (optionally with a feature name, e.g. /code-tester reactions), or asks to test, QA, verify, check, or 'make sure it works' for a feature, branch, or uncommitted changes before review or commit. Runs typecheck, lint, build, the database tests and Playwright e2e tests, adds missing tests, does a live headless browser check with the Playwright MCP tools, fixes what fails, and writes .claude/handoff/test-report.md. Use this even when the user only says 'is it ready?' or 'test the new stuff'."
+context: fork
+background: true
 ---
 
 # /code-tester
