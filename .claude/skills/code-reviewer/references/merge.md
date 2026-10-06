@@ -35,8 +35,28 @@ gh pr merge <number> --merge          # never --admin; never force-push
 
 ## Conflicts
 
-Stop. For each conflicting file, show what `main` changed and what the branch changed.
-Suggest a resolution, and let the user decide. Don't resolve conflicts silently.
+Stop, and don't change any file, branch or PR until the builder has answered. The
+builder wrote the code and may be editing it right now; a fix made without them can be
+wrong, or get overwritten.
+
+1. **Find the builder.** Run `ListAgents` and confirm which session is the builder (the
+   user's pipeline is builder → tester → reviewer). If it isn't clear, ask the user.
+2. **Message the builder** with `SendMessage`, one message per branch:
+   - which branch is being merged into which, and the PR number;
+   - each conflicting file: what the target changed, what the branch changed
+     (`git merge-tree --write-tree --name-only origin/<target> origin/<branch>` prints a tree id,
+     then the conflicting files and a CONFLICT line for each;
+     `git diff origin/<target>...origin/<branch> -- <file>` and
+     `git diff origin/<branch>...origin/<target> -- <file>` show each side);
+   - the resolution you suggest, and anything the merge must also change that isn't a
+     textual conflict (e.g. bumping a version both sides set to the same value);
+   - a request: say whether they agree, or resolve it themselves, and tell you when the
+     branch is updated.
+3. **Wait for the reply.** Don't poll; their answer arrives as a message. If the builder
+   doesn't answer, or the session is gone, tell the user and wait. Don't resolve it yourself.
+4. **Show the user** the agreed resolution: files, what each side keeps, and who makes
+   the change, and **wait for their approval**. Only then does anyone edit.
+5. The resolved branch is new code. It goes back to /code-tester before it's merged.
 
 ## After merging
 
